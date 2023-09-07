@@ -11,7 +11,7 @@ class Scribus {
 	public function new() {
 		info('Scribus');
 
-		var path = Folder.ROOT_FOLDER + '/src/scribus/assets/scribus_a4.sla';
+		var path = Folder.ROOT_FOLDER + '/assets/scribus_a4.sla';
 		if (sys.FileSystem.exists(path)) {
 			var str:String = sys.io.File.getContent(path);
 			_xml = Xml.parse(str);
