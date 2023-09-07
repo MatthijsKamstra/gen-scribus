@@ -40,7 +40,7 @@ class Main {
 		scribus.addColorRGB('test_mck_rgb', 0, 10, 20);
 		scribus.addColorCMYK('test_mck_cmyk', 0, 10, 20, 30);
 
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}.sla', scribus.xml());
+		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}_combo.sla', scribus.xml());
 	}
 
 	function createScribusA4NL() {
