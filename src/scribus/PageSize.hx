@@ -13,13 +13,13 @@ class PageSize {
 	}
 
 	// 1 centimeter =	28.3464567	PostScript	points
-	static var CM2POINTS(default, null):Float = 841.889763779528 / 29.7; // 28.3464567;
+	public static var CM2POINTS(default, null):Float = 841.889763779528 / 29.7; // 28.3464567;
 
 	// static var CM2POINTS(default, null):Float = 28.35; // 28.3464567;
 
-	public static function setValueInPoints(pagesize:String):{width:String, height:String} {
+	public static function setValueInPoints(pagesize:String):{width:Float, height:Float} {
 		var size:{width:Float, height:Float} = getPageSizeInCm(pagesize);
-		return {width: '${size.width * CM2POINTS}', height: '${size.height * CM2POINTS}'}
+		return {width: (size.width * CM2POINTS), height: (size.height * CM2POINTS)}
 	}
 
 	// Hoe groot is A0 formaat    84,1 cm x 118,9 cm    (841 mm x 1189 mm)
