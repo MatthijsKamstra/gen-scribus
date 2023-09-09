@@ -81,6 +81,8 @@ class Main {
 		scribus.setPageSize(_pageSize);
 		scribus.setMarginInMM(14, 14, 14, 14);
 		scribus.setBleedInMM(3, 3, 3, 3);
+		scribus.setHorizontalGuidesInMM([14, 148 - 14]);
+		scribus.setVerticalGuidesInMM([14, 148 - 14]);
 
 		scribus.pageWidth = _pageWidth;
 		scribus.pageHeight = _pageHeight;

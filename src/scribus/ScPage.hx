@@ -45,8 +45,6 @@ class ScPage {
 		this.xpos = XPOS;
 		this.ypos = YPOS;
 
-		log(xpos);
-
 		return '<PAGE
 			PAGEXPOS="${XPOS}"
 			PAGEYPOS="${YPOS}"

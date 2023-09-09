@@ -17,10 +17,12 @@ POC generating a scribus file with Haxe
 - [x] xpos ypos image
 - [ ] import text
 - [ ] update text
-- [ ] text input markdown
-- [ ] text input html
+- [x] text input odt
+- [x] text input markdown
+- [x] text input html
 - [ ] generate document based upon json (settings file)
 - [x] adding colors (rgb, cmyk)
+- [x] horizontal and vertical guides
 - [ ] updating title, author, etc
 - [ ] single page, facing page
 - [ ] resize image to correct scale (load image, get imagesize, calculate new scale)

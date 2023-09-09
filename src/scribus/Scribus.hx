@@ -119,6 +119,50 @@ class Scribus {
 	// 	doc.att.PAGEWIDTH = PageSize.setValueInPoints(pagesize).width;
 	// }
 
+	public function setVerticalGuidesInMM(arr:Array<Float>) {
+		var _guides = '';
+
+		for (i in 0...arr.length) {
+			var _arr = arr[i] * PageSize.MM2POINTS;
+			_guides += '${_arr} ';
+		}
+
+		// log(_guides);
+
+		// iterate over PAGE
+		for (c in doc.nodes.PAGE) {
+			// trace(c.att.Size);
+			c.att.VerticalGuides = '$_guides';
+		}
+		// iterate over MASTERPAGE
+		for (c in doc.nodes.MASTERPAGE) {
+			// trace(c.att.Size);
+			c.att.VerticalGuides = '$_guides';
+		}
+	}
+
+	public function setHorizontalGuidesInMM(arr:Array<Float>) {
+		var _guides = '';
+
+		for (i in 0...arr.length) {
+			var _arr = arr[i] * PageSize.MM2POINTS;
+			_guides += '${_arr} ';
+		}
+
+		// log(_guides);
+
+		// iterate over PAGE
+		for (c in doc.nodes.PAGE) {
+			// trace(c.att.Size);
+			c.att.HorizontalGuides = '$_guides';
+		}
+		// iterate over MASTERPAGE
+		for (c in doc.nodes.MASTERPAGE) {
+			// trace(c.att.Size);
+			c.att.HorizontalGuides = '$_guides';
+		}
+	}
+
 	public function setBleedInMM(left:Float = 0, right:Float = 0, top:Float = 0, bottom:Float = 0) {
 		var _left:Float = left * PageSize.MM2POINTS;
 		var _right:Float = right * PageSize.MM2POINTS;
