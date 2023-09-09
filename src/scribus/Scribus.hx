@@ -56,7 +56,7 @@ class Scribus {
 		// log(doc.att.PAGESIZE);
 		// log(doc.att.LANGUAGE);
 
-		addComment('[mck]');
+		addComment('[mck] start generation document');
 	}
 
 	function addComment(comment:String) {
@@ -104,6 +104,17 @@ class Scribus {
 		}
 	}
 
+	public function addImage(page:ScPage, path:String) {
+		var image = new ScImage(page, path);
+		image.width = pageWidth;
+		image.height = pageHeight;
+		image.path = path;
+
+		var root = _xml.firstElement();
+		var document = root.firstElement();
+		document.addChild(Xml.parse(image.toString()));
+	}
+
 	// function setPageWidth(pagesize:String) {
 	// 	doc.att.PAGEWIDTH = PageSize.setValueInPoints(pagesize).width;
 	// }
@@ -138,7 +149,10 @@ class Scribus {
 		doc.att.BORDERBOTTOM = '$_bottom';
 	}
 
-	public function addPage() {
+	public function addPage(alias:String = ''):ScPage {
+		if (alias != '')
+			addComment(alias);
+
 		var page = new ScPage();
 		page.size = pageSizeName;
 		page.width = pageWidth;
@@ -152,6 +166,8 @@ class Scribus {
 		var root = _xml.firstElement();
 		var document = root.firstElement();
 		document.addChild(Xml.parse(page.toString()));
+
+		return page;
 	}
 
 	public function toString():String {

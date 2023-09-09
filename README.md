@@ -8,10 +8,13 @@ POC generating a scribus file with Haxe
 - [x] regex door alle PAGEHEIGHT PAGEWIDTH
 - [x] change the language of the file
 - [x] add pages
+- [x] xpos ypos page
 - [x] change input to mm
-- [ ] change margins
-- [ ] import images
-- [ ] update images
+- [x] change margins
+- [x] create dummy png
+- [x] import images
+- [x] update images
+- [x] xpos ypos image
 - [ ] import text
 - [ ] update text
 - [ ] text input markdown
@@ -20,6 +23,7 @@ POC generating a scribus file with Haxe
 - [x] adding colors (rgb, cmyk)
 - [ ] updating title, author, etc
 - [ ] single page, facing page
+- [ ] resize image to correct scale (load image, get imagesize, calculate new scale)
 
 ## Pandoc
 

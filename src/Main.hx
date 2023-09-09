@@ -1,3 +1,4 @@
+import scribus.ScPage;
 import scribus.PageSize;
 import scribus.Locale;
 import scribus.Scribus;
@@ -84,13 +85,31 @@ class Main {
 		scribus.pageWidth = _pageWidth;
 		scribus.pageHeight = _pageHeight;
 
-		scribus.removePages(); // doesn't work at this moment
+		// scribus.removeMasterPages();
+		scribus.removePages();
 
-		scribus.addPage();
-		scribus.addPage();
-		scribus.addPage();
-		scribus.addPage();
-		scribus.addPage();
+		var page:ScPage = scribus.addPage('cover (right)');
+		scribus.addImage(page, '../assets/svg/snippets_piramide van Lencioni.png');
+
+		page = scribus.addPage('inner side cover (left)');
+		// log(page);
+
+		page = scribus.addPage('inhoud (right)');
+		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_4.png');
+
+		page = scribus.addPage('text (left)');
+		// log(page);
+		page = scribus.addPage('image (right)');
+		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_1.png');
+
+		page = scribus.addPage('text (left)');
+		page = scribus.addPage('image (right)');
+		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_2.png');
+
+		page = scribus.addPage('text (left)');
+		page = scribus.addPage('image (right)');
+		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_3.png');
+
 		// scribus.addPage();
 
 		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize}_${_language}.sla', scribus.toString());
