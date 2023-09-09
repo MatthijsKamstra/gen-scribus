@@ -4,9 +4,18 @@ echo 'Using pandoc.sh to convert .md to .docx/.html/.odt'
 
 
 
-pandoc -o assets/converted/open_vraag_00.docx -f markdown -t docx -V lang=nl assets/markdown/open_vraag_00.md
+# pandoc -o assets/converted/open_vraag_00.docx -f markdown -t docx -V lang=nl assets/markdown/open_vraag_00.md
 pandoc -o assets/converted/open_vraag_00.odt -f markdown -t odt -V lang=nl assets/markdown/open_vraag_00.md
-pandoc -o assets/converted/open_vraag_00.html -f markdown -t html -V lang=nl assets/markdown/open_vraag_00.md
+# pandoc -o assets/converted/open_vraag_00.html -f markdown -t html -V lang=nl assets/markdown/open_vraag_00.md
+
+
+# pandoc -o assets/converted/cheatsheet.rtf -f markdown -t rtf -V lang=nl assets/markdown/cheatsheet.md
+pandoc -o assets/converted/cheatsheet.odt -f markdown -t odt -V lang=nl assets/markdown/cheatsheet.md
+# pandoc -o assets/converted/cheatsheet.html -f markdown -t html -V lang=nl assets/markdown/cheatsheet.md
+# pandoc -o assets/converted/cheatsheet.docx -f markdown -t docx -V lang=nl assets/markdown/full_markdown.md
+
+
+
 
 # echo 'Step 0. Close LibreOffice'
 # echo '(it seems impossible to refresh a new document with the same name)'

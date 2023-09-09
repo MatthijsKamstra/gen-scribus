@@ -14,6 +14,7 @@ class PageSize {
 
 	// 1 centimeter =	28.3464567	PostScript	points
 	public static var CM2POINTS(default, null):Float = 841.889763779528 / 29.7; // 28.3464567;
+	public static var MM2POINTS(default, null):Float = 841.889763779528 / 297; // 28.3464567;
 
 	// static var CM2POINTS(default, null):Float = 28.35; // 28.3464567;
 

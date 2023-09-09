@@ -7,7 +7,9 @@ POC generating a scribus file with Haxe
 - [x] create scribus file in any size you want
 - [x] regex door alle PAGEHEIGHT PAGEWIDTH
 - [x] change the language of the file
-- [ ] add pages
+- [x] add pages
+- [x] change input to mm
+- [ ] change margins
 - [ ] import images
 - [ ] update images
 - [ ] import text
@@ -17,9 +19,15 @@ POC generating a scribus file with Haxe
 - [ ] generate document based upon json (settings file)
 - [x] adding colors (rgb, cmyk)
 - [ ] updating title, author, etc
-- [ ] change margins
 - [ ] single page, facing page
 
 ## Pandoc
 
-perhaps need to use pandoc, to convert markdown to a file that works for scribus
+Use pandoc, to convert markdown to a file that works for scribus
+
+see: [pandoc.sh](pandoc.sh)
+
+```bash
+# open terminal to the root of this repo
+sh pandoc.sh
+```

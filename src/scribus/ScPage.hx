@@ -1,18 +1,23 @@
 package scribus;
 
-class Page {
+class ScPage {
 	var pageWidth:Float = Default.PAGEWIDTH;
 	var pageHeight:Float = Default.PAGEHEIGHT;
 	var pageSize:String = Default.PAGESIZE;
 
-	static var pageNumber:Int = 0;
+	static var pageNumber:Int = -1; // want to start at zero (@see toString)
 
 	@:isVar public var size(get, set):String;
 	@:isVar public var width(get, set):Float;
 	@:isVar public var height(get, set):Float;
 
+	public var marginLeft:Float;
+	public var marginRight:Float;
+	public var marginTop:Float;
+	public var marginBottom:Float;
+
 	public function new() {
-		trace('Page');
+		// trace('Page');
 	}
 
 	function get_size():String {
@@ -41,18 +46,30 @@ class Page {
 
 	public function toString():String {
 		pageNumber++;
+
+		var _MNAM = 'Normal Right';
+		// 'Normal Left'
+		// 'Normal Right'
+		if (pageNumber % 2 == 0) {
+			// row = "-even";
+			_MNAM = 'Normal Right';
+		} else {
+			// row = "--odd";
+			_MNAM = 'Normal Left';
+		}
+
 		return '<PAGE
 			PAGEXPOS="695.276590551181"
 			PAGEYPOS="20.001"
 			PAGEWIDTH="${width}"
 			PAGEHEIGHT="${height}"
-			BORDERLEFT="40"
-			BORDERRIGHT="40"
-			BORDERTOP="40"
-			BORDERBOTTOM="40"
+			BORDERLEFT="${marginLeft}"
+			BORDERRIGHT="${marginRight}"
+			BORDERTOP="${marginTop}"
+			BORDERBOTTOM="${marginBottom}"
 			NUM="${pageNumber}"
 			NAM=""
-			MNAM="Normal"
+			MNAM="${_MNAM}"
 			Size="${size}"
 			Orientation="0"
 			LEFT="0"

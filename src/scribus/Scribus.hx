@@ -8,13 +8,19 @@ class Scribus {
 
 	var doc:Access;
 
-	@:isVar public var pageHeight(get, set):Float; // cm
-	@:isVar public var pageWidth(get, set):Float; // cm
+	@:isVar public var pageSizeName(get, set):String; // ''
+	@:isVar public var pageHeight(get, set):Float; // cm / mm
+	@:isVar public var pageWidth(get, set):Float; // cm / mm
+
+	@:isVar public var marginLeft(get, set):Float;
+	@:isVar public var marginRight(get, set):Float;
+	@:isVar public var marginTop(get, set):Float;
+	@:isVar public var marginBottom(get, set):Float;
 
 	public function new() {
 		info('Scribus');
 
-		var path = Folder.ROOT_FOLDER + '/assets/scribus_a4.sla';
+		var path = Folder.ROOT_FOLDER + '/assets/template_scribus_a4.sla';
 		if (sys.FileSystem.exists(path)) {
 			var str:String = sys.io.File.getContent(path);
 			_xml = Xml.parse(str);
@@ -49,6 +55,14 @@ class Scribus {
 		// // log(doc);
 		// log(doc.att.PAGESIZE);
 		// log(doc.att.LANGUAGE);
+
+		addComment('[mck]');
+	}
+
+	function addComment(comment:String) {
+		var root = _xml.firstElement();
+		var document = root.firstElement();
+		document.addChild(Xml.parse('<!-- ${comment} -->\n'));
 	}
 
 	public function addColorRGB(name:String, r:Int, g:Int, b:Int) {
@@ -68,7 +82,20 @@ class Scribus {
 	}
 
 	public function setPageSize(pagesize:String) {
+		pageSizeName = pagesize;
 		doc.att.PAGESIZE = pagesize;
+
+		// iterate over PAGE
+		for (c in doc.nodes.PAGE) {
+			// trace(c.att.Size);
+			c.att.Size = '$pagesize';
+		}
+		// iterate over MASTERPAGE
+		for (c in doc.nodes.MASTERPAGE) {
+			// trace(c.att.Size);
+			c.att.Size = '$pagesize';
+		}
+
 		if (PageSize.setValueInPoints(pagesize).width != 0.0) {
 			// setPageWidth(pagesize);
 			set_pageWidth(PageSize.setValueInPoints(pagesize).width);
@@ -80,67 +107,57 @@ class Scribus {
 	// function setPageWidth(pagesize:String) {
 	// 	doc.att.PAGEWIDTH = PageSize.setValueInPoints(pagesize).width;
 	// }
-	function get_pageWidth():Float {
-		// var v = Std.parseFloat(doc.att.PAGEWIDTH);
-		return pageWidth;
+
+	public function setBleedInMM(left:Float = 0, right:Float = 0, top:Float = 0, bottom:Float = 0) {
+		var _left:Float = left * PageSize.MM2POINTS;
+		var _right:Float = right * PageSize.MM2POINTS;
+		var _top:Float = top * PageSize.MM2POINTS;
+		var _bottom:Float = bottom * PageSize.MM2POINTS;
+
+		doc.att.BleedLeft = '$_left';
+		doc.att.BleedRight = '$_right';
+		doc.att.BleedTop = '$_top';
+		doc.att.BleedBottom = '$_bottom';
+		doc.att.showBleed = '1';
 	}
 
-	function set_pageWidth(value:Float):Float {
-		// doc.att.PAGEWIDTH = '$value';
+	public function setMarginInMM(left:Float = 14.111, right:Float = 14.111, top:Float = 14.111, bottom:Float = 14.111) {
+		var _left:Float = left * PageSize.MM2POINTS;
+		var _right:Float = right * PageSize.MM2POINTS;
+		var _top:Float = top * PageSize.MM2POINTS;
+		var _bottom:Float = bottom * PageSize.MM2POINTS;
 
-		var newValue:String = '$value';
-		var str = _xml.toString();
-		var regex = ~/PAGEWIDTH="[\d.]+"/g;
-		var replacedString = regex.replace(str, 'PAGEWIDTH="' + newValue + '"');
-		_xml = Xml.parse(replacedString);
+		marginLeft = _left;
+		marginRight = _right;
+		marginTop = _top;
+		marginBottom = _bottom;
 
-		init();
-		return pageWidth = value;
+		doc.att.BORDERLEFT = '$_left';
+		doc.att.BORDERRIGHT = '$_right';
+		doc.att.BORDERTOP = '$_top';
+		doc.att.BORDERBOTTOM = '$_bottom';
 	}
 
-	function get_pageHeight():Float {
-		// var v = Std.parseFloat(doc.att.PAGEHEIGHT);
-		return pageHeight;
-	}
-
-	function set_pageHeight(value:Float):Float {
-		// doc.att.PAGEHEIGHT = '$value';
-
-		var newValue:String = '$value';
-		var str = _xml.toString();
-		var regex = ~/PAGEHEIGHT="[\d.]+"/g;
-		var replacedString = regex.replace(str, 'PAGEHEIGHT="' + newValue + '"');
-		_xml = Xml.parse(replacedString);
-
-		return pageHeight = value;
-	}
-
-	public function addPage(pageSize:String, pageWidth:Float, pageHeight:Float) {
-		log('addpage');
-		// var page = '${doc.nodes.MASTERPAGE[0]}\n' //
-		// 	.replace('MASTERPAGE', 'PAGE') //
-		// 	.replace('MNAM=""', 'MNAM="Normal"') //
-		// 	.replace('NAM="Normal"', 'NAM=""');
-		// var root = _xml.firstElement();
-		// var document = root.firstElement();
-		// document.addChild(Xml.parse(page));
-		var page = new Page();
-		page.size = pageSize;
+	public function addPage() {
+		var page = new ScPage();
+		page.size = pageSizeName;
 		page.width = pageWidth;
 		page.height = pageHeight;
+
+		page.marginLeft = marginLeft;
+		page.marginRight = marginRight;
+		page.marginTop = marginTop;
+		page.marginBottom = marginBottom;
+
 		var root = _xml.firstElement();
 		var document = root.firstElement();
 		document.addChild(Xml.parse(page.toString()));
 	}
 
-	public function xml():String {
+	public function toString():String {
 		return _xml.toString();
 	}
 
-	/**
-	 *
-	 * werkt niet...
-	 */
 	public function removePages() {
 		for (c in doc.nodes.PAGE) {
 			// log(c.x.firstChild());
@@ -150,7 +167,104 @@ class Scribus {
 			log(_parent.removeChild(c.x));
 			// _parent.addChild(c.x);
 		}
+	}
 
-		log(_xml);
+	// ____________________________________ getter/setter ____________________________________
+
+	function get_pageSizeName():String {
+		return pageSizeName;
+	}
+
+	function set_pageSizeName(value:String):String {
+		return pageSizeName = value;
+	}
+
+	function get_pageWidth():Float {
+		// var v = Std.parseFloat(doc.att.PAGEWIDTH);
+		return pageWidth;
+	}
+
+	function set_pageWidth(value:Float):Float {
+		doc.att.PAGEWIDTH = '$value';
+
+		// var newValue:String = '$value';
+		// var str = _xml.toString();
+		// var regex = ~/PAGEWIDTH="[\d.]+"/g;
+		// var replacedString = regex.replace(str, 'PAGEWIDTH="' + newValue + '"');
+		// _xml = Xml.parse(replacedString);
+		// init();
+
+		// iterate over PAGE
+		for (c in doc.nodes.PAGE) {
+			// trace(c.att.Size);
+			c.att.PAGEWIDTH = '$value';
+		}
+		// iterate over MASTERPAGE
+		for (c in doc.nodes.MASTERPAGE) {
+			// trace(c.att.Size);
+			c.att.PAGEWIDTH = '$value';
+		}
+
+		return pageWidth = value;
+	}
+
+	function get_pageHeight():Float {
+		// var v = Std.parseFloat(doc.att.PAGEHEIGHT);
+		return pageHeight;
+	}
+
+	function set_pageHeight(value:Float):Float {
+		doc.att.PAGEHEIGHT = '$value';
+
+		// var newValue:String = '$value';
+		// var str = _xml.toString();
+		// var regex = ~/PAGEHEIGHT="[\d.]+"/g;
+		// var replacedString = regex.replace(str, 'PAGEHEIGHT="' + newValue + '"');
+		// _xml = Xml.parse(replacedString);
+
+		// iterate over PAGE
+		for (c in doc.nodes.PAGE) {
+			// trace(c.att.Size);
+			c.att.PAGEHEIGHT = '$value';
+		}
+		// iterate over MASTERPAGE
+		for (c in doc.nodes.MASTERPAGE) {
+			// trace(c.att.Size);
+			c.att.PAGEHEIGHT = '$value';
+		}
+
+		return pageHeight = value;
+	}
+
+	function get_marginBottom():Float {
+		return marginBottom;
+	}
+
+	function set_marginBottom(value:Float):Float {
+		return marginBottom = value;
+	}
+
+	function get_marginTop():Float {
+		return marginTop;
+	}
+
+	function set_marginTop(value:Float):Float {
+		return marginTop = value;
+	}
+
+	function get_marginRight():Float {
+		return marginRight;
+	}
+
+	function set_marginRight(value:Float):Float {
+		return marginRight = value;
+	}
+
+	function get_marginLeft():Float {
+		return marginLeft;
+	}
+
+	function set_marginLeft(value:Float):Float {
+		return marginLeft = value;
 	}
 }

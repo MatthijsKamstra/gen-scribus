@@ -43,7 +43,7 @@ class Main {
 		scribus.addColorRGB('test_mck_rgb', 0, 10, 20);
 		scribus.addColorCMYK('test_mck_cmyk', 0, 10, 20, 30);
 
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}_combo.sla', scribus.xml());
+		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}_combo.sla', scribus.toString());
 	}
 
 	function createScribusA4NL() {
@@ -54,7 +54,7 @@ class Main {
 		scribus.setPageSize(pagesize);
 		scribus.setLanguage(language);
 
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}.sla', scribus.xml());
+		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}.sla', scribus.toString());
 	}
 
 	function createScribusA5EN() {
@@ -65,32 +65,35 @@ class Main {
 		scribus.setPageSize(pagesize);
 		scribus.setLanguage(language);
 
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}.sla', scribus.xml());
+		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}.sla', scribus.toString());
 	}
 
 	function createScribusCustomNL() {
 		var _pageSize = 'Custom 148x148mm';
-		var _pageWidth = PageSize.CM2POINTS * 14.8;
-		var _pageHeight = PageSize.CM2POINTS * 14.8;
+		var _pageWidth = PageSize.MM2POINTS * 148;
+		var _pageHeight = PageSize.MM2POINTS * 148;
 
-		var language = Locale.NL;
+		var _language = Locale.NL;
 
 		var scribus = new Scribus();
-
+		scribus.setLanguage(_language);
 		scribus.setPageSize(_pageSize);
+		scribus.setMarginInMM(14, 14, 14, 14);
+		scribus.setBleedInMM(3, 3, 3, 3);
+
 		scribus.pageWidth = _pageWidth;
 		scribus.pageHeight = _pageHeight;
-		scribus.setLanguage(language);
 
 		scribus.removePages(); // doesn't work at this moment
 
-		scribus.addPage(_pageSize, _pageWidth, _pageHeight);
-		scribus.addPage(_pageSize, _pageWidth, _pageHeight);
-		scribus.addPage(_pageSize, _pageWidth, _pageHeight);
-		scribus.addPage(_pageSize, _pageWidth, _pageHeight);
-		scribus.addPage(_pageSize, _pageWidth, _pageHeight);
+		scribus.addPage();
+		scribus.addPage();
+		scribus.addPage();
+		scribus.addPage();
+		scribus.addPage();
+		// scribus.addPage();
 
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize}_${language}.sla', scribus.xml());
+		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize}_${_language}.sla', scribus.toString());
 	}
 
 	// https://regexr.com/
