@@ -83,6 +83,8 @@ class Main {
 		scribus.setBleedInMM(3, 3, 3, 3);
 		scribus.setHorizontalGuidesInMM([14, 148 - 14]);
 		scribus.setVerticalGuidesInMM([14, 148 - 14]);
+		scribus.isSnapToGuides(true);
+		scribus.isGuideLocked(true);
 
 		scribus.pageWidth = _pageWidth;
 		scribus.pageHeight = _pageHeight;
@@ -92,25 +94,29 @@ class Main {
 
 		var page:ScPage = scribus.addPage('cover (right)');
 		scribus.addImage(page, '../assets/svg/snippets_piramide van Lencioni.png');
+		// scribus.addText(page, '../assets/markdown/Piramide_van_Lencioni_01.md');
 
 		page = scribus.addPage('inner side cover (left)');
-		// log(page);
+		// scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_5.png');
+		// scribus.addText(page, '../assets/markdown/Piramide_van_Lencioni_01.md');
 
 		page = scribus.addPage('inhoud (right)');
 		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_4.png');
 
 		page = scribus.addPage('text (left)');
-		// log(page);
-		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_1.png');
+		log('Main | page.xpos: ' + page.xpos);
+		log('Main | page.ypos: ' + page.ypos);
+		scribus.addText(page, '../assets/markdown/Piramide_van_Lencioni_01.md');
+		// page = scribus.addPage('image (right)');
+		// scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_1.png');
 
-		page = scribus.addPage('text (left)');
-		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_2.png');
+		// page = scribus.addPage('text (left)');
+		// page = scribus.addPage('image (right)');
+		// scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_2.png');
 
-		page = scribus.addPage('text (left)');
-		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_3.png');
+		// page = scribus.addPage('text (left)');
+		// page = scribus.addPage('image (right)');
+		// scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_3.png');
 
 		// scribus.addPage();
 

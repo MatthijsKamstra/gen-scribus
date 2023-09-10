@@ -23,6 +23,7 @@ POC generating a scribus file with Haxe
 - [ ] generate document based upon json (settings file)
 - [x] adding colors (rgb, cmyk)
 - [x] horizontal and vertical guides
+- [x] snapToGuide toggle
 - [ ] updating title, author, etc
 - [ ] single page, facing page
 - [ ] resize image to correct scale (load image, get imagesize, calculate new scale)

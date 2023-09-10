@@ -104,15 +104,34 @@ class Scribus {
 		}
 	}
 
+	public function isSnapToGuides(bool:Bool) {
+		doc.att.SnapToGuides = '${(bool) ? '1' : '0'}';
+	}
+
+	public function isGuideLocked(bool:Bool) {
+		doc.att.GUIDELOCK = '${(bool) ? '1' : '0'}';
+	}
+
 	public function addImage(page:ScPage, path:String) {
-		var image = new ScImage(page, path);
-		image.width = pageWidth;
-		image.height = pageHeight;
-		image.path = path;
+		var el = new ScImage(page, path);
+		el.width = pageWidth;
+		el.height = pageHeight;
+		el.path = path;
 
 		var root = _xml.firstElement();
 		var document = root.firstElement();
-		document.addChild(Xml.parse(image.toString()));
+		document.addChild(Xml.parse(el.toString()));
+	}
+
+	public function addText(page:ScPage, path:String) {
+		var el = new ScText(page, path);
+		el.width = pageWidth;
+		el.height = pageHeight;
+		el.path = path;
+
+		var root = _xml.firstElement();
+		var document = root.firstElement();
+		document.addChild(Xml.parse(el.toString()));
 	}
 
 	// function setPageWidth(pagesize:String) {
@@ -224,8 +243,19 @@ class Scribus {
 			// log(c.x);
 			var _parent = c.x.parent;
 			// log(_parent);
-			log(_parent.removeChild(c.x));
-			// _parent.addChild(c.x);
+			// log(_parent.removeChild(c.x));
+			_parent.removeChild(c.x);
+		}
+	}
+
+	public function removeMasterPages() {
+		for (c in doc.nodes.MASTERPAGE) {
+			// log(c.x.firstChild());
+			// log(c.x);
+			var _parent = c.x.parent;
+			// log(_parent);
+			// log(_parent.removeChild(c.x));
+			_parent.removeChild(c.x);
 		}
 	}
 

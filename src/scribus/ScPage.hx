@@ -39,11 +39,17 @@ class ScPage {
 		} else {
 			// row = "--odd";
 			_MNAM = 'Normal Left';
+			XPOS = DEFAULT_XPOS;
 			YPOS += height + (2 * DEFAULT_YPOS);
 		}
 
 		this.xpos = XPOS;
 		this.ypos = YPOS;
+
+		log('ScPage | ${ID} | XPOS: ' + XPOS);
+		log('ScPage | ${ID} | YPOS: ' + YPOS);
+		log('ScPage | ${ID} | this.xpos: ' + this.xpos);
+		log('ScPage | ${ID} | this.ypos: ' + this.ypos);
 
 		return '<PAGE
 			PAGEXPOS="${XPOS}"
