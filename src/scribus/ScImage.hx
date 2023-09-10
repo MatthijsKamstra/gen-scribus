@@ -9,7 +9,7 @@ class ScImage {
 	@:isVar public var width(get, set):Float;
 	public var path:String;
 
-	var scaletype(default, null):Int = 1;
+	var scaletype(default, null):Int = 0; // 0 = "fit to frame"
 
 	public var xpos = 100.001;
 	public var ypos = 20.001;

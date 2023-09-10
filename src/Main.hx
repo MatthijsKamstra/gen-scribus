@@ -101,22 +101,22 @@ class Main {
 		// scribus.addText(page, '../assets/markdown/Piramide_van_Lencioni_01.md');
 
 		page = scribus.addPage('inhoud (right)');
-		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_4.png');
+		scribus.addImage(page, '../assets/png/a4_gray.png');
 
 		page = scribus.addPage('text (left)');
 		scribus.addText(page, '../assets/markdown/Piramide_van_Lencioni_01.md');
 		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_1.png');
+		scribus.addImage(page, '../assets/png/a4_green.png');
 
 		page = scribus.addPage('text (left)');
 		scribus.addText(page, '../assets/markdown/Piramide_van_Lencioni_01.md');
 		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_2.png');
+		scribus.addImage(page, '../assets/png/a4_pink.png');
 
 		page = scribus.addPage('text (left)');
 		scribus.addText(page, '../assets/markdown/Piramide_van_Lencioni_01.md');
 		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_3.png');
+		scribus.addImage(page, '../assets/png/a4_red.png');
 
 		page = scribus.addPage();
 		scribus.addImage(page, '../assets/svg/snippets_piramide van Lencioni.svg');
