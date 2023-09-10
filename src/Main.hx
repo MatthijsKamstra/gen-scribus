@@ -104,21 +104,22 @@ class Main {
 		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_4.png');
 
 		page = scribus.addPage('text (left)');
-		log('Main | page.xpos: ' + page.xpos);
-		log('Main | page.ypos: ' + page.ypos);
 		scribus.addText(page, '../assets/markdown/Piramide_van_Lencioni_01.md');
-		// page = scribus.addPage('image (right)');
-		// scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_1.png');
+		page = scribus.addPage('image (right)');
+		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_1.png');
 
-		// page = scribus.addPage('text (left)');
-		// page = scribus.addPage('image (right)');
-		// scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_2.png');
+		page = scribus.addPage('text (left)');
+		scribus.addText(page, '../assets/markdown/Piramide_van_Lencioni_01.md');
+		page = scribus.addPage('image (right)');
+		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_2.png');
 
-		// page = scribus.addPage('text (left)');
-		// page = scribus.addPage('image (right)');
-		// scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_3.png');
+		page = scribus.addPage('text (left)');
+		scribus.addText(page, '../assets/markdown/Piramide_van_Lencioni_01.md');
+		page = scribus.addPage('image (right)');
+		scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_3.png');
 
-		// scribus.addPage();
+		page = scribus.addPage();
+		scribus.addImage(page, '../assets/svg/snippets_piramide van Lencioni.svg');
 
 		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize}_${_language}.sla', scribus.toString());
 	}

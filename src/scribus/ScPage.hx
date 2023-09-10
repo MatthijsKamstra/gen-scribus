@@ -46,10 +46,10 @@ class ScPage {
 		this.xpos = XPOS;
 		this.ypos = YPOS;
 
-		log('ScPage | ${ID} | XPOS: ' + XPOS);
-		log('ScPage | ${ID} | YPOS: ' + YPOS);
-		log('ScPage | ${ID} | this.xpos: ' + this.xpos);
-		log('ScPage | ${ID} | this.ypos: ' + this.ypos);
+		// log('ScPage | ${ID} | XPOS: ' + XPOS);
+		// log('ScPage | ${ID} | YPOS: ' + YPOS);
+		// log('ScPage | ${ID} | this.xpos: ' + this.xpos);
+		// log('ScPage | ${ID} | this.ypos: ' + this.ypos);
 
 		return '<PAGE
 			PAGEXPOS="${XPOS}"

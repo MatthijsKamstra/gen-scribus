@@ -16,8 +16,8 @@ class ScText {
 		// trace('ScText');
 		this.id = page.id;
 
-		log('page.xpos: ' + page.xpos);
-		log('page.ypos: ' + page.ypos);
+		// log('page.xpos: ' + page.xpos);
+		// log('page.ypos: ' + page.ypos);
 
 		this.xpos = page.xpos;
 		this.ypos = page.ypos;
