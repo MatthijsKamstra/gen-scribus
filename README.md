@@ -2,6 +2,13 @@
 
 POC generating a scribus file with Haxe
 
+## Reason
+
+- Not possible to link to external text file (markdown)
+- Generate a quick and dirty document with text and image on a spread
+- automate some of the scribus features
+-
+
 ## Goals:
 
 - [x] create scribus file in any size you want
@@ -24,9 +31,10 @@ POC generating a scribus file with Haxe
 - [x] adding colors (rgb, cmyk)
 - [x] horizontal and vertical guides
 - [x] snapToGuide toggle
+- [x] fit image to frame
 - [ ] updating title, author, etc
 - [ ] single page, facing page
-- [ ] resize image to correct scale (load image, get imagesize, calculate new scale)
+- [x] resize image to correct scale (load image, get imagesize, calculate new scale) <- fit image to frame
 
 ## Pandoc
 

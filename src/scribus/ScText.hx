@@ -14,9 +14,18 @@ class ScText {
 	public var offsetx:Float = 0.0;
 	public var offsety:Float = 0.0;
 
+	var ITEXT:Array<String> = [];
+	var DEFAULT_STYLE = '<DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>';
+
 	public function new(page:ScPage, path:String) {
 		// trace('ScText');
 		this.id = page.id;
+
+		// read the file
+		var content = sys.io.File.getContent(path.replace('../', ''));
+		// trace(content);
+		var convert = new ScMarkdownConverter(content);
+		ITEXT = convert.itextArr;
 
 		// log('page.xpos: ' + page.xpos);
 		// log('page.ypos: ' + page.ypos);
@@ -72,8 +81,8 @@ class ScText {
 			NEXTITEM="-1"
 			BACKITEM="-1">
             <StoryText>
-                <DefaultStyle/>
-				<ITEXT CH="text"/>
+                ${DEFAULT_STYLE}
+				${ITEXT.join('\n')}
                 <trail/>
             </StoryText>
         </PAGEOBJECT>\n';

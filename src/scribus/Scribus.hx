@@ -126,8 +126,6 @@ class Scribus {
 	public function addText(page:ScPage, path:String) {
 		var el = new ScText(page, path);
 
-		trace(marginLeft);
-
 		el.offsetx = marginLeft;
 		el.offsety = marginTop;
 		el.width = pageWidth - marginLeft - marginRight;
