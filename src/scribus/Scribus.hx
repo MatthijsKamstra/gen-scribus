@@ -125,8 +125,13 @@ class Scribus {
 
 	public function addText(page:ScPage, path:String) {
 		var el = new ScText(page, path);
-		el.width = pageWidth;
-		el.height = pageHeight;
+
+		trace(marginLeft);
+
+		el.offsetx = marginLeft;
+		el.offsety = marginTop;
+		el.width = pageWidth - marginLeft - marginRight;
+		el.height = pageHeight - marginTop - marginBottom;
 		el.path = path;
 
 		var root = _xml.firstElement();

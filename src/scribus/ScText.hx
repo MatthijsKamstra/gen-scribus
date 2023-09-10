@@ -11,6 +11,8 @@ class ScText {
 
 	public var xpos = 100.001;
 	public var ypos = 20.001;
+	public var offsetx:Float = 0.0;
+	public var offsety:Float = 0.0;
 
 	public function new(page:ScPage, path:String) {
 		// trace('ScText');
@@ -18,12 +20,15 @@ class ScText {
 
 		// log('page.xpos: ' + page.xpos);
 		// log('page.ypos: ' + page.ypos);
+		// log(offsetx);
 
 		this.xpos = page.xpos;
 		this.ypos = page.ypos;
 	}
 
 	public function toString():String {
+		this.xpos += offsetx;
+		this.ypos += offsety;
 		return '<PAGEOBJECT
 			XPOS="${xpos}"
 			YPOS="${ypos}"
