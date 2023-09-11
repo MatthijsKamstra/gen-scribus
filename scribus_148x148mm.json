@@ -1,0 +1,188 @@
+{
+  "document": {
+    "author": "Matthijs Kamstra",
+    "language": "nl",
+    "pageName": "Custom boo",
+    "width": { "unit": "mm", "value": 200 },
+    "height": { "unit": "mm", "value": 100 },
+    "margins": [
+      { "dir": "top", "unit": "mm", "value": 20 },
+      { "dir": "bottom", "unit": "mm", "value": 20 },
+      { "dir": "left", "unit": "mm", "value": 20 },
+      { "dir": "right", "unit": "mm", "value": 20 }
+    ],
+    "guides": [
+      { "dir": "top", "unit": "mm", "value": 20 },
+      { "dir": "bottom", "unit": "mm", "value": 20 },
+      { "dir": "left", "unit": "mm", "value": 20 },
+      { "dir": "right", "unit": "mm", "value": 20 }
+    ],
+    "bleeds": [
+      { "dir": "top", "unit": "mm", "value": 3 },
+      { "dir": "bottom", "unit": "mm", "value": 3 },
+      { "dir": "left", "unit": "mm", "value": 3 },
+      { "dir": "right", "unit": "mm", "value": 3 }
+    ],
+    "guideSnap": true,
+    "guideLocked": true
+  },
+  "pages": [
+    {
+      "left": {
+        "_alias": "text (left)",
+        "texts": [
+          {
+            "path": "assets/markdown/test_heading.md",
+            "x": { "unit": "mm", "value": 22 },
+            "y": { "unit": "mm", "value": 22 },
+            "width": { "unit": "mm", "value": 22 },
+            "height": { "unit": "mm", "value": 22 }
+          }
+        ]
+      },
+      "right": {
+        "_alias": "image (right)",
+        "images": [
+          {
+            "path": "assets/png/a4_green.png",
+            "x": { "unit": "mm", "value": 0 },
+            "y": { "unit": "mm", "value": 0 },
+            "width": { "unit": "mm", "value": 200 },
+            "height": { "unit": "mm", "value": 50 }
+          },
+          {
+            "path": "assets/png/a4_blue.png",
+            "x": { "unit": "mm", "value": 0 },
+            "y": { "unit": "mm", "value": 50 },
+            "width": { "unit": "mm", "value": 200 },
+            "height": { "unit": "mm", "value": 50 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "text (left)",
+        "texts": [
+          {
+            "path": "assets/markdown/test_simple.md",
+            "x": { "unit": "mm", "value": 22 },
+            "y": { "unit": "mm", "value": 22 },
+            "width": { "unit": "mm", "value": 22 },
+            "height": { "unit": "mm", "value": 22 }
+          }
+        ]
+      },
+      "right": {
+        "_alias": "image (right)",
+        "images": [
+          {
+            "path": "assets/png/a4_red.png",
+            "x": { "unit": "mm", "value": 0 },
+            "y": { "unit": "mm", "value": 0 },
+            "width": { "unit": "mm", "value": 200 },
+            "height": { "unit": "mm", "value": 100 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "text (left)",
+        "texts": [
+          {
+            "path": "assets/markdown/Piramide_van_Lencioni_01.md",
+            "x": { "unit": "mm", "value": 22 },
+            "y": { "unit": "mm", "value": 22 },
+            "width": { "unit": "mm", "value": 22 },
+            "height": { "unit": "mm", "value": 22 }
+          }
+        ]
+      },
+      "right": {
+        "_alias": "image (right)",
+        "images": [
+          {
+            "path": "assets/png/a4_yellow.png",
+            "x": { "unit": "mm", "value": 0 },
+            "y": { "unit": "mm", "value": 0 },
+            "width": { "unit": "mm", "value": 200 },
+            "height": { "unit": "mm", "value": 100 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "text (left)",
+        "texts": [
+          {
+            "path": "assets/markdown/open_vraag_00.md",
+            "x": { "unit": "mm", "value": 22 },
+            "y": { "unit": "mm", "value": 22 },
+            "width": { "unit": "mm", "value": 22 },
+            "height": { "unit": "mm", "value": 22 }
+          }
+        ]
+      },
+      "right": {
+        "_alias": "image (right)",
+        "images": [
+          {
+            "path": "assets/png/a4_pink.png",
+            "x": { "unit": "mm", "value": 0 },
+            "y": { "unit": "mm", "value": 0 },
+            "width": { "unit": "mm", "value": 200 },
+            "height": { "unit": "mm", "value": 100 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "text (left)",
+        "texts": [
+          {
+            "path": "assets/markdown/maslow.md",
+            "x": { "unit": "mm", "value": 22 },
+            "y": { "unit": "mm", "value": 22 },
+            "width": { "unit": "mm", "value": 22 },
+            "height": { "unit": "mm", "value": 22 }
+          }
+        ]
+      },
+      "right": {
+        "_alias": "image (right)",
+        "images": [
+          {
+            "path": "assets/png/a4_gray.png",
+            "x": { "unit": "mm", "value": 0 },
+            "y": { "unit": "mm", "value": 0 },
+            "width": { "unit": "mm", "value": 200 },
+            "height": { "unit": "mm", "value": 100 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "cover last page"
+      },
+      "right": {}
+    },
+    {
+      "left": {},
+      "right": {
+        "_alias": "cover (right)"
+      }
+    },
+    {
+      "left": {
+        "_alias": "inside cover (left)"
+      },
+      "right": {
+        "_alias": "inhoud (right)"
+      }
+    }
+  ]
+}

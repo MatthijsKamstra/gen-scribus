@@ -4,6 +4,8 @@ POC: generating a [Scribus](https://www.scribus.net/) file via [Haxe](https://ha
 
 ## temp fix
 
+haxe is acting up...
+
 ```bash
 haxe -v --wait 6000
 ```
@@ -32,10 +34,16 @@ haxe -v --wait 6000
 - [x] use UUID in nodes (doesn't work.. is cleaned after save in Scribus)
 - [x] import text
 - [ ] custom markdown converter
-- [ ] update text (how to find? use UUID)
+  - [x] heading
+  - [x] bold
+  - [x] italic
+  - [ ] bold italic
+  - [ ] quote / block quote
+- [x] update text (how to find? use UUID, doesn't work)
 - [x] text input odt
 - [x] text input markdown
 - [x] text input html
+- [x] create json (settings file)
 - [ ] generate document based upon json (settings file)
 - [x] adding colors (rgb, cmyk)
 - [x] horizontal and vertical guides

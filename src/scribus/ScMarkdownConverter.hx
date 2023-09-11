@@ -8,7 +8,7 @@ class ScMarkdownConverter {
 	public var itextArr(default, null):Array<String> = [];
 
 	public function new(content:String) {
-		trace('ScMarkdownConverter');
+		// trace('ScMarkdownConverter');
 		this.content = content;
 		this.itextArr = [];
 		convert();
@@ -34,7 +34,7 @@ class ScMarkdownConverter {
 		if (matches.length > 0) {
 			for (i in 0...matches.length) {
 				var match = matches[i];
-				str = str.replace(match, '"/><ITEXT CPARENT="Text5_Bold" CH="${match.replace('**', '')}"/><ITEXT CH="');
+				str = str.replace(match, '"/>\n<ITEXT CPARENT="Text5_Bold" CH="${match.replace('**', '')}"/>\n<ITEXT CH="');
 			}
 		}
 		return str;
@@ -45,7 +45,7 @@ class ScMarkdownConverter {
 		if (matches.length > 0) {
 			for (i in 0...matches.length) {
 				var match = matches[i];
-				str = str.replace(match, '"/><ITEXT CPARENT="Text5_Italic" CH="${match.replace('_', '')}"/><ITEXT CH="');
+				str = str.replace(match, '"/>\n<ITEXT CPARENT="Text5_Italic" CH="${match.replace('_', '')}"/>\n<ITEXT CH="');
 			}
 		}
 		return str;
