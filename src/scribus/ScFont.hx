@@ -36,6 +36,6 @@ class ScFont {
 			SCALEV="100"
 			BASEO="0"
 			KERN="0"
-			LANGUAGE="en_GB"/>\n';
+			LANGUAGE="nl"/>\n';
 	}
 }

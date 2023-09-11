@@ -89,14 +89,18 @@ class Main {
 		scribus.pageWidth = _pageWidth;
 		scribus.pageHeight = _pageHeight;
 
-		scribus.defaultFont('Titillium Web Regular', 12);
+		scribus.removeStyle();
 
-		scribus.addStyle('Text3_Heading 1', 24);
-		scribus.addStyle('Text3_Heading 2', 22);
-		scribus.addStyle('Text3_Heading 3', 20);
-		scribus.addStyle('Text3_Heading 4', 18);
-		scribus.addStyle('Text3_Heading 5', 16);
-		scribus.addStyle('Text3_Heading 6', 14);
+		// scribus.defaultFont('Titillium Web Regular', 11);
+		// scribus.addDefaultStyle('Titillium Web Regular', 11);
+		// scribus.addStyle('Text3_Heading 1', 24);
+		// scribus.addStyle('Text3_Heading 2', 20);
+		// scribus.addStyle('Text3_Heading 3', 18);
+		// scribus.addStyle('Text3_Heading 4', 16);
+		// scribus.addStyle('Text3_Heading 5', 14);
+		// scribus.addStyle('Text3_Heading 6', 12);
+
+		scribus.dumpStyle();
 
 		// scribus.removeMasterPages();
 		scribus.removePages();
@@ -118,12 +122,12 @@ class Main {
 		scribus.addImage(page, '../assets/png/a4_green.png');
 
 		page = scribus.addPage('text (left)');
-		scribus.addText(page, '../assets/markdown/simple.md');
+		scribus.addText(page, '../assets/markdown/maslow.md');
 		page = scribus.addPage('image (right)');
 		scribus.addImage(page, '../assets/png/a4_pink.png');
 
 		page = scribus.addPage('text (left)');
-		scribus.addText(page, '../assets/markdown/simple.md');
+		scribus.addText(page, '../assets/markdown/test_simple.md');
 		page = scribus.addPage('image (right)');
 		scribus.addImage(page, '../assets/png/a4_red.png');
 

@@ -1,5 +1,7 @@
 package scribus;
 
+import utils.RegEx;
+
 class ScMarkdownConverter {
 	var content:String;
 
@@ -18,9 +20,35 @@ class ScMarkdownConverter {
 		for (i in 0...arr.length) {
 			var _arr = arr[i];
 			// trace(_arr);
+			if (_arr == '')
+				continue; // block empty line
 			var str = extractHeading(_arr);
+			str = extractBold(str);
+			str = extractItalic(str);
 			itextArr.push(str);
 		}
+	}
+
+	function extractBold(str:String) {
+		var matches = RegEx.getMatches(RegEx.boldPattern, content);
+		if (matches.length > 0) {
+			for (i in 0...matches.length) {
+				var match = matches[i];
+				str = str.replace(match, '"/><ITEXT CPARENT="Text5_Bold" CH="${match.replace('**', '')}"/><ITEXT CH="');
+			}
+		}
+		return str;
+	}
+
+	function extractItalic(str:String) {
+		var matches = RegEx.getMatches(RegEx.italicPattern, content);
+		if (matches.length > 0) {
+			for (i in 0...matches.length) {
+				var match = matches[i];
+				str = str.replace(match, '"/><ITEXT CPARENT="Text5_Italic" CH="${match.replace('_', '')}"/><ITEXT CH="');
+			}
+		}
+		return str;
 	}
 
 	function extractHeading(str:String):String {
@@ -38,38 +66,27 @@ class ScMarkdownConverter {
 			<ITEXT CH="h6 Heading"/>
 			<para PARENT="Text3_Heading 6"/>
 		 */
+
 		var para = '';
 		var text = str;
-		var hash = '######';
-		if (str.startsWith(hash)) {
-			para = Const.HEADING6;
-			text = text.replace(hash, '').trim();
+		var hashLevels = ['######', '#####', '####', '###', '##', '#'];
+		var styleLevels = [
+			'Text3_Heading 6',
+			'Text3_Heading 5',
+			'Text3_Heading 4',
+			'Text3_Heading 3',
+			'Text3_Heading 2',
+			'Text3_Heading 1'
+		];
+
+		for (hash in hashLevels) {
+			if (str.startsWith(hash)) {
+				para = "Text3_Heading " + (hash.length);
+				text = text.replace(hash, '').trim();
+				break; // Stop processing after the first heading is found
+			}
 		}
-		hash = '#####';
-		if (str.startsWith(hash)) {
-			para = Const.HEADING5;
-			text = text.replace(hash, '').trim();
-		}
-		hash = '####';
-		if (str.startsWith(hash)) {
-			para = Const.HEADING4;
-			text = text.replace(hash, '').trim();
-		}
-		hash = '###';
-		if (str.startsWith(hash)) {
-			para = Const.HEADING3;
-			text = text.replace(hash, '').trim();
-		}
-		hash = '##';
-		if (str.startsWith(hash)) {
-			para = Const.HEADING2;
-			text = text.replace(hash, '').trim();
-		}
-		hash = '#';
-		if (str.startsWith(hash)) {
-			para = Const.HEADING1;
-			text = text.replace(hash, '').trim();
-		}
+
 		return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
 	}
 }
