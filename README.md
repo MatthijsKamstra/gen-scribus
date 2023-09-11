@@ -1,13 +1,14 @@
 # gen-scribus
 
-POC generating a scribus file with Haxe
+POC: generating a [Scribus](https://www.scribus.net/) file via [Haxe](https://haxe.org/)
 
 ## Reason
 
-- Not possible to link to external text file (markdown)
+- Not possible to link (and update) to external text file (markdown)
 - Generate a quick and dirty document with text and image on a spread
-- automate some of the scribus features
--
+- Automate some of the scribus features
+- Not possible to use commandline to generate file
+- Not possible to update document (with external file and/or input)
 
 ## Goals:
 
@@ -22,8 +23,9 @@ POC generating a scribus file with Haxe
 - [x] import images
 - [x] update images
 - [x] xpos ypos image
+- [x] use UUID in nodes (doesn't work.. is cleaned after save in Scribus)
 - [ ] import text
-- [ ] update text
+- [ ] update text (how to find? use UUID)
 - [x] text input odt
 - [x] text input markdown
 - [x] text input html

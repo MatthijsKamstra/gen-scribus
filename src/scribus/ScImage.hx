@@ -1,5 +1,6 @@
 package scribus;
 
+import utils.UUID;
 import utils.ID;
 
 class ScImage {
@@ -27,6 +28,7 @@ class ScImage {
 
 	public function toString():String {
 		return '<PAGEOBJECT
+			uuid="${UUID.uuid()}"
 			XPOS="${xpos}"
 			YPOS="${ypos}"
 			OwnPage="${id}"

@@ -1,5 +1,7 @@
 package scribus;
 
+import utils.UUID;
+
 class ScPage {
 	final DEFAULT_XPOS = 100.001;
 	final DEFAULT_YPOS = 20.001;
@@ -52,6 +54,7 @@ class ScPage {
 		// log('ScPage | ${ID} | this.ypos: ' + this.ypos);
 
 		return '<PAGE
+			UUID="${UUID.uuid()}"
 			PAGEXPOS="${XPOS}"
 			PAGEYPOS="${YPOS}"
 			PAGEWIDTH="${width}"

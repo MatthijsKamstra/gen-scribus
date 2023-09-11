@@ -1,5 +1,6 @@
 package scribus;
 
+import utils.UUID;
 import utils.ID;
 
 class ScText {
@@ -39,6 +40,7 @@ class ScText {
 		this.xpos += offsetx;
 		this.ypos += offsety;
 		return '<PAGEOBJECT
+			uuid="${UUID.uuid()}"
 			XPOS="${xpos}"
 			YPOS="${ypos}"
 			OwnPage="${id}"
