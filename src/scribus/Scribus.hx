@@ -60,21 +60,15 @@ class Scribus {
 	}
 
 	function addComment(comment:String) {
-		var root = _xml.firstElement();
-		var document = root.firstElement();
-		document.addChild(Xml.parse('<!-- ${comment} -->\n'));
+		add2document('<!-- ${comment} -->\n');
 	}
 
 	public function addColorRGB(name:String, r:Int, g:Int, b:Int) {
-		var root = _xml.firstElement();
-		var document = root.firstElement();
-		document.addChild(Xml.parse('<COLOR SPACE="RGB" NAME="${name}"R="${r}" G="${g}" B="${b}"/>\n'));
+		add2document('<COLOR SPACE="RGB" NAME="${name}"R="${r}" G="${g}" B="${b}"/>\n');
 	}
 
 	public function addColorCMYK(name:String, c:Int, m:Int, y:Int, k:Int) {
-		var root = _xml.firstElement();
-		var document = root.firstElement();
-		document.addChild(Xml.parse('<COLOR SPACE="CMYK" NAME="${name}" C="${c}" M="${m}" Y="${y}" K="${k}"/>\n'));
+		add2document('<COLOR SPACE="CMYK" NAME="${name}" C="${c}" M="${m}" Y="${y}" K="${k}"/>\n');
 	}
 
 	public function setLanguage(s:String) {
@@ -118,9 +112,7 @@ class Scribus {
 		el.height = pageHeight;
 		el.path = path;
 
-		var root = _xml.firstElement();
-		var document = root.firstElement();
-		document.addChild(Xml.parse(el.toString()));
+		add2document(el.toString());
 	}
 
 	public function addText(page:ScPage, path:String) {
@@ -132,9 +124,7 @@ class Scribus {
 		el.height = pageHeight - marginTop - marginBottom;
 		el.path = path;
 
-		var root = _xml.firstElement();
-		var document = root.firstElement();
-		document.addChild(Xml.parse(el.toString()));
+		add2document(el.toString());
 	}
 
 	// function setPageWidth(pagesize:String) {
@@ -229,16 +219,38 @@ class Scribus {
 		page.marginTop = marginTop;
 		page.marginBottom = marginBottom;
 
-		var root = _xml.firstElement();
-		var document = root.firstElement();
-		document.addChild(Xml.parse(page.toString()));
+		add2document(page.toString());
 
 		return page;
 	}
 
+	public function defaultFont(name:String, fontsize:Int) {
+		var font = new ScFont(name, fontsize);
+		add2document(font.toString());
+		return font;
+	}
+
+	public function addStyle(name:String, fontsize:Int) {
+		var style = new ScStyle(name, fontsize);
+
+		add2document(style.toString());
+
+		return style;
+	}
+
+	private function add2document(str:String) {
+		var root = _xml.firstElement();
+		var document = root.firstElement();
+		document.addChild(Xml.parse(str));
+	}
+
+	// ____________________________________ to string ____________________________________
+
 	public function toString():String {
 		return _xml.toString();
 	}
+
+	// ____________________________________ remove ____________________________________
 
 	public function removePages() {
 		for (c in doc.nodes.PAGE) {

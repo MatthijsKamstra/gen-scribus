@@ -89,6 +89,15 @@ class Main {
 		scribus.pageWidth = _pageWidth;
 		scribus.pageHeight = _pageHeight;
 
+		scribus.defaultFont('Titillium Web Regular', 12);
+
+		scribus.addStyle('Text3_Heading 1', 24);
+		scribus.addStyle('Text3_Heading 2', 22);
+		scribus.addStyle('Text3_Heading 3', 20);
+		scribus.addStyle('Text3_Heading 4', 18);
+		scribus.addStyle('Text3_Heading 5', 16);
+		scribus.addStyle('Text3_Heading 6', 14);
+
 		// scribus.removeMasterPages();
 		scribus.removePages();
 
@@ -104,7 +113,7 @@ class Main {
 		scribus.addImage(page, '../assets/png/a4_gray.png');
 
 		page = scribus.addPage('text (left)');
-		scribus.addText(page, '../assets/markdown/simple.md');
+		scribus.addText(page, '../assets/markdown/test_heading.md');
 		page = scribus.addPage('image (right)');
 		scribus.addImage(page, '../assets/png/a4_green.png');
 

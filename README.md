@@ -24,7 +24,8 @@ POC: generating a [Scribus](https://www.scribus.net/) file via [Haxe](https://ha
 - [x] update images
 - [x] xpos ypos image
 - [x] use UUID in nodes (doesn't work.. is cleaned after save in Scribus)
-- [ ] import text
+- [x] import text
+- [ ] custom markdown converter
 - [ ] update text (how to find? use UUID)
 - [x] text input odt
 - [x] text input markdown
