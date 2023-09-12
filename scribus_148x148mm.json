@@ -2,34 +2,48 @@
   "document": {
     "author": "Matthijs Kamstra",
     "language": "nl",
-    "pageName": "Custom boo",
+    "pageName": "Custom Boo",
     "width": { "unit": "mm", "value": 200 },
-    "height": { "unit": "mm", "value": 100 },
+    "height": { "unit": "mm", "value": 150 },
     "margins": [
-      { "dir": "top", "unit": "mm", "value": 20 },
-      { "dir": "bottom", "unit": "mm", "value": 20 },
-      { "dir": "left", "unit": "mm", "value": 20 },
-      { "dir": "right", "unit": "mm", "value": 20 }
+      { "dir": "left", "unit": "mm", "value": 50 },
+      { "dir": "right", "unit": "mm", "value": 70 },
+      { "dir": "top", "unit": "mm", "value": 10 },
+      { "dir": "bottom", "unit": "mm", "value": 30 }
     ],
     "guides": [
-      { "dir": "top", "unit": "mm", "value": 20 },
-      { "dir": "bottom", "unit": "mm", "value": 20 },
       { "dir": "left", "unit": "mm", "value": 20 },
-      { "dir": "right", "unit": "mm", "value": 20 }
+      { "dir": "right", "unit": "mm", "value": 20 },
+      { "dir": "top", "unit": "mm", "value": 20 },
+      { "dir": "bottom", "unit": "mm", "value": 20 }
     ],
     "bleeds": [
-      { "dir": "top", "unit": "mm", "value": 3 },
-      { "dir": "bottom", "unit": "mm", "value": 3 },
       { "dir": "left", "unit": "mm", "value": 3 },
-      { "dir": "right", "unit": "mm", "value": 3 }
+      { "dir": "right", "unit": "mm", "value": 3 },
+      { "dir": "top", "unit": "mm", "value": 3 },
+      { "dir": "bottom", "unit": "mm", "value": 3 }
     ],
     "guideSnap": true,
     "guideLocked": true
   },
   "pages": [
     {
+      "left": {},
+      "right": {
+        "_alias": "cover (right) 1"
+      }
+    },
+    {
       "left": {
-        "_alias": "text (left)",
+        "_alias": "inside cover (left) 2"
+      },
+      "right": {
+        "_alias": "inhoud (right) 3"
+      }
+    },
+    {
+      "left": {
+        "_alias": "text (left) 4",
         "texts": [
           {
             "path": "assets/markdown/test_heading.md",
@@ -41,7 +55,7 @@
         ]
       },
       "right": {
-        "_alias": "image (right)",
+        "_alias": "image (right) 5",
         "images": [
           {
             "path": "assets/png/a4_green.png",
@@ -62,7 +76,7 @@
     },
     {
       "left": {
-        "_alias": "text (left)",
+        "_alias": "text (left) 6",
         "texts": [
           {
             "path": "assets/markdown/test_simple.md",
@@ -74,7 +88,7 @@
         ]
       },
       "right": {
-        "_alias": "image (right)",
+        "_alias": "image (right) 7",
         "images": [
           {
             "path": "assets/png/a4_red.png",
@@ -88,7 +102,7 @@
     },
     {
       "left": {
-        "_alias": "text (left)",
+        "_alias": "text (left) 8",
         "texts": [
           {
             "path": "assets/markdown/Piramide_van_Lencioni_01.md",
@@ -100,7 +114,7 @@
         ]
       },
       "right": {
-        "_alias": "image (right)",
+        "_alias": "image (right) 9",
         "images": [
           {
             "path": "assets/png/a4_yellow.png",
@@ -114,7 +128,7 @@
     },
     {
       "left": {
-        "_alias": "text (left)",
+        "_alias": "text (left) 10",
         "texts": [
           {
             "path": "assets/markdown/open_vraag_00.md",
@@ -126,7 +140,7 @@
         ]
       },
       "right": {
-        "_alias": "image (right)",
+        "_alias": "image (right) 11",
         "images": [
           {
             "path": "assets/png/a4_pink.png",
@@ -140,7 +154,7 @@
     },
     {
       "left": {
-        "_alias": "text (left)",
+        "_alias": "text (left) 12",
         "texts": [
           {
             "path": "assets/markdown/maslow.md",
@@ -152,7 +166,7 @@
         ]
       },
       "right": {
-        "_alias": "image (right)",
+        "_alias": "image (right) 13",
         "images": [
           {
             "path": "assets/png/a4_gray.png",
@@ -166,23 +180,9 @@
     },
     {
       "left": {
-        "_alias": "cover last page"
+        "_alias": "cover last page 14"
       },
       "right": {}
-    },
-    {
-      "left": {},
-      "right": {
-        "_alias": "cover (right)"
-      }
-    },
-    {
-      "left": {
-        "_alias": "inside cover (left)"
-      },
-      "right": {
-        "_alias": "inhoud (right)"
-      }
     }
   ]
 }

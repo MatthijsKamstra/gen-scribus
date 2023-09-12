@@ -1,3 +1,4 @@
+import scribus.ScSettings;
 import haxe.display.JsonModuleTypes.JsonDoc;
 import haxe.Json;
 import scribus.ScPage;
@@ -37,77 +38,7 @@ class Main {
 	}
 
 	function useSettings(path:String) {
-		// read the file
-		var content = sys.io.File.getContent(path);
-		var json:AST.HxSettingsObj = Json.parse(content);
-		// log(json.document.author);
-
-		var _pageSize = json.document.pageName;
-		var _pageLanguage = json.document.language;
-		var _pageWidth = PageSize.MM2POINTS * json.document.width.value;
-		var _pageHeight = PageSize.MM2POINTS * json.document.height.value;
-
-		// var mt = json.document.margins.
-
-		var scribus = new Scribus();
-		scribus.setLanguage(_pageLanguage);
-		scribus.setPageSize(_pageSize);
-		scribus.isSnapToGuides(json.document.guideSnap);
-		scribus.isGuideLocked(json.document.guideLocked);
-		scribus.setMarginInMM(14, 14, 14, 14);
-		scribus.setBleedInMM(3, 3, 3, 3);
-		scribus.setHorizontalGuidesInMM([14, 148 - 14]);
-		scribus.setVerticalGuidesInMM([14, 148 - 14]);
-
-		scribus.pageWidth = _pageWidth;
-		scribus.pageHeight = _pageHeight;
-
-		scribus.removeStyle();
-
-		// scribus.defaultFont('Titillium Web Regular', 11);
-		// scribus.addDefaultStyle('Titillium Web Regular', 11);
-		// scribus.addStyle('Text3_Heading 1', 24);
-		// scribus.addStyle('Text3_Heading 2', 20);
-		// scribus.addStyle('Text3_Heading 3', 18);
-		// scribus.addStyle('Text3_Heading 4', 16);
-		// scribus.addStyle('Text3_Heading 5', 14);
-		// scribus.addStyle('Text3_Heading 6', 12);
-
-		scribus.dumpStyle();
-
-		// scribus.removeMasterPages();
-		scribus.removePages();
-
-		var page:ScPage = scribus.addPage('cover (right)');
-		scribus.addImage(page, '../assets/svg/snippets_piramide van Lencioni.png');
-		// scribus.addText(page, '../assets/markdown/simple.md');
-
-		page = scribus.addPage('inner side cover (left)');
-		// scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_5.png');
-		// scribus.addText(page, '../assets/markdown/simple.md');
-
-		page = scribus.addPage('inhoud (right)');
-		scribus.addImage(page, '../assets/png/a4_gray.png');
-
-		page = scribus.addPage('text (left)');
-		scribus.addText(page, '../assets/markdown/test_heading.md');
-		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_green.png');
-
-		page = scribus.addPage('text (left)');
-		scribus.addText(page, '../assets/markdown/maslow.md');
-		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_pink.png');
-
-		page = scribus.addPage('text (left)');
-		scribus.addText(page, '../assets/markdown/test_simple.md');
-		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_red.png');
-
-		page = scribus.addPage();
-		scribus.addImage(page, '../assets/svg/snippets_piramide van Lencioni.svg');
-
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize}_${_language}.sla', scribus.toString());
+		var settings = new ScSettings(path);
 	}
 
 	function createScribus() {
@@ -116,7 +47,7 @@ class Main {
 
 		var scribus = new Scribus();
 
-		scribus.setPageSize(pagesize);
+		scribus.setPageName(pagesize);
 		scribus.setLanguage(language);
 
 		scribus.addColorRGB('test_mck_rgb', 0, 10, 20);
@@ -130,7 +61,7 @@ class Main {
 		var language = Locale.NL;
 		var scribus = new Scribus();
 
-		scribus.setPageSize(pagesize);
+		scribus.setPageName(pagesize);
 		scribus.setLanguage(language);
 
 		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}.sla', scribus.toString());
@@ -141,7 +72,7 @@ class Main {
 		var language = Locale.EN_GB;
 		var scribus = new Scribus();
 
-		scribus.setPageSize(pagesize);
+		scribus.setPageName(pagesize);
 		scribus.setLanguage(language);
 
 		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}.sla', scribus.toString());
@@ -156,7 +87,7 @@ class Main {
 
 		var scribus = new Scribus();
 		scribus.setLanguage(_language);
-		scribus.setPageSize(_pageSize);
+		scribus.setPageName(_pageSize);
 		scribus.setMarginInMM(14, 14, 14, 14);
 		scribus.setBleedInMM(3, 3, 3, 3);
 		scribus.setHorizontalGuidesInMM([14, 148 - 14]);
@@ -212,7 +143,9 @@ class Main {
 		page = scribus.addPage();
 		scribus.addImage(page, '../assets/svg/snippets_piramide van Lencioni.svg');
 
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize}_${_language}.sla', scribus.toString());
+		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize.replace(' ', '_')}_${_language}.sla', scribus.toString());
+
+		// Sys.command('open ./bin/_gen_scribus_Custom_148x148mm_nl.sla');
 	}
 
 	// https://regexr.com/

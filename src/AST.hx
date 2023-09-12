@@ -38,59 +38,51 @@ typedef Document = {
 	var author:String;
 	var language:String;
 	var pageName:String;
-	var width:Width;
-	var height:Height;
-	var margins:Array<Margins>;
-	var guides:Array<Guides>;
-	var bleeds:Array<Bleeds>;
+	var width:ValueObj;
+	var height:ValueObj;
+	var margins:Array<DirValueObj>;
+	var guides:Array<DirValueObj>;
+	var bleeds:Array<DirValueObj>;
 	var guideSnap:Bool;
 	var guideLocked:Bool;
 };
 
-typedef Width = {
+typedef ValueObj = {
 	var unit:String;
 	var value:Int;
 };
 
-typedef Height = {
-	var unit:String;
-	var value:Int;
-};
-
-typedef Margins = {
-	var dir:String;
-	var unit:String;
-	var value:Int;
-};
-
-typedef Guides = {
-	var dir:String;
-	var unit:String;
-	var value:Int;
-};
-
-typedef Bleeds = {
+typedef DirValueObj = {
 	var dir:String;
 	var unit:String;
 	var value:Int;
 };
 
 typedef Pages = {
-	var left:Left;
-	var right:Right;
+	var left:PageObj;
+	var right:PageObj;
 };
 
-typedef Left = {
+typedef PageObj = {
 	var _alias:String;
 	var texts:Array<Texts>;
+	var images:Array<Images>;
+};
+
+typedef Images = {
+	var path:String;
+	var x:X;
+	var y:Y;
+	var width:ValueObj;
+	var height:ValueObj;
 };
 
 typedef Texts = {
 	var path:String;
 	var x:X;
 	var y:Y;
-	var width:Width;
-	var height:Height;
+	var width:ValueObj;
+	var height:ValueObj;
 };
 
 typedef X = {
@@ -101,17 +93,4 @@ typedef X = {
 typedef Y = {
 	var unit:String;
 	var value:Int;
-};
-
-typedef Right = {
-	var _alias:String;
-	var images:Array<Images>;
-};
-
-typedef Images = {
-	var path:String;
-	var x:X;
-	var y:Y;
-	var width:Width;
-	var height:Height;
 };

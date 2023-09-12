@@ -75,7 +75,7 @@ class Scribus {
 		doc.att.LANGUAGE = s;
 	}
 
-	public function setPageSize(pagesize:String) {
+	public function setPageName(pagesize:String) {
 		pageSizeName = pagesize;
 		doc.att.PAGESIZE = pagesize;
 
@@ -96,6 +96,11 @@ class Scribus {
 			// setPageHeight(pagesize);
 			set_pageHeight(PageSize.setValueInPoints(pagesize).height);
 		}
+	}
+
+	public function setPageSizeInMM(width:Float, height:Float) {
+		this.pageWidth = PageSize.MM2POINTS * width;
+		this.pageHeight = PageSize.MM2POINTS * height;
 	}
 
 	public function isSnapToGuides(bool:Bool) {
@@ -154,6 +159,8 @@ class Scribus {
 	}
 
 	public function setHorizontalGuidesInMM(arr:Array<Float>) {
+		// log(arr);
+
 		var _guides = '';
 
 		for (i in 0...arr.length) {
@@ -189,6 +196,8 @@ class Scribus {
 	}
 
 	public function setMarginInMM(left:Float = 14.111, right:Float = 14.111, top:Float = 14.111, bottom:Float = 14.111) {
+		log('$left, $right, $top, $bottom');
+
 		var _left:Float = left * PageSize.MM2POINTS;
 		var _right:Float = right * PageSize.MM2POINTS;
 		var _top:Float = top * PageSize.MM2POINTS;

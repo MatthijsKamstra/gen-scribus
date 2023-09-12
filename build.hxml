@@ -4,4 +4,4 @@
 --interp
 
 
---cmd open ./bin/_gen_scribus_Custom\ 148x148mm_nl.sla
+# --cmd open ./bin/_gen_scribus_Custom_148x148mm_nl.sla
