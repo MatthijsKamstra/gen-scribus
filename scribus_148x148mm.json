@@ -6,16 +6,16 @@
     "width": { "unit": "mm", "value": 200 },
     "height": { "unit": "mm", "value": 150 },
     "margins": [
-      { "dir": "left", "unit": "mm", "value": 50 },
-      { "dir": "right", "unit": "mm", "value": 70 },
-      { "dir": "top", "unit": "mm", "value": 10 },
-      { "dir": "bottom", "unit": "mm", "value": 30 }
+      { "dir": "left", "unit": "mm", "value": 70 },
+      { "dir": "right", "unit": "mm", "value": 0 },
+      { "dir": "top", "unit": "mm", "value": 30 },
+      { "dir": "bottom", "unit": "mm", "value": 10 }
     ],
     "guides": [
-      { "dir": "left", "unit": "mm", "value": 20 },
-      { "dir": "right", "unit": "mm", "value": 20 },
-      { "dir": "top", "unit": "mm", "value": 20 },
-      { "dir": "bottom", "unit": "mm", "value": 20 }
+      { "dir": "left", "unit": "mm", "value": 70 },
+      { "dir": "right", "unit": "mm", "value": 0 },
+      { "dir": "top", "unit": "mm", "value": 30 },
+      { "dir": "bottom", "unit": "mm", "value": 10 }
     ],
     "bleeds": [
       { "dir": "left", "unit": "mm", "value": 3 },

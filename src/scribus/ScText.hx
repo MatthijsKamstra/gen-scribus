@@ -16,6 +16,7 @@ class ScText {
 	public var offsety:Float = 0.0;
 
 	var ITEXT:Array<String> = [];
+	var ITEXT_STR:String = '';
 	var DEFAULT_STYLE = '<DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>';
 
 	public function new(page:ScPage, path:String) {
@@ -26,11 +27,16 @@ class ScText {
 		var content = sys.io.File.getContent(path.replace('../', ''));
 		// trace(content);
 		var convert = new ScMarkdownConverter(content);
-		ITEXT = convert.itextArr;
+		// ITEXT = convert.itextArr;
+		ITEXT_STR = convert.out;
 
 		// log('page.xpos: ' + page.xpos);
 		// log('page.ypos: ' + page.ypos);
 		// log(offsetx);
+
+		// [mck] if page is left, the margins are reversed
+		// @example: 	rightpage: left:10, right:50
+		//  			left-page: left:50, right:10
 
 		this.xpos = page.xpos;
 		this.ypos = page.ypos;
@@ -84,8 +90,7 @@ class ScText {
 			BACKITEM="-1">
             <StoryText>
                 ${DEFAULT_STYLE}
-				${ITEXT.join('\n')}
-                <trail/>
+				${ITEXT_STR}
             </StoryText>
         </PAGEOBJECT>\n';
 	}

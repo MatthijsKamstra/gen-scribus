@@ -5,28 +5,39 @@ import utils.RegEx;
 class ScMarkdownConverter {
 	var content:String;
 
-	public var itextArr(default, null):Array<String> = [];
+	// public var itextArr(default, null):Array<String> = [];
+	public var out:String = '';
 
 	public function new(content:String) {
 		// trace('ScMarkdownConverter');
 		this.content = content;
-		this.itextArr = [];
+		// this.itextArr = [];
+		this.out = '';
 		convert();
 	}
 
 	function convert() {
+		// this.content = this.content.replace('"', '&quot;'); // replace quotes
 		var arr = this.content.split('\n');
-
 		for (i in 0...arr.length) {
 			var _arr = arr[i];
 			// trace(_arr);
 			if (_arr == '')
 				continue; // block empty line
-			var str = extractHeading(_arr);
+			var str = _arr.htmlEscape(true);
+			// str = extractDefault(str);
+			str = extractHeading(str);
 			str = extractBold(str);
-			str = extractItalic(str);
-			itextArr.push(str);
+			// str = extractItalic(str);
+			// itextArr.push(str);
+			this.out += str;
 		}
+	}
+
+	function extractDefault(str:String) {
+		var text = str;
+		var para = '';
+		return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>\n';
 	}
 
 	function extractBold(str:String) {

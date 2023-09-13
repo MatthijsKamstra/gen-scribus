@@ -1,5 +1,6 @@
 package scribus;
 
+import AST.PageObj;
 import sys.FileSystem;
 import haxe.Json;
 import utils.SaveFile;
@@ -50,7 +51,7 @@ class ScSettings {
 		// // scribus.addStyle('Text3_Heading 5', 14);
 		// // scribus.addStyle('Text3_Heading 6', 12);
 
-		// scribus.dumpStyle();
+		scribus.dumpStyle();
 
 		// // scribus.removeMasterPages();
 		// scribus.removePages();
@@ -76,15 +77,18 @@ class ScSettings {
 	function createPage(scribus:Scribus, pageObj:AST.PageObj) {
 		var page:ScPage = scribus.addPage(pageObj._alias);
 		if (pageObj.images != null) {
-			info('image');
-			// File.
-			scribus.addImage(page, Path.normalize(Sys.getCwd() + '/assets/svg/snippets_piramide van Lencioni.png'));
+			// info('image');
+			for (i in 0...pageObj.images.length) {
+				var _image = pageObj.images[i];
+				scribus.addImage(page, Path.normalize(Sys.getCwd() + _image.path));
+			}
 		}
 		if (pageObj.texts != null) {
-			info('text');
-			// trace();
-			// trace(FileSystem.fullPath('/assets/markdown/simple.md'));
-			// scribus.addText(page, Path.normalize(Sys.getCwd() + '/assets/markdown/test_simple.md'));
+			// info('text');
+			for (i in 0...pageObj.texts.length) {
+				var _text = pageObj.texts[i];
+				scribus.addText(page, Path.normalize(Sys.getCwd() + _text.path));
+			}
 		}
 	}
 

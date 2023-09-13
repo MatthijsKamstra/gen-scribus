@@ -23,9 +23,7 @@ class ScPage {
 	public var marginTop:Float;
 	public var marginBottom:Float;
 
-	public function new() {
-		// ScPage.ID = -1;
-	}
+	public function new() {}
 
 	function reset() {
 		XPOS = DEFAULT_XPOS;
@@ -56,10 +54,10 @@ class ScPage {
 		this.xpos = XPOS;
 		this.ypos = YPOS;
 
-		log('ScPage | ${Counter.ID} | XPOS: ' + XPOS);
-		log('ScPage | ${Counter.ID} | YPOS: ' + YPOS);
-		log('ScPage | ${Counter.ID} | this.xpos: ' + this.xpos);
-		log('ScPage | ${Counter.ID} | this.ypos: ' + this.ypos);
+		// log('ScPage | ${Counter.ID} | XPOS: ' + XPOS);
+		// log('ScPage | ${Counter.ID} | YPOS: ' + YPOS);
+		// log('ScPage | ${Counter.ID} | this.xpos: ' + this.xpos);
+		// log('ScPage | ${Counter.ID} | this.ypos: ' + this.ypos);
 
 		return '<PAGE
 			UUID="${UUID.uuid()}"
