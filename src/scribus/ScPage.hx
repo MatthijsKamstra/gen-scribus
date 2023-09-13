@@ -1,12 +1,12 @@
 package scribus;
 
+import utils.Counter;
 import utils.UUID;
 
 class ScPage {
 	final DEFAULT_XPOS = 100.001;
 	final DEFAULT_YPOS = 20.001;
 
-	private static var ID:Int = -1;
 	private static var XPOS:Float = 100.001;
 	private static var YPOS:Float = 20.001;
 
@@ -24,17 +24,25 @@ class ScPage {
 	public var marginBottom:Float;
 
 	public function new() {
-		// trace('Page');
+		// ScPage.ID = -1;
+	}
+
+	function reset() {
+		XPOS = DEFAULT_XPOS;
+		YPOS = DEFAULT_YPOS;
 	}
 
 	public function toString():String {
-		ID++;
-		this.id = ID;
+		if (Counter.ID <= -1) {
+			reset();
+		}
+		Counter.ID++;
+		this.id = Counter.ID;
 
 		var _MNAM = 'Normal Right';
 		// 'Normal Left'
 		// 'Normal Right'
-		if (ID % 2 == 0) {
+		if (Counter.ID % 2 == 0) {
 			// row = "-even";
 			_MNAM = 'Normal Right';
 			XPOS = DEFAULT_XPOS + width;
@@ -48,10 +56,10 @@ class ScPage {
 		this.xpos = XPOS;
 		this.ypos = YPOS;
 
-		// log('ScPage | ${ID} | XPOS: ' + XPOS);
-		// log('ScPage | ${ID} | YPOS: ' + YPOS);
-		// log('ScPage | ${ID} | this.xpos: ' + this.xpos);
-		// log('ScPage | ${ID} | this.ypos: ' + this.ypos);
+		log('ScPage | ${Counter.ID} | XPOS: ' + XPOS);
+		log('ScPage | ${Counter.ID} | YPOS: ' + YPOS);
+		log('ScPage | ${Counter.ID} | this.xpos: ' + this.xpos);
+		log('ScPage | ${Counter.ID} | this.ypos: ' + this.ypos);
 
 		return '<PAGE
 			UUID="${UUID.uuid()}"
@@ -63,7 +71,7 @@ class ScPage {
 			BORDERRIGHT="${marginRight}"
 			BORDERTOP="${marginTop}"
 			BORDERBOTTOM="${marginBottom}"
-			NUM="${ID}"
+			NUM="${Counter.ID}"
 			NAM=""
 			MNAM="${_MNAM}"
 			Size="${size}"

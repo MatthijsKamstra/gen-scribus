@@ -64,11 +64,12 @@ class ScSettings {
 			}
 			if (_page.right._alias != null) {
 				trace('   [r]: ' + _page.right._alias);
-				// createPage(scribus, _page.right);
+				createPage(scribus, _page.right);
 			}
 		}
 
 		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize.replace(' ', '_')}_${_pageLanguage}.sla', scribus.toString());
+
 		Sys.command('open ./bin/_gen_scribus_Custom_boo_nl.sla');
 	}
 

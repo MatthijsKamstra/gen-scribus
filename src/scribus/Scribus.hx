@@ -1,5 +1,6 @@
 package scribus;
 
+import utils.Counter;
 import haxe.xml.Access;
 import haxe.rtti.XmlParser;
 
@@ -19,6 +20,8 @@ class Scribus {
 
 	public function new() {
 		info('Scribus');
+
+		Counter.reset(); // start all new Scribus document from zero
 
 		var path = Folder.ROOT_FOLDER + '/assets/template_scribus_a4.sla';
 		if (sys.FileSystem.exists(path)) {
