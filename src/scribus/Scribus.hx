@@ -269,7 +269,7 @@ class Scribus {
         <STYLE NAME="Text3_Heading 6" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="12" FONTFEATURES="-clig"/>
         <STYLE NAME="Text5_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>';
 
-		dump = '        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Titillium Web Regular" FONTSIZE="11" FONTFEATURES="" FEATURES="inherit" FCOLOR="Black" FSHADE="100" HyphenWordMin="3" SCOLOR="Black" BGCOLOR="None" BGSHADE="100" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="en_GB"/>
+		dump = '<CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Titillium Web Regular" FONTSIZE="11" FONTFEATURES="" FEATURES="inherit" FCOLOR="Black" FSHADE="100" HyphenWordMin="3" SCOLOR="Black" BGCOLOR="None" BGSHADE="100" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="en_GB"/>
         <CHARSTYLE CNAME="Text5_Bold" CPARENT="Default Character Style" FONT="Titillium Web Bold"/>
         <CHARSTYLE CNAME="Text5_BoldItalic" CPARENT="Default Character Style" FONT="Titillium Web Bold Italic"/>
         <CHARSTYLE CNAME="Text5_Italic" CPARENT="Default Character Style" FONT="Titillium Web Italic" />
@@ -281,7 +281,12 @@ class Scribus {
         <STYLE NAME="Text3_Heading 5" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="14" FONTFEATURES="-clig"/>
         <STYLE NAME="Text3_Heading 6" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="12" FONTFEATURES="-clig"/>
         <STYLE NAME="Text5_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
-        <STYLE NAME="Text7_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>';
+        <STYLE NAME="Text7_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
+		<STYLE NAME="Text1_List 1" PARENT="Default Paragraph Style" LINESPMode="1" Bullet="1" BulletStr="•"/>
+		<STYLE NAME="Text1_Blockquotes 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
+
+
+		';
 
 		add2document(dump.toString());
 	}

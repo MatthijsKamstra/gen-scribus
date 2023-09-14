@@ -17,19 +17,23 @@ class ScMarkdownConverter {
 	}
 
 	function convert() {
-		// this.content = this.content.replace('"', '&quot;'); // replace quotes
 		var arr = this.content.split('\n');
 		for (i in 0...arr.length) {
 			var _arr = arr[i];
 			// trace(_arr);
 			if (_arr == '')
 				continue; // block empty line
+
 			var str = _arr.htmlEscape(true);
+			str = extractBold(str);
+			log(str);
+			str = extractItalic(str);
+			log(str);
+			str = extractBlockquote(str);
+			log(str);
 			// str = extractDefault(str);
 			str = extractHeading(str);
-			// str = extractBlockquote(str);
-			str = extractBold(str);
-			str = extractItalic(str);
+			log(str);
 			// itextArr.push(str);
 			this.out += str;
 		}
@@ -64,13 +68,13 @@ class ScMarkdownConverter {
 	}
 
 	function extractBlockquote(str:String) {
-		var para = '';
+		var para = 'Text1_Blockquotes 1';
 		var text = str;
 		if (str.startsWith('>') || str.startsWith('&gt;')) {
-			para = "Text3_Heading____";
 			text = text.replace('>', '').replace('&gt;', '').trim();
+			return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
 		}
-		return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
+		return str;
 	}
 
 	function extractHeading(str:String):String {
