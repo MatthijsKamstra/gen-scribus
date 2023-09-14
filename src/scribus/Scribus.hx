@@ -298,7 +298,7 @@ class Scribus {
         <STYLE NAME="Text5_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
         <STYLE NAME="Text7_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
 		<STYLE NAME="Text1_List 1" PARENT="Default Paragraph Style" LINESPMode="1" Bullet="1" BulletStr="•"/>
-		<STYLE NAME="${StyleName.BLOCKQUOTES}Text1_Blockquotes 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
+		<STYLE NAME="${StyleName.BLOCKQUOTES}" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
 
 
 		';
