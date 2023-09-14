@@ -1,5 +1,6 @@
 package scribus;
 
+import const.StyleName;
 import utils.RegEx;
 
 class ScMarkdownConverter {
@@ -25,94 +26,105 @@ class ScMarkdownConverter {
 				continue; // block empty line
 
 			var str = _arr.htmlEscape(true);
+			str = extractDefault(str);
+			str = extractBoldItalic(str);
 			str = extractBold(str);
-			log(str);
 			str = extractItalic(str);
-			log(str);
 			str = extractBlockquote(str);
-			log(str);
-			// str = extractDefault(str);
 			str = extractHeading(str);
-			log(str);
 			// itextArr.push(str);
 			this.out += str;
 		}
 	}
 
 	function extractDefault(str:String) {
-		var text = str;
 		var para = '';
-		return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>\n';
+		var text = str;
+		return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
 	}
 
 	function extractBold(str:String) {
+		var para = StyleName.BOLD;
 		var matches = RegEx.getMatches(RegEx.boldPattern, content);
 		if (matches.length > 0) {
 			for (i in 0...matches.length) {
 				var match = matches[i];
-				str = str.replace(match, '"/>\n<ITEXT CPARENT="Text5_Bold" CH="${match.replace('**', '')}"/>\n<ITEXT CH="');
+				str = str.replace(match, '"/>\n<ITEXT CPARENT="${para}" CH="${match.replace('**', '')}"/>\n<ITEXT CH="');
 			}
 		}
 		return str;
 	}
 
-	function extractItalic(str:String) {
+	function extractItalic(str:String):String {
+		var para = StyleName.ITALIC;
 		var matches = RegEx.getMatches(RegEx.italicPattern, content);
 		if (matches.length > 0) {
 			for (i in 0...matches.length) {
 				var match = matches[i];
-				str = str.replace(match, '"/>\n<ITEXT CPARENT="Text5_Italic" CH="${match.replace('_', '')}"/>\n<ITEXT CH="');
+				str = str.replace(match, '"/>\n<ITEXT CPARENT="${para}" CH="${match.replace('_', '')}"/>\n<ITEXT CH="');
+			}
+		}
+		return str;
+	}
+
+	function extractBoldItalic(str:String):String {
+		// trace('extractBoldItalic ("${str}")');
+		var para = StyleName.BOLD_ITALIC;
+		var matches = RegEx.getMatches(RegEx.boldItalicPattern, content);
+		if (matches.length <= 0)
+			matches = RegEx.getMatches(RegEx.italicBoldPattern, content);
+		if (matches.length > 0) {
+			for (i in 0...matches.length) {
+				var match = matches[i];
+				var tt = match.replace('_', '').replace('**', '');
+				str = str.replace(match, '"/>\n<ITEXT CPARENT="${para}" CH="${tt}"/>\n<ITEXT CH="');
 			}
 		}
 		return str;
 	}
 
 	function extractBlockquote(str:String) {
-		var para = 'Text1_Blockquotes 1';
+		var para = StyleName.BLOCKQUOTES;
 		var text = str;
-		if (str.startsWith('>') || str.startsWith('&gt;')) {
-			text = text.replace('>', '').replace('&gt;', '').trim();
-			return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
+		if (str.startsWith('<ITEXT CH="&gt;')) {
+			text = text.replace('&gt; ', '').replace('para PARENT=""', 'para PARENT="${para}"');
+			// var xml = Xml.parse(text);
+			// trace(xml.firstChild());
+			// return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
+			return text;
 		}
 		return str;
 	}
 
 	function extractHeading(str:String):String {
-		/**
-			<ITEXT CH="h1 Heading"/>
-			<para PARENT="Text3_Heading 1"/>
-			<ITEXT CH="h2 Heading"/>
-			<para PARENT="Text3_Heading 2"/>
-			<ITEXT CH="h3 Heading"/>
-			<para PARENT="Text3_Heading 3"/>
-			<ITEXT CH="h4 Heading"/>
-			<para PARENT="Text3_Heading 4"/>
-			<ITEXT CH="h5 Heading"/>
-			<para PARENT="Text3_Heading 5"/>
-			<ITEXT CH="h6 Heading"/>
-			<para PARENT="Text3_Heading 6"/>
-		 */
-
 		var para = '';
 		var text = str;
 		var hashLevels = ['######', '#####', '####', '###', '##', '#'];
 		var styleLevels = [
-			'Text3_Heading 6',
-			'Text3_Heading 5',
-			'Text3_Heading 4',
-			'Text3_Heading 3',
-			'Text3_Heading 2',
-			'Text3_Heading 1'
+			StyleName.H6,
+			StyleName.H5,
+			StyleName.H4,
+			StyleName.H3,
+			StyleName.H2,
+			StyleName.H1,
 		];
 
-		for (hash in hashLevels) {
-			if (str.startsWith(hash)) {
-				para = "Text3_Heading " + (hash.length);
-				text = text.replace(hash, '').trim();
+		for (i in 0...hashLevels.length) {
+			var _hashLevels = hashLevels[i];
+			if (str.startsWith('<ITEXT CH="' + _hashLevels)) {
+				// para = "Text3_Heading " + (_hashLevels.length);
+				para = styleLevels[i];
+				text = text.replace(_hashLevels + ' ', '');
+				text = text.replace(_hashLevels, '').replace('para PARENT=""', 'para PARENT="${para}"');
+				// var xml = Xml.parse(text);
+				// trace(xml.firstChild());
+				// return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
+				return text;
+
+				// return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
 				break; // Stop processing after the first heading is found
 			}
 		}
-
-		return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
+		return str;
 	}
 }

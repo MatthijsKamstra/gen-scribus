@@ -3,6 +3,9 @@ package utils;
 // - https://regexr.com/
 // - https://haxe.org/manual/std-regex.html
 class RegEx {
+	public static var boldItalicPattern:EReg = ~/(\*\*_.*?_\*\*)/g;
+	public static var italicBoldPattern:EReg = ~/(_\*\*.*?\*\*_)/g;
+
 	public static final italicPattern:EReg = ~/(_.*?_)/g;
 	public static final boldPattern = ~/(\*\*.*?\*\*)/g;
 

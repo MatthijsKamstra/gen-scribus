@@ -38,7 +38,7 @@ haxe -v --wait 6000
   - [x] bold
   - [x] italic
   - [ ] bold italic
-  - [ ] quote / block quote
+  - [x] quote / block quote
   - [ ] list
   - [ ] number list
 - [x] update text (how to find? use UUID, doesn't work)
