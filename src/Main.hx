@@ -1,3 +1,4 @@
+import scribus.ScMarkdownConverter;
 import scribus.ScSettings;
 import haxe.display.JsonModuleTypes.JsonDoc;
 import haxe.Json;
@@ -14,15 +15,18 @@ class Main {
 
 		init();
 
+		// regexTest();
+
 		// create Scibus document, with adjustments
 		// createScribus();
 		// createScribusA4NL();
 		// createScribusA5EN();
-		createScribusCustomNL();
 
-		// test();
+		// // snippets of knownledge
+		// createScribusCustomNL();
 
-		useSettings('scribus_148x148mm.json');
+		// // use settings
+		// useSettings('scribus_148x148mm.json');
 	}
 
 	function init() {
@@ -149,7 +153,7 @@ class Main {
 	}
 
 	// https://regexr.com/
-	function test() {
+	function regexTest() {
 		var page = '<PAGE Size="A4" PAGEXPOS="695.276590551181" PAGEWIDTH="595.275590551181" PAGEHEIGHT="841.889763779528" />';
 
 		var newValue:String = '123';
@@ -157,7 +161,6 @@ class Main {
 		var regex = ~/PAGEWIDTH="[\d.]+"/g;
 		// public static var getVars = ~/(this.).+/g;
 		var replacedString = regex.replace(str, 'PAGEWIDTH="' + newValue + '"');
-
 		log(str);
 		log(replacedString);
 	}

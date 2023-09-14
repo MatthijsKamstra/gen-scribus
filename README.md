@@ -33,18 +33,20 @@ haxe -v --wait 6000
 - [x] xpos ypos image
 - [x] use UUID in nodes (doesn't work.. is cleaned after save in Scribus)
 - [x] import text
-- [ ] custom markdown converter
+- [x] custom markdown converter
   - [x] heading
   - [x] bold
   - [x] italic
   - [ ] bold italic
   - [ ] quote / block quote
+  - [ ] list
+  - [ ] number list
 - [x] update text (how to find? use UUID, doesn't work)
 - [x] text input odt
 - [x] text input markdown
 - [x] text input html
 - [x] create json (settings file)
-- [ ] generate document based upon json (settings file)
+- [x] generate document based upon json (settings file)
 - [x] adding colors (rgb, cmyk)
 - [x] horizontal and vertical guides
 - [x] snapToGuide toggle

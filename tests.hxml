@@ -1,0 +1,6 @@
+--library buddy
+--class-path src
+-D analyzer-optimize
+-D no-deprecation-warnings
+-main tests.MainTest
+--interp

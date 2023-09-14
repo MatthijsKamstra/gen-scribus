@@ -27,8 +27,9 @@ class ScMarkdownConverter {
 			var str = _arr.htmlEscape(true);
 			// str = extractDefault(str);
 			str = extractHeading(str);
+			// str = extractBlockquote(str);
 			str = extractBold(str);
-			// str = extractItalic(str);
+			str = extractItalic(str);
 			// itextArr.push(str);
 			this.out += str;
 		}
@@ -60,6 +61,16 @@ class ScMarkdownConverter {
 			}
 		}
 		return str;
+	}
+
+	function extractBlockquote(str:String) {
+		var para = '';
+		var text = str;
+		if (str.startsWith('>') || str.startsWith('&gt;')) {
+			para = "Text3_Heading____";
+			text = text.replace('>', '').replace('&gt;', '').trim();
+		}
+		return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
 	}
 
 	function extractHeading(str:String):String {
