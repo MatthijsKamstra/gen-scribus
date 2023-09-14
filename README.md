@@ -37,10 +37,11 @@ haxe -v --wait 6000
   - [x] heading
   - [x] bold
   - [x] italic
-  - [ ] bold italic
+  - [x] bold italic
+  - [ ] strikethrough
   - [x] quote / block quote
-  - [ ] list
-  - [ ] number list
+  - [x] list
+  - [x] number list
 - [x] update text (how to find? use UUID, doesn't work)
 - [x] text input odt
 - [x] text input markdown

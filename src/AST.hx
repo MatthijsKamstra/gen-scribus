@@ -35,7 +35,9 @@ typedef HxSettingsObj = {
 };
 
 typedef Document = {
-	var author:String;
+	@:optional var author:String;
+	@:optional var title:String;
+	@:optional var description:String;
 	var language:String;
 	var pageName:String;
 	var width:ValueObj;

@@ -1,6 +1,8 @@
 {
   "document": {
     "author": "Matthijs Kamstra",
+    "title": "Haxe Scribus Gen doc",
+    "description": "blah blah, Haxe Scribus Gen doc",
     "language": "nl",
     "pageName": "Custom Boo",
     "width": { "unit": "mm", "value": 200 },
@@ -79,7 +81,7 @@
         "_alias": "text (left) 6",
         "texts": [
           {
-            "path": "assets/markdown/test_simple.md",
+            "path": "assets/markdown/test_lists.md",
             "x": { "unit": "mm", "value": 22 },
             "y": { "unit": "mm", "value": 22 },
             "width": { "unit": "mm", "value": 22 },
@@ -105,7 +107,7 @@
         "_alias": "text (left) 8",
         "texts": [
           {
-            "path": "assets/markdown/Piramide_van_Lencioni_01.md",
+            "path": "assets/markdown/test_quotes.md",
             "x": { "unit": "mm", "value": 22 },
             "y": { "unit": "mm", "value": 22 },
             "width": { "unit": "mm", "value": 22 },
@@ -131,7 +133,7 @@
         "_alias": "text (left) 10",
         "texts": [
           {
-            "path": "assets/markdown/open_vraag_00.md",
+            "path": "assets/markdown/test_simple.md",
             "x": { "unit": "mm", "value": 22 },
             "y": { "unit": "mm", "value": 22 },
             "width": { "unit": "mm", "value": 22 },
@@ -167,6 +169,32 @@
       },
       "right": {
         "_alias": "image (right) 13",
+        "images": [
+          {
+            "path": "assets/png/a4_gray.png",
+            "x": { "unit": "mm", "value": 0 },
+            "y": { "unit": "mm", "value": 0 },
+            "width": { "unit": "mm", "value": 200 },
+            "height": { "unit": "mm", "value": 100 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "text (left) 14",
+        "texts": [
+          {
+            "path": "assets/markdown/test_emphasis.md",
+            "x": { "unit": "mm", "value": 22 },
+            "y": { "unit": "mm", "value": 22 },
+            "width": { "unit": "mm", "value": 22 },
+            "height": { "unit": "mm", "value": 22 }
+          }
+        ]
+      },
+      "right": {
+        "_alias": "image (right) 15",
         "images": [
           {
             "path": "assets/png/a4_gray.png",

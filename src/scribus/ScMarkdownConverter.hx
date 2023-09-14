@@ -25,6 +25,8 @@ class ScMarkdownConverter {
 			if (_arr == '')
 				continue; // block empty line
 
+			// log(_arr);
+
 			var str = _arr.htmlEscape(true);
 			str = extractDefault(str);
 			str = extractBoldItalic(str);
@@ -71,12 +73,23 @@ class ScMarkdownConverter {
 		// trace('extractBoldItalic ("${str}")');
 		var para = StyleName.BOLD_ITALIC;
 		var matches = RegEx.getMatches(RegEx.boldItalicPattern, content);
-		if (matches.length <= 0)
+		if (matches.length <= 0) {
+			// trace('not bold-italic');
 			matches = RegEx.getMatches(RegEx.italicBoldPattern, content);
+		}
+		if (matches.length <= 0) {
+			// trace('not italic-bold');
+		}
 		if (matches.length > 0) {
 			for (i in 0...matches.length) {
 				var match = matches[i];
-				var tt = match.replace('_', '').replace('**', '');
+				var tt = match;
+				// trace('${i} --------------------');
+				// trace(tt);
+				tt = tt.replace('**', '');
+				// trace(tt);
+				tt = tt.replace('_', '');
+				// trace(tt);
 				str = str.replace(match, '"/>\n<ITEXT CPARENT="${para}" CH="${tt}"/>\n<ITEXT CH="');
 			}
 		}

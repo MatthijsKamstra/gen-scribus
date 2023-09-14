@@ -63,6 +63,18 @@ class Scribus {
 		addComment('[mck] start generation document');
 	}
 
+	public function setDocumentAuthor(arg:Null<String>) {
+		doc.att.AUTHOR = arg;
+	}
+
+	public function setDocumentTitle(arg:Null<String>) {
+		doc.att.TITLE = arg;
+	}
+
+	public function setDocumentDescription(arg:Null<String>) {
+		doc.att.COMMENTS = arg;
+	}
+
 	function addComment(comment:String) {
 		add2document('<!-- ${comment} -->\n');
 	}

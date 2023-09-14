@@ -39,6 +39,16 @@ class ScSettings {
 		scribus.setHorizontalGuidesInMM([marginMap.get('top')]);
 		scribus.setVerticalGuidesInMM([marginMap.get('left')]);
 
+		if (json.document.author != null) {
+			scribus.setDocumentAuthor(json.document.author);
+		}
+		if (json.document.title != null) {
+			scribus.setDocumentTitle(json.document.title);
+		}
+		if (json.document.description != null) {
+			scribus.setDocumentDescription(json.document.description);
+		}
+
 		// scribus.removeStyle();
 
 		// // scribus.defaultFont('Titillium Web Regular', 11);
