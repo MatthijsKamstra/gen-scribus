@@ -8,7 +8,6 @@ import utils.SaveFile;
 class ScSettings {
 	public function new(path:String) {
 		trace('ScSettings');
-
 		init(path);
 	}
 

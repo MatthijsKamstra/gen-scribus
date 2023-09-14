@@ -26,7 +26,7 @@ class Main {
 		// createScribusCustomNL();
 
 		// // use settings
-		// useSettings('scribus_148x148mm.json');
+		useSettings('scribus_148x148mm.json');
 	}
 
 	function init() {

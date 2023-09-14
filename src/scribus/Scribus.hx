@@ -1,5 +1,6 @@
 package scribus;
 
+import const.StyleName;
 import utils.Counter;
 import haxe.xml.Access;
 import haxe.rtti.XmlParser;
@@ -255,35 +256,37 @@ class Scribus {
 	}
 
 	public function dumpStyle() {
+		var dump = '';
+
 		// var dump = '<CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Titillium Web Regular" FONTSIZE="11" FONTFEATURES="" FEATURES="inherit" FCOLOR="Black" FSHADE="100" HyphenWordMin="3" SCOLOR="Black" BGCOLOR="None" BGSHADE="100" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="en_GB"/>\n<CHARSTYLE CNAME="Text5_Bold" CPARENT="Default Character Style" FONT="Titillium Web Bold"/>\n<CHARSTYLE CNAME="Text5_BoldItalic" CPARENT="Default Character Style" FONT="Titillium Web Bold Italic"/>\n<STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" DIRECTION="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" ParagraphEffectOffset="0" DROP="0" DROPLIN="2" Bullet="0" Numeration="0" HyphenConsecutiveLines="2" BCOLOR="None" BSHADE="100" CPARENT="Default Character Style"/>\n<STYLE NAME="Text3_Heading 1" PARENT="Default Paragraph Style" LINESPMode="1" LINESP="21" FIRST="0" VOR="0" NACH="5" OpticalMargins="0" FONT="Dosis Regular" FONTSIZE="24" FONTFEATURES="-clig" BASEO="15" LANGUAGE="nl"/>\n<STYLE NAME="Text3_Heading 2" PARENT="Default Paragraph Style" LINESPMode="1" VOR="7" FONT="Dosis Regular" FONTSIZE="20" FONTFEATURES="-clig"/>\n<STYLE NAME="Text3_Heading 3" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="18" FONTFEATURES="-clig"/>\n<STYLE NAME="Text3_Heading 4" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="16" FONTFEATURES="-clig"/>\n<STYLE NAME="Text3_Heading 5" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="14" FONTFEATURES="-clig"/>\n<STYLE NAME="Text3_Heading 6" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="12" FONTFEATURES="-clig"/>\n<STYLE NAME="Text5_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>';
 
-		var dump = '        <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Titillium Web Regular" FONTSIZE="11" FONTFEATURES="" FEATURES="inherit" FCOLOR="Black" FSHADE="100" HyphenWordMin="3" SCOLOR="Black" BGCOLOR="None" BGSHADE="100" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="en_GB"/>
-        <CHARSTYLE CNAME="Text5_Bold" CPARENT="Default Character Style" FONT="Titillium Web Bold"/>
-        <CHARSTYLE CNAME="Text5_BoldItalic" CPARENT="Default Character Style" FONT="Titillium Web Bold Italic"/>
-        <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" DIRECTION="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" ParagraphEffectOffset="0" DROP="0" DROPLIN="2" Bullet="0" Numeration="0" HyphenConsecutiveLines="2" BCOLOR="None" BSHADE="100" CPARENT="Default Character Style"/>
-        <STYLE NAME="Text3_Heading 1" PARENT="Default Paragraph Style" LINESPMode="1" LINESP="21" FIRST="0" VOR="0" NACH="5" OpticalMargins="0" FONT="Dosis Regular" FONTSIZE="24" FONTFEATURES="-clig" BASEO="15" LANGUAGE="nl"/>
-        <STYLE NAME="Text3_Heading 2" PARENT="Default Paragraph Style" LINESPMode="1" VOR="7" FONT="Dosis Regular" FONTSIZE="20" FONTFEATURES="-clig"/>
-        <STYLE NAME="Text3_Heading 3" PARENT="Default Paragraph Style" LINESPMode="1" VOR="7" FONT="Dosis Regular" FONTSIZE="18" FONTFEATURES="-clig"/>
-        <STYLE NAME="Text3_Heading 4" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="16" FONTFEATURES="-clig"/>
-        <STYLE NAME="Text3_Heading 5" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="14" FONTFEATURES="-clig"/>
-        <STYLE NAME="Text3_Heading 6" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="12" FONTFEATURES="-clig"/>
-        <STYLE NAME="Text5_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>';
+		// var dump = '<CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Titillium Web Regular" FONTSIZE="11" FONTFEATURES="" FEATURES="inherit" FCOLOR="Black" FSHADE="100" HyphenWordMin="3" SCOLOR="Black" BGCOLOR="None" BGSHADE="100" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="en_GB"/>
+		// <CHARSTYLE CNAME="Text5_Bold" CPARENT="Default Character Style" FONT="Titillium Web Bold"/>
+		// <CHARSTYLE CNAME="Text5_BoldItalic" CPARENT="Default Character Style" FONT="Titillium Web Bold Italic"/>
+		// <STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" DIRECTION="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" ParagraphEffectOffset="0" DROP="0" DROPLIN="2" Bullet="0" Numeration="0" HyphenConsecutiveLines="2" BCOLOR="None" BSHADE="100" CPARENT="Default Character Style"/>
+		// <STYLE NAME="Text3_Heading 1" PARENT="Default Paragraph Style" LINESPMode="1" LINESP="21" FIRST="0" VOR="0" NACH="5" OpticalMargins="0" FONT="Dosis Regular" FONTSIZE="24" FONTFEATURES="-clig" BASEO="15" LANGUAGE="nl"/>
+		// <STYLE NAME="Text3_Heading 2" PARENT="Default Paragraph Style" LINESPMode="1" VOR="7" FONT="Dosis Regular" FONTSIZE="20" FONTFEATURES="-clig"/>
+		// <STYLE NAME="Text3_Heading 3" PARENT="Default Paragraph Style" LINESPMode="1" VOR="7" FONT="Dosis Regular" FONTSIZE="18" FONTFEATURES="-clig"/>
+		// <STYLE NAME="Text3_Heading 4" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="16" FONTFEATURES="-clig"/>
+		// <STYLE NAME="Text3_Heading 5" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="14" FONTFEATURES="-clig"/>
+		// <STYLE NAME="Text3_Heading 6" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="12" FONTFEATURES="-clig"/>
+		// <STYLE NAME="Text5_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>';
 
 		dump = '<CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="Titillium Web Regular" FONTSIZE="11" FONTFEATURES="" FEATURES="inherit" FCOLOR="Black" FSHADE="100" HyphenWordMin="3" SCOLOR="Black" BGCOLOR="None" BGSHADE="100" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="en_GB"/>
-        <CHARSTYLE CNAME="Text5_Bold" CPARENT="Default Character Style" FONT="Titillium Web Bold"/>
-        <CHARSTYLE CNAME="Text5_BoldItalic" CPARENT="Default Character Style" FONT="Titillium Web Bold Italic"/>
-        <CHARSTYLE CNAME="Text5_Italic" CPARENT="Default Character Style" FONT="Titillium Web Italic" />
+        <CHARSTYLE CNAME="${StyleName.BOLD}" CPARENT="Default Character Style" FONT="Titillium Web Bold"/>
+        <CHARSTYLE CNAME="${StyleName.BOLD_ITALIC}" CPARENT="Default Character Style" FONT="Titillium Web Bold Italic"/>
+        <CHARSTYLE CNAME="${StyleName.ITALIC}" CPARENT="Default Character Style" FONT="Titillium Web Italic" />
 		<STYLE NAME="Default Paragraph Style" DefaultStyle="1" ALIGN="0" DIRECTION="0" LINESPMode="0" LINESP="15" INDENT="0" RMARGIN="0" FIRST="0" VOR="0" NACH="0" ParagraphEffectOffset="0" DROP="0" DROPLIN="2" Bullet="0" Numeration="0" HyphenConsecutiveLines="2" BCOLOR="None" BSHADE="100" CPARENT="Default Character Style"/>
-        <STYLE NAME="Text3_Heading 1" PARENT="Default Paragraph Style" LINESPMode="1" LINESP="21" FIRST="0" VOR="0" NACH="5" OpticalMargins="0" FONT="Dosis Regular" FONTSIZE="24" FONTFEATURES="-clig" BASEO="15" LANGUAGE="nl"/>
-        <STYLE NAME="Text3_Heading 2" PARENT="Default Paragraph Style" LINESPMode="1" VOR="7" FONT="Dosis Regular" FONTSIZE="20" FONTFEATURES="-clig"/>
-        <STYLE NAME="Text3_Heading 3" PARENT="Default Paragraph Style" LINESPMode="1" VOR="7" FONT="Dosis Regular" FONTSIZE="18" FONTFEATURES="-clig"/>
-        <STYLE NAME="Text3_Heading 4" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="16" FONTFEATURES="-clig"/>
-        <STYLE NAME="Text3_Heading 5" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="14" FONTFEATURES="-clig"/>
-        <STYLE NAME="Text3_Heading 6" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="12" FONTFEATURES="-clig"/>
+        <STYLE NAME="${StyleName.H1}" PARENT="Default Paragraph Style" LINESPMode="1" LINESP="21" FIRST="0" VOR="0" NACH="5" OpticalMargins="0" FONT="Dosis Regular" FONTSIZE="24" FONTFEATURES="-clig" BASEO="15" LANGUAGE="nl"/>
+        <STYLE NAME="${StyleName.H2}" PARENT="Default Paragraph Style" LINESPMode="1" VOR="7" FONT="Dosis Regular" FONTSIZE="20" FONTFEATURES="-clig"/>
+        <STYLE NAME="${StyleName.H3}" PARENT="Default Paragraph Style" LINESPMode="1" VOR="7" FONT="Dosis Regular" FONTSIZE="18" FONTFEATURES="-clig"/>
+        <STYLE NAME="${StyleName.H4}" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="16" FONTFEATURES="-clig"/>
+        <STYLE NAME="${StyleName.H5}" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="14" FONTFEATURES="-clig"/>
+        <STYLE NAME="${StyleName.H6}" PARENT="Default Paragraph Style" LINESPMode="1" FONT="Dosis Regular" FONTSIZE="12" FONTFEATURES="-clig"/>
         <STYLE NAME="Text5_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
         <STYLE NAME="Text7_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
 		<STYLE NAME="Text1_List 1" PARENT="Default Paragraph Style" LINESPMode="1" Bullet="1" BulletStr="•"/>
-		<STYLE NAME="Text1_Blockquotes 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
+		<STYLE NAME="${StyleName.BLOCKQUOTES}Text1_Blockquotes 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
 
 
 		';
