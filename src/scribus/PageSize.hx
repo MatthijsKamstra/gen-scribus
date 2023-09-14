@@ -63,7 +63,7 @@ class PageSize {
 			case 'A6':
 				trace('A6');
 			default:
-				trace("case '" + pagesize + "': trace ('" + pagesize + "');");
+				// trace("case '" + pagesize + "': trace ('" + pagesize + "');");
 		}
 		return value;
 	}

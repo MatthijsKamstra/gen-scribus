@@ -52,7 +52,7 @@ haxe -v --wait 6000
 - [x] horizontal and vertical guides
 - [x] snapToGuide toggle
 - [x] fit image to frame
-- [ ] updating title, author, etc
+- [x] updating title, author, etc
 - [ ] single page, facing page
 - [x] resize image to correct scale (load image, get imagesize, calculate new scale) <- fit image to frame
 

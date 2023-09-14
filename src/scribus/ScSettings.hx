@@ -7,7 +7,7 @@ import utils.SaveFile;
 
 class ScSettings {
 	public function new(path:String) {
-		trace('ScSettings');
+		// trace('ScSettings');
 		init(path);
 	}
 
@@ -69,11 +69,11 @@ class ScSettings {
 		for (i in 0...pages.length) {
 			var _page = pages[i];
 			if (_page.left._alias != null) {
-				trace('[l]   : ' + _page.left._alias);
+				// trace('[l]   : ' + _page.left._alias);
 				createPage(scribus, _page.left);
 			}
 			if (_page.right._alias != null) {
-				trace('   [r]: ' + _page.right._alias);
+				// trace('   [r]: ' + _page.right._alias);
 				createPage(scribus, _page.right);
 			}
 		}

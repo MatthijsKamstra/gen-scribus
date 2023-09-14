@@ -212,7 +212,7 @@ class Scribus {
 	}
 
 	public function setMarginInMM(left:Float = 14.111, right:Float = 14.111, top:Float = 14.111, bottom:Float = 14.111) {
-		log('$left, $right, $top, $bottom');
+		// log('$left, $right, $top, $bottom');
 
 		var _left:Float = left * PageSize.MM2POINTS;
 		var _right:Float = right * PageSize.MM2POINTS;

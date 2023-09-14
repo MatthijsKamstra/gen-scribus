@@ -6,11 +6,11 @@ class Counter {
 	public static var ID:Int = -1;
 
 	public function new() {
-		trace('Counter');
+		// trace('Counter');
 	}
 
 	public static function reset() {
-		warn('Current Counter.ID: ${Counter.ID}, reset to DEFAULT: ${DEFAULT}');
+		// warn('Current Counter.ID: ${Counter.ID}, reset to DEFAULT: ${DEFAULT}');
 		Counter.ID = DEFAULT;
 	}
 }
