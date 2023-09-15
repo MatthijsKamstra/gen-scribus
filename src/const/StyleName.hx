@@ -13,4 +13,7 @@ class StyleName {
 	public static final ITALIC = 'Italic_GenByMck';
 
 	public static final BLOCKQUOTES = 'Blockquotes_GenByMck';
+
+	public static final LIST = 'List_GenByMck'; // unordered
+	public static final LIST_NUMBERED = 'List_Numbered_GenByMck'; // ordered
 }

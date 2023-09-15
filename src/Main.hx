@@ -1,3 +1,4 @@
+import const.Config;
 import scribus.ScMarkdownConverter;
 import scribus.ScSettings;
 import haxe.display.JsonModuleTypes.JsonDoc;
@@ -10,10 +11,11 @@ import utils.SaveFile;
 import scribus.Scribus;
 
 class Main {
-	public function new() {
+	public function new(?args:Array<String>) {
 		info('Start project: "${Project.NAME}"');
 
 		init();
+		initArgs(args);
 
 		// regexTest();
 
@@ -26,11 +28,57 @@ class Main {
 		// createScribusCustomNL();
 
 		// // use settings
-		useSettings('scribus_148x148mm.json');
+		// useSettings('scribus_148x148mm.json');
+	}
+
+	function initArgs(?args:Array<String>) {
+		var args:Array<String> = args;
+		info('SETTINGS');
+
+		if (args == null) {
+			args = [];
+			args.push('-h');
+		}
+		if (args == null || args.length == 0) {
+			args.push('-h');
+		}
+
+		for (i in 0...args.length) {
+			var temp = args[i];
+			switch (temp) {
+				case '-v', '--version':
+					Sys.println('Version: ' + Config.VERSION);
+				// case '-cd', '--folder': // isFolderSet = true;
+				// case '-f', '--force':
+				// 	mute('Config.IS_OVERWRITE = true', 1);
+				// 	Config.IS_OVERWRITE = true;
+				// case '-d', '--dryrun':
+				// 	mute('Config.IS_DRYRUN = true', 1);
+				// 	Config.IS_DRYRUN = true;
+				// case '-b', '--basic':
+				// 	mute('Config.IS_BASIC = true', 1);
+				// 	Config.IS_BASIC = true;
+				case '--debug':
+					mute('Config.IS_DEBUG = true', 1);
+					Config.IS_DEBUG = true;
+				case '--help', '-h':
+					// mute('HELP', 1);
+					showHelp();
+				// case '--out', '-o':
+				// 	// log(args[i + 1]);
+				// 	var str = '# README\n\n**Generated on:** ${Date.now()}\n**Target:**';
+				// 	SaveFile.writeFile(Sys.getCwd(), 'TESTME.MD', str);
+				case '--in', '-i':
+					mute('Config.PATH: "${args[i + 1]}"', 1);
+					Config.PATH = args[i + 1];
+				default:
+					// trace("case '" + temp + "': trace ('" + temp + "');");
+			}
+		}
 	}
 
 	function init() {
-		info('init');
+		// info('init');
 
 		Folder.ROOT_FOLDER = Sys.getCwd();
 		Folder.DOCS = Path.join([Sys.getCwd(), 'docs']);
@@ -165,7 +213,33 @@ class Main {
 		log(replacedString);
 	}
 
+	/**
+	 * test custom loggin
+	 */
+	function initLog() {
+		Sys.println('this is the default sys.println');
+		// logging via Haxe
+		log("this is a log message");
+		warn("this is a warn message");
+		info("this is a info message");
+		progress("this is a progress message");
+	}
+
+	function showHelp():Void {
+		Sys.println('
+----------------------------------------------------
+${Project.NAME} (${Config.VERSION})
+
+  --version / -v	: version number
+  --help / -h		: show this help
+  --in / -i		: path to project folder
+  --debug		: write test with some extra debug information
+----------------------------------------------------
+');
+
+	}
+
 	static public function main() {
-		var app = new Main();
+		var app = new Main(Sys.args());
 	}
 }

@@ -1,7 +1,10 @@
+--library buddy
 -cp src
+# --main Main
+--run Main
+# -debug
+-dce full
 -D analyzer-optimize
--main Main
 --interp
-
 
 # --cmd open ./bin/_gen_scribus_Custom_148x148mm_nl.sla

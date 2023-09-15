@@ -299,6 +299,8 @@ class Scribus {
         <STYLE NAME="Text7_Numbered List 1" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
 		<STYLE NAME="Text1_List 1" PARENT="Default Paragraph Style" LINESPMode="1" Bullet="1" BulletStr="•"/>
 		<STYLE NAME="${StyleName.BLOCKQUOTES}" PARENT="Default Paragraph Style" LINESPMode="1" Numeration="1"/>
+<STYLE NAME="${StyleName.LIST}" PARENT="Default Paragraph Style" DIRECTION="0" LINESPMode="1" INDENT="0" ParagraphEffectOffset="2.83464566929134" ParagraphEffectIndent="0" Bullet="1" BulletStr="●" OpticalMargins="0" HyphenConsecutiveLines="2" MinWordTrack="1" />
+		<STYLE NAME="${StyleName.LIST_NUMBERED}" PARENT="Default Paragraph Style" LINESPMode="1" ParagraphEffectOffset="2.83464566929134" Numeration="1" />
 
 
 		';
