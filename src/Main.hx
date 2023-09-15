@@ -16,6 +16,7 @@ class Main {
 
 		init();
 		initArgs(args);
+		setup();
 
 		// regexTest();
 
@@ -87,6 +88,12 @@ class Main {
 		info('Folder.ROOT_FOLDER: ${Folder.ROOT_FOLDER}');
 		info('Folder.DOCS: ${Folder.DOCS}');
 		info('Folder.BIN: ${Folder.BIN}');
+	}
+
+	function setup() {
+		if (Config.PATH != '') {
+			useSettings(Config.PATH);
+		}
 	}
 
 	function useSettings(path:String) {
