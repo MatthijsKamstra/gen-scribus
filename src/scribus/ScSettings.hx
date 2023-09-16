@@ -1,7 +1,6 @@
 package scribus;
 
-import AST.PageObj;
-import sys.FileSystem;
+import const.Config;
 import haxe.Json;
 import utils.SaveFile;
 
@@ -78,9 +77,17 @@ class ScSettings {
 			}
 		}
 
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize.replace(' ', '_')}_${_pageLanguage}.sla', scribus.toString());
+		var _title = json.document.title.replace(' ', '_');
+		var _size = '${json.document.width.value}${json.document.width.unit}x${json.document.height.value}${json.document.height.unit}'.replace(' ', '_');
+		var _fileName = '${_title}__${_size}__${json.document.language}.sla'.toLowerCase();
 
-		Sys.command('open ./bin/_gen_scribus_Custom_boo_nl.sla');
+		var _path = Folder.EXPORT + "/" + _fileName;
+
+		SaveFile.out(_path, scribus.toString());
+
+		if (Config.OPEN_FILE) {
+			Sys.command('open ${_path}');
+		}
 	}
 
 	function createPage(scribus:Scribus, pageObj:AST.PageObj) {

@@ -1,1 +1,2 @@
+# --cmd haxe build.hxml --openFile -i scribus_148x148mm.json
 --cmd haxe build.hxml -i scribus_148x148mm.json

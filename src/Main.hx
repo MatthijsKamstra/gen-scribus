@@ -1,14 +1,11 @@
 import const.Config;
-import scribus.ScMarkdownConverter;
-import scribus.ScSettings;
-import haxe.display.JsonModuleTypes.JsonDoc;
-import haxe.Json;
-import scribus.ScPage;
-import scribus.PageSize;
 import scribus.Locale;
+import scribus.PageSize;
+import scribus.ScPage;
+import scribus.ScSettings;
 import scribus.Scribus;
+import sys.FileSystem;
 import utils.SaveFile;
-import scribus.Scribus;
 
 class Main {
 	public function new(?args:Array<String>) {
@@ -17,8 +14,6 @@ class Main {
 		init();
 		initArgs(args);
 		setup();
-
-		// regexTest();
 
 		// create Scibus document, with adjustments
 		// createScribus();
@@ -30,6 +25,27 @@ class Main {
 
 		// // use settings
 		// useSettings('scribus_148x148mm.json');
+	}
+
+	function init() {
+		// info('init');
+
+		Folder.ROOT_FOLDER = Sys.getCwd();
+		Folder.DOCS = Path.join([Sys.getCwd(), 'docs']);
+		Folder.BIN = Path.join([Sys.getCwd(), 'bin']);
+		Folder.EXPORT = Path.join([Sys.getCwd(), 'export']);
+
+		mute('local docs folder exists: ' + FileSystem.exists(Folder.DOCS));
+		mute('local bin folder exists: ' + FileSystem.exists(Folder.BIN));
+		mute('local export folder exists: ' + FileSystem.exists(Folder.EXPORT));
+
+		// if (!FileSystem.exists(Folder.EXPORT)) {
+		// 	FileSystem.createDirectory(Folder.EXPORT);
+		// }
+
+		info('Folder.ROOT_FOLDER: ${Folder.ROOT_FOLDER}');
+		info('Folder.DOCS: ${Folder.DOCS}');
+		info('Folder.BIN: ${Folder.BIN}');
 	}
 
 	function initArgs(?args:Array<String>) {
@@ -59,6 +75,9 @@ class Main {
 				// case '-b', '--basic':
 				// 	mute('Config.IS_BASIC = true', 1);
 				// 	Config.IS_BASIC = true;
+				case '--openFile', '--open':
+					mute('Config.OPEN_FILE = true', 1);
+					Config.OPEN_FILE = true;
 				case '--debug':
 					mute('Config.IS_DEBUG = true', 1);
 					Config.IS_DEBUG = true;
@@ -72,25 +91,39 @@ class Main {
 				case '--in', '-i':
 					mute('Config.PATH: "${args[i + 1]}"', 1);
 					Config.PATH = args[i + 1];
+					mute('is path absolute: ' + Path.isAbsolute(Config.PATH));
+					if (Path.isAbsolute(Config.PATH)) {
+						Folder.EXPORT = Path.normalize('${Config.PATH}/../export');
+					} else {
+						Folder.EXPORT = Folder.ROOT_FOLDER + 'export';
+					}
+					mute(Folder.EXPORT);
+
 				default:
 					// trace("case '" + temp + "': trace ('" + temp + "');");
 			}
 		}
 	}
 
-	function init() {
-		// info('init');
-
-		Folder.ROOT_FOLDER = Sys.getCwd();
-		Folder.DOCS = Path.join([Sys.getCwd(), 'docs']);
-		Folder.BIN = Path.join([Sys.getCwd(), 'bin']);
-
-		info('Folder.ROOT_FOLDER: ${Folder.ROOT_FOLDER}');
-		info('Folder.DOCS: ${Folder.DOCS}');
-		info('Folder.BIN: ${Folder.BIN}');
-	}
-
 	function setup() {
+		//
+		info('SETUP');
+		mute(Folder.EXPORT, 1);
+
+		log('Export folder exists: ' + FileSystem.exists(Folder.EXPORT));
+		if (!FileSystem.exists(Folder.EXPORT)) {
+			FileSystem.createDirectory(Folder.EXPORT);
+			mute('folder created');
+		}
+
+		// Sys.println("Enter your name:");
+		// var ans = Sys.stdin().readLine();
+		// // `ans` is just the text --- no newline
+
+		// trace('text');
+
+		// var content = Sys.stdin().readAll().toString();
+
 		if (Config.PATH != '') {
 			useSettings(Config.PATH);
 		}
@@ -205,19 +238,6 @@ class Main {
 		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize.replace(' ', '_')}_${_language}.sla', scribus.toString());
 
 		// Sys.command('open ./bin/_gen_scribus_Custom_148x148mm_nl.sla');
-	}
-
-	// https://regexr.com/
-	function regexTest() {
-		var page = '<PAGE Size="A4" PAGEXPOS="695.276590551181" PAGEWIDTH="595.275590551181" PAGEHEIGHT="841.889763779528" />';
-
-		var newValue:String = '123';
-		var str = page;
-		var regex = ~/PAGEWIDTH="[\d.]+"/g;
-		// public static var getVars = ~/(this.).+/g;
-		var replacedString = regex.replace(str, 'PAGEWIDTH="' + newValue + '"');
-		log(str);
-		log(replacedString);
 	}
 
 	/**
