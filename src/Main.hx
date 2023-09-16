@@ -30,6 +30,7 @@ class Main {
 	function init() {
 		// info('init');
 
+		Config.ROOT = Sys.getCwd();
 		Folder.ROOT_FOLDER = Sys.getCwd();
 		Folder.DOCS = Path.join([Sys.getCwd(), 'docs']);
 		Folder.BIN = Path.join([Sys.getCwd(), 'bin']);
@@ -93,6 +94,7 @@ class Main {
 					Config.PATH = args[i + 1];
 					mute('is path absolute: ' + Path.isAbsolute(Config.PATH));
 					if (Path.isAbsolute(Config.PATH)) {
+						Folder.ROOT_FOLDER = Path.normalize('${Config.PATH}/../');
 						Folder.EXPORT = Path.normalize('${Config.PATH}/../export');
 					} else {
 						Folder.EXPORT = Folder.ROOT_FOLDER + 'export';

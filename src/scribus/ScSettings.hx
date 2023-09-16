@@ -96,14 +96,14 @@ class ScSettings {
 			// info('image');
 			for (i in 0...pageObj.images.length) {
 				var _image = pageObj.images[i];
-				scribus.addImage(page, Path.normalize(Sys.getCwd() + _image.path));
+				scribus.addImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _image.path));
 			}
 		}
 		if (pageObj.texts != null) {
 			// info('text');
 			for (i in 0...pageObj.texts.length) {
 				var _text = pageObj.texts[i];
-				scribus.addText(page, Path.normalize(Sys.getCwd() + _text.path));
+				scribus.addText(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _text.path));
 			}
 		}
 	}

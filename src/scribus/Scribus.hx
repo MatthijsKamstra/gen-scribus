@@ -1,9 +1,9 @@
 package scribus;
 
+import const.Config;
 import const.StyleName;
-import utils.Counter;
 import haxe.xml.Access;
-import haxe.rtti.XmlParser;
+import utils.Counter;
 
 class Scribus {
 	private var _xml:Xml;
@@ -24,7 +24,7 @@ class Scribus {
 
 		Counter.reset(); // start all new Scribus document from zero
 
-		var path = Folder.ROOT_FOLDER + '/assets/template_scribus_a4.sla';
+		var path = Config.ROOT + '/assets/template_scribus_a4.sla';
 		if (sys.FileSystem.exists(path)) {
 			var str:String = sys.io.File.getContent(path);
 			_xml = Xml.parse(str);
