@@ -6,6 +6,14 @@ import utils.RegEx;
 class ScMarkdownConverter {
 	var content:String;
 
+	var previous:String = ''; // is the previos value
+
+	public var PARAGRAPH = 'paragraph';
+	public var HEADING = 'heading';
+	public var BLOCKQUOTE:String = 'blockquote';
+	public var LIST:String = 'list';
+	public var LIST_NUMBERED:String = 'list_numbered';
+
 	// public var itextArr(default, null):Array<String> = [];
 	public var out:String = '';
 
@@ -22,18 +30,23 @@ class ScMarkdownConverter {
 		for (i in 0...arr.length) {
 			var _arr = arr[i];
 			// trace(_arr);
-			if (_arr == '')
+
+			info('previous line: ' + this.previous);
+
+			if (_arr == '' && this.previous == HEADING)
 				continue; // block empty line
 
 			// log(_arr);
 
 			var str = _arr.htmlEscape(true);
-			str = extractDefault(str);
+			str = extractDefault(str); // <p>
 			str = extractBoldItalic(str);
 			str = extractBold(str);
 			str = extractItalic(str);
-			str = extractBlockquote(str);
-			str = extractHeading(str);
+			str = extractBlockquote(str); // <blockquote>
+			str = extractHeading(str); // <h1>
+			str = extractList(str); // <li>
+			str = extractNumberedList(str); // <ul>
 			// itextArr.push(str);
 			this.out += str;
 		}
@@ -42,6 +55,7 @@ class ScMarkdownConverter {
 	function extractDefault(str:String) {
 		var para = '';
 		var text = str;
+		this.previous = PARAGRAPH;
 		return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
 	}
 
@@ -104,8 +118,25 @@ class ScMarkdownConverter {
 			// var xml = Xml.parse(text);
 			// trace(xml.firstChild());
 			// return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
+			this.previous = BLOCKQUOTE;
 			return text;
 		}
+		return str;
+	}
+
+	function extractList(str:String) {
+		warn('WIP extract List');
+		var para = StyleName.LIST;
+		var text = str;
+		// this.previous = LIST;
+		return str;
+	}
+
+	function extractNumberedList(str:String) {
+		warn('WIP extract Numbered list');
+		var para = StyleName.LIST_NUMBERED;
+		var text = str;
+		// this.previous = LIST_NUMBERED;
 		return str;
 	}
 
@@ -132,6 +163,9 @@ class ScMarkdownConverter {
 				// var xml = Xml.parse(text);
 				// trace(xml.firstChild());
 				// return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
+
+				this.previous = HEADING;
+
 				return text;
 
 				// return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';

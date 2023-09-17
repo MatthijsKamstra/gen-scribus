@@ -62,11 +62,13 @@ class ScSettings {
 		scribus.dumpStyle();
 
 		// // scribus.removeMasterPages();
-		// scribus.removePages();
+		scribus.removePages();
 
 		var pages:Array<AST.Pages> = json.pages;
 		for (i in 0...pages.length) {
 			var _page = pages[i];
+			// warn(_page.left._alias);
+			// warn(_page.right._alias);
 			if (_page.left._alias != null) {
 				// trace('[l]   : ' + _page.left._alias);
 				createPage(scribus, _page.left);
