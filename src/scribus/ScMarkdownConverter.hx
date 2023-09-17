@@ -13,6 +13,7 @@ class ScMarkdownConverter {
 	public var BLOCKQUOTE:String = 'blockquote';
 	public var LIST:String = 'list';
 	public var LIST_NUMBERED:String = 'list_numbered';
+	public var EMPTY:String = 'empty';
 
 	// public var itextArr(default, null):Array<String> = [];
 	public var out:String = '';
@@ -31,10 +32,14 @@ class ScMarkdownConverter {
 			var _arr = arr[i];
 			// trace(_arr);
 
-			info('previous line: ' + this.previous);
+			// info('previous line: ' + this.previous);
 
-			if (_arr == '' && this.previous == HEADING)
+			if (_arr == '') {
+				this.previous = EMPTY;
 				continue; // block empty line
+			}
+			// if (_arr == '' && this.previous == HEADING)
+			// 	continue; // block empty line
 
 			// log(_arr);
 
@@ -86,14 +91,15 @@ class ScMarkdownConverter {
 	function extractBoldItalic(str:String):String {
 		// trace('extractBoldItalic ("${str}")');
 		var para = StyleName.BOLD_ITALIC;
+		// content = content.replace('**_')
 		var matches = RegEx.getMatches(RegEx.boldItalicPattern, content);
 		if (matches.length <= 0) {
 			// trace('not bold-italic');
 			matches = RegEx.getMatches(RegEx.italicBoldPattern, content);
 		}
-		if (matches.length <= 0) {
-			// trace('not italic-bold');
-		}
+		// if (matches.length <= 0) {
+		// 	// trace('not italic-bold');
+		// }
 		if (matches.length > 0) {
 			for (i in 0...matches.length) {
 				var match = matches[i];
@@ -115,28 +121,45 @@ class ScMarkdownConverter {
 		var text = str;
 		if (str.startsWith('<ITEXT CH="&gt;')) {
 			text = text.replace('&gt; ', '').replace('para PARENT=""', 'para PARENT="${para}"');
-			// var xml = Xml.parse(text);
-			// trace(xml.firstChild());
-			// return '<ITEXT CH="${text}"/>\n<para PARENT="${para}"/>';
 			this.previous = BLOCKQUOTE;
 			return text;
 		}
 		return str;
 	}
 
+	// unordered list // <ul>
 	function extractList(str:String) {
-		warn('WIP extract List');
 		var para = StyleName.LIST;
 		var text = str;
-		// this.previous = LIST;
+		if (str.startsWith('<ITEXT CH="- ')) {
+			text = text.replace('- ', '').replace('para PARENT=""', 'para PARENT="${para}"');
+			this.previous = LIST;
+			return text;
+		}
 		return str;
 	}
 
+	// ordered list // <li>
 	function extractNumberedList(str:String) {
-		warn('WIP extract Numbered list');
+		// warn('WIP extract Numbered list');
 		var para = StyleName.LIST_NUMBERED;
 		var text = str;
-		// this.previous = LIST_NUMBERED;
+		var xml = Xml.parse(str);
+		var t = xml.firstChild().get('CH');
+		if (t.indexOf('.') > 0 && t.indexOf('.') < 4) {
+			// log(t, 1);
+			// mute('list? : ' + text);
+			// mute(t.indexOf('.'));
+			// mute(t.substr(t.indexOf('.') + 1).ltrim(), 1);
+			var v = t.substr(t.indexOf('.') + 1).ltrim();
+			text = text.replace('para PARENT=""', 'para PARENT="${para}"');
+			var _xml = Xml.parse(text);
+			var _t = xml.firstChild().get('CH');
+			_xml.firstChild().set('CH', v);
+			this.previous = LIST_NUMBERED;
+			// return text;
+			return _xml.toString();
+		}
 		return str;
 	}
 

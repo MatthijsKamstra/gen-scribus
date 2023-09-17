@@ -2,14 +2,14 @@
 
 Lists in markdown
 
-## Unordered
+## Unordered (li)
 
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-- Integer molestie lorem at massa
+- Start Unordered list
+- Unordered list
+- End Unordered list
 
-## Ordered
+## Ordered (ul)
 
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
+1. Start Ordered list
+2. Ordered list
+3. End Ordered list

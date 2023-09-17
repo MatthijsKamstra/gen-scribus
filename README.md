@@ -2,14 +2,6 @@
 
 POC: generating a [Scribus](https://www.scribus.net/) file via [Haxe](https://haxe.org/)
 
-## temp fix
-
-haxe is acting up...
-
-```bash
-haxe -v --wait 6000
-```
-
 ## Reason
 
 - Not possible to link (and update) to external text file (markdown)
@@ -17,6 +9,7 @@ haxe -v --wait 6000
 - Automate some of the scribus features
 - Not possible to use commandline to generate file
 - Not possible to update document (with external file and/or input)
+- Better import markdown (Scribus default markdown import will break when using `<li>`)
 
 ## Goals:
 
