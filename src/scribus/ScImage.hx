@@ -39,35 +39,43 @@ class ScImage {
 		// this.widthInMM = page.width * PageSize.POINTS2MM;
 		// this.heightInMM = page.height * PageSize.POINTS2MM;
 
-		info('x: ${this.xpos}, y: ${this.ypos}, w: ${this.width}, h: ${this.height}', 1);
+		if (Config.IS_DEBUG)
+			info('x: ${this.xpos}, y: ${this.ypos}, w: ${this.width}, h: ${this.height}', 1);
 	}
 
 	public function settings(image:Image) {
 		// warn(image);
 		if (image.x != null && image.x.unit.toLowerCase() == 'mm') {
-			log('x: ${image.x.value}${image.x.unit}, ${PageSize.MM2POINTS * image.x.value} points, xpos: ${xpos}', 1);
-			info(PageSize.MM2POINTS);
-			info('${image.x.value}');
-			info(PageSize.MM2POINTS * image.x.value);
-			info(xpos);
-			info(xpos + (PageSize.MM2POINTS * image.x.value));
+			if (Config.IS_DEBUG) {
+				log('x: ${image.x.value}${image.x.unit}, ${PageSize.MM2POINTS * image.x.value} points, xpos: ${xpos}', 1);
+				info(PageSize.MM2POINTS);
+				info('${image.x.value}');
+				info(PageSize.MM2POINTS * image.x.value);
+				info(xpos);
+				info(xpos + (PageSize.MM2POINTS * image.x.value));
+			}
 			xpos = xpos + (PageSize.MM2POINTS * image.x.value);
 			// xposInMM = image.x.value;
-			log('x: ${image.x.value}${image.x.unit}, ${PageSize.MM2POINTS * image.x.value} points, xpos: ${xpos}', 2);
+			if (Config.IS_DEBUG)
+				log('x: ${image.x.value}${image.x.unit}, ${PageSize.MM2POINTS * image.x.value} points, xpos: ${xpos}', 2);
 		}
 		if (image.y != null && image.y.unit.toLowerCase() == 'mm') {
-			log('y: ${image.y.value}${image.y.unit}, ${PageSize.MM2POINTS * image.y.value} points, ypos: ${ypos}', 1);
+			if (Config.IS_DEBUG)
+				log('y: ${image.y.value}${image.y.unit}, ${PageSize.MM2POINTS * image.y.value} points, ypos: ${ypos}', 1);
 			ypos = ypos + (PageSize.MM2POINTS * image.y.value);
 			// yposInMM = image.y.value;
-			log('y: ${image.y.value}${image.y.unit}, ${PageSize.MM2POINTS * image.y.value} points, ypos: ${ypos}', 2);
+			if (Config.IS_DEBUG)
+				log('y: ${image.y.value}${image.y.unit}, ${PageSize.MM2POINTS * image.y.value} points, ypos: ${ypos}', 2);
 		}
 		if (image.width != null && image.width.unit.toLowerCase() == 'mm') {
-			log('w', 1);
+			if (Config.IS_DEBUG)
+				log('w', 1);
 			width = PageSize.MM2POINTS * image.width.value;
 			// widthInMM = image.width.value;
 		}
 		if (image.height != null && image.height.unit.toLowerCase() == 'mm') {
-			log('h', 1);
+			if (Config.IS_DEBUG)
+				log('h', 1);
 			height = PageSize.MM2POINTS * image.height.value;
 			// heightInMM = image.height.value;
 		}

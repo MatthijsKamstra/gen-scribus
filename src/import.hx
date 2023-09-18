@@ -1,4 +1,5 @@
 // project
+import const.Config;
 import const.Folder;
 import const.Project;
 import haxe.io.Path;
