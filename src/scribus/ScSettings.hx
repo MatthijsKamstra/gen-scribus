@@ -1,5 +1,6 @@
 package scribus;
 
+import AST.Image;
 import const.Config;
 import haxe.Json;
 import utils.SaveFile;
@@ -97,8 +98,15 @@ class ScSettings {
 		if (pageObj.images != null) {
 			// info('image');
 			for (i in 0...pageObj.images.length) {
-				var _image = pageObj.images[i];
-				scribus.addImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _image.path));
+				var _image:Image = pageObj.images[i];
+				// scribus.addImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _image.path));
+
+				// new methode
+				scribus.addComment('Images added by hand');
+				var image = new ScImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _image.path));
+				// var image = new ScImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + 'assets/png/a4_red.png'));
+				image.settings(_image);
+				scribus.add2document(image.toString());
 			}
 		}
 		if (pageObj.texts != null) {

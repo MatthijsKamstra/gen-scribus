@@ -4,7 +4,7 @@
     "title": "Haxe Scribus Gen doc",
     "description": "blah blah, Haxe Scribus Gen doc",
     "language": "nl",
-    "pageName": "Custom Boo",
+    "pageName": "Custom Size",
     "width": { "unit": "mm", "value": 200 },
     "height": { "unit": "mm", "value": 150 },
     "margins": [
@@ -32,7 +32,16 @@
     {
       "left": {},
       "right": {
-        "_alias": "cover (right) 1"
+        "_alias": "cover (right) 1",
+        "images": [
+          {
+            "path": "assets/png/a4_green.png",
+            "x": { "unit": "mm", "value": -3 },
+            "y": { "unit": "mm", "value": -3 },
+            "width": { "unit": "mm", "value": 206 },
+            "height": { "unit": "mm", "value": 56 }
+          }
+        ]
       }
     },
     {

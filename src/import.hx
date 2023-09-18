@@ -1,11 +1,8 @@
 // project
 import const.Folder;
-import const.Global;
 import const.Project;
-import log.Logger.*;
-// haxe
-import sys.io.File;
 import haxe.io.Path;
+import log.Logger.*;
+import sys.io.File;
 
-// using
 using StringTools;

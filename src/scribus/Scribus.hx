@@ -75,7 +75,7 @@ class Scribus {
 		doc.att.COMMENTS = arg;
 	}
 
-	function addComment(comment:String) {
+	public function addComment(comment:String) {
 		add2document('<!-- ${comment} -->\n');
 	}
 
@@ -117,6 +117,8 @@ class Scribus {
 	public function setPageSizeInMM(width:Float, height:Float) {
 		this.pageWidth = PageSize.MM2POINTS * width;
 		this.pageHeight = PageSize.MM2POINTS * height;
+		// this.pageWidthMM = PageSize.MM2POINTS * width;
+		// this.pageHeightMM = PageSize.MM2POINTS * height;
 	}
 
 	public function isSnapToGuides(bool:Bool) {
@@ -307,9 +309,12 @@ class Scribus {
 		add2document(dump.toString());
 	}
 
-	private function add2document(str:String) {
+	public function add2document(str:String) {
 		var root = _xml.firstElement();
 		var document = root.firstElement();
+
+		// log(document);
+
 		document.addChild(Xml.parse(str));
 	}
 

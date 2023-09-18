@@ -16,6 +16,9 @@ class PageSize {
 	public static var CM2POINTS(default, null):Float = 841.889763779528 / 29.7; // 28.3464567;
 	public static var MM2POINTS(default, null):Float = 841.889763779528 / 297; // 28.3464567;
 
+	public static var POINTS2MM(default, null):Float = 297 / 841.889763779528; // 0.352777778; // 28.3464567;
+	public static var POINTS2CM(default, null):Float = 29.7 / 841.889763779528;
+
 	// static var CM2POINTS(default, null):Float = 28.35; // 28.3464567;
 
 	public static function setValueInPoints(pagesize:String):{width:Float, height:Float} {

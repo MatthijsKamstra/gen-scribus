@@ -6,7 +6,7 @@ POC: generating a [Scribus](https://www.scribus.net/) file via [Haxe](https://ha
 
 - Not possible to link (and update) to external text file (markdown)
 - Generate a quick and dirty document with text and image on a spread
-- Automate some of the scribus features
+- Automate some of the scribus features via settings
 - Not possible to use commandline to generate file
 - Not possible to update document (with external file and/or input)
 - Better import markdown (Scribus default markdown import will break when using `<li>`)
@@ -15,18 +15,20 @@ POC: generating a [Scribus](https://www.scribus.net/) file via [Haxe](https://ha
 
 - [x] create scribus file in any size you want
 - [x] regex door alle PAGEHEIGHT PAGEWIDTH
-- [x] change the language of the file
-- [x] add pages
-- [x] xpos ypos page
-- [x] change input to mm
-- [x] change margins
+- Pages
+  - [x] add pages
+  - [x] xpos ypos page
+- Document
+  - [x] change input to mm
+  - [x] change margins
+  - [x] change the language of the file
+  - [x] horizontal and vertical guides
+  - [x] snapToGuide toggle
+  - [x] generate document based upon json (settings file)
+  - [x] updating title, author, etc
 - [x] create dummy png
-- [x] import images
-- [x] update images
-- [x] xpos ypos image
 - [x] use UUID in nodes (doesn't work.. is cleaned after save in Scribus)
-- [x] import text
-- [x] custom markdown converter
+- Custom markdown converter
   - [x] heading
   - [x] bold
   - [x] italic
@@ -35,17 +37,25 @@ POC: generating a [Scribus](https://www.scribus.net/) file via [Haxe](https://ha
   - [x] quote / block quote
   - [x] list
   - [x] number list
-- [x] update text (how to find? use UUID, doesn't work)
-- [x] text input odt
-- [x] text input markdown
-- [x] text input html
+  - [ ] refactor
+  - [ ] test more
 - [x] create json (settings file)
-- [x] generate document based upon json (settings file)
 - [x] adding colors (rgb, cmyk)
-- [x] horizontal and vertical guides
-- [x] snapToGuide toggle
-- [x] fit image to frame
-- [x] updating title, author, etc
+- Images
+  - [x] fit image to frame
+  - [x] import images
+  - [x] update images (does Scribus also self)
+  - [x] xpos ypos image
+  - [x] position images via settings json
+  - [ ] use percentage for width and height
+  - [ ] use percentage for x and y
+- Texts
+  - [x] import text
+  - [x] update text (how to find? use UUID, doesn't work)
+  - [x] text input odt
+  - [x] text input markdown
+  - [x] text input html
+  - [ ] position texts via settings json
 - [ ] single page, facing page
 - [x] resize image to correct scale (load image, get imagesize, calculate new scale) <- fit image to frame
 

@@ -11,12 +11,17 @@ class ScPage {
 	private static var YPOS:Float = 20.001;
 
 	@:isVar public var id(default, null):Int = -1;
-	@:isVar public var xpos(default, null):Float = 100.001;
-	@:isVar public var ypos(default, null):Float = 20.001;
 
-	@:isVar public var size(get, set):String = Default.PAGESIZE;
-	@:isVar public var width(get, set):Float = Default.PAGEWIDTH;
-	@:isVar public var height(get, set):Float = Default.PAGEHEIGHT;
+	@:isVar public var size(get, set):String = Default.PAGESIZE; // in points
+	@:isVar public var xpos(get, set):Float = 100.001; // in points
+	@:isVar public var ypos(get, set):Float = 20.001; // in points
+	@:isVar public var width(get, set):Float = Default.PAGEWIDTH; // in points
+	@:isVar public var height(get, set):Float = Default.PAGEHEIGHT; // in points
+
+	@:isVar public var xposInMM(get, set):Float; // in mm
+	@:isVar public var yposInMM(get, set):Float; // in mm
+	@:isVar public var widthInMM(get, set):Float; // in mm
+	@:isVar public var heightInMM(get, set):Float; // in mm
 
 	public var marginLeft:Float;
 	public var marginRight:Float;
@@ -104,6 +109,22 @@ class ScPage {
 		return size = value;
 	}
 
+	function set_xpos(value:Float):Float {
+		return xpos = value;
+	}
+
+	function get_xpos():Float {
+		return xpos;
+	}
+
+	function set_ypos(value:Float):Float {
+		return ypos = value;
+	}
+
+	function get_ypos():Float {
+		return ypos;
+	}
+
 	function get_width():Float {
 		return width;
 	}
@@ -126,5 +147,43 @@ class ScPage {
 
 	function set_id(value:Int):Int {
 		return id = value;
+	}
+
+	// ____________________________________ getter/setter in mm ____________________________________
+
+	function set_xposInMM(value:Float):Float {
+		this.xpos = PageSize.MM2POINTS * value;
+		return xposInMM = value;
+	}
+
+	function get_xposInMM():Float {
+		return xposInMM;
+	}
+
+	function set_yposInMM(value:Float):Float {
+		this.ypos = PageSize.MM2POINTS * value;
+		return yposInMM = value;
+	}
+
+	function get_yposInMM():Float {
+		return yposInMM;
+	}
+
+	function set_widthInMM(value:Float):Float {
+		this.width = PageSize.MM2POINTS * value;
+		return widthInMM = value;
+	}
+
+	function get_widthInMM():Float {
+		return widthInMM;
+	}
+
+	function set_heightInMM(value:Float):Float {
+		this.height = PageSize.MM2POINTS * value;
+		return heightInMM = value;
+	}
+
+	function get_heightInMM():Float {
+		return heightInMM;
 	}
 }

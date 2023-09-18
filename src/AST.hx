@@ -68,10 +68,10 @@ typedef Pages = {
 typedef PageObj = {
 	var _alias:String;
 	var texts:Array<Texts>;
-	var images:Array<Images>;
+	var images:Array<Image>;
 };
 
-typedef Images = {
+typedef Image = {
 	var path:String;
 	var x:X;
 	var y:Y;

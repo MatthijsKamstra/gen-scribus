@@ -1,0 +1,104 @@
+{
+  "document": {
+    "author": "Matthijs Kamstra",
+    "title": "test images with gen-scribus",
+    "description": "blah blah, Haxe Scribus Gen doc",
+    "language": "nl",
+    "pageName": "a4",
+    "width": { "unit": "mm", "value": 210 },
+    "height": { "unit": "mm", "value": 297 },
+    "margins": [
+      { "dir": "left", "unit": "mm", "value": 10 },
+      { "dir": "right", "unit": "mm", "value": 10 },
+      { "dir": "top", "unit": "mm", "value": 10 },
+      { "dir": "bottom", "unit": "mm", "value": 10 }
+    ],
+    "guides": [
+      { "dir": "left", "unit": "mm", "value": 10 },
+      { "dir": "right", "unit": "mm", "value": 10 },
+      { "dir": "top", "unit": "mm", "value": 10 },
+      { "dir": "bottom", "unit": "mm", "value": 10 }
+    ],
+    "bleeds": [
+      { "dir": "left", "unit": "mm", "value": 3 },
+      { "dir": "right", "unit": "mm", "value": 3 },
+      { "dir": "top", "unit": "mm", "value": 3 },
+      { "dir": "bottom", "unit": "mm", "value": 3 }
+    ],
+    "guideSnap": true,
+    "guideLocked": true
+  },
+  "pages": [
+    {
+      "left": {},
+      "right": {
+        "_alias": "cover (right) 1",
+        "images": [
+          {
+            "path": "assets/png/a4_green.png",
+            "width": { "unit": "mm", "value": 100 },
+            "height": { "unit": "mm", "value": 100 }
+          },
+          {
+            "path": "assets/png/a4_gray.png",
+            "x": { "unit": "mm", "value": 0 },
+            "y": { "unit": "mm", "value": 0 },
+            "width": { "unit": "mm", "value": 210 },
+            "height": { "unit": "mm", "value": 297 }
+          },
+          {
+            "path": "assets/png/a4_blue.png",
+            "x": { "unit": "mm", "value": -3 },
+            "y": { "unit": "mm", "value": -3 },
+            "width": { "unit": "mm", "value": 216 },
+            "height": { "unit": "mm", "value": 303 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "only a path",
+        "images": [
+          {
+            "path": "assets/png/a4_green.png"
+          }
+        ]
+      },
+      "right": {
+        "_alias": "only height",
+        "images": [
+          {
+            "path": "assets/png/a4_red.png",
+            "height": { "unit": "mm", "value": 100 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "only width",
+        "images": [
+          {
+            "path": "assets/png/a4_green.png",
+            "width": { "unit": "mm", "value": 100 }
+          }
+        ]
+      },
+      "right": {
+        "_alias": "only width/height",
+        "images": [
+          {
+            "path": "assets/png/a4_red.png",
+            "width": { "unit": "mm", "value": 100 },
+            "height": { "unit": "mm", "value": 100 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {},
+      "right": {}
+    }
+  ]
+}

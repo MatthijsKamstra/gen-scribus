@@ -2,13 +2,13 @@
 
 Lists in markdown
 
-## Unordered (li)
+## Unordered <li>
 
 - Start Unordered list
 - Unordered list
 - End Unordered list
 
-## Ordered (ul)
+## Ordered <ul>
 
 1. Start Ordered list
 2. Ordered list
