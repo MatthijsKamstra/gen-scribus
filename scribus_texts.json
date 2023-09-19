@@ -1,0 +1,88 @@
+{
+  "document": {
+    "author": "Matthijs Kamstra",
+    "title": "test text with gen-scribus",
+    "description": "blah blah, Haxe Scribus Gen doc",
+    "language": "nl",
+    "pageName": "a4",
+    "width": { "unit": "mm", "value": 210 },
+    "height": { "unit": "mm", "value": 297 },
+    "margins": [
+      { "dir": "left", "unit": "mm", "value": 10 },
+      { "dir": "right", "unit": "mm", "value": 10 },
+      { "dir": "top", "unit": "mm", "value": 10 },
+      { "dir": "bottom", "unit": "mm", "value": 10 }
+    ],
+    "guides": [
+      { "dir": "left", "unit": "mm", "value": 10 },
+      { "dir": "right", "unit": "mm", "value": 10 },
+      { "dir": "top", "unit": "mm", "value": 10 },
+      { "dir": "bottom", "unit": "mm", "value": 10 }
+    ],
+    "bleeds": [
+      { "dir": "left", "unit": "mm", "value": 3 },
+      { "dir": "right", "unit": "mm", "value": 3 },
+      { "dir": "top", "unit": "mm", "value": 3 },
+      { "dir": "bottom", "unit": "mm", "value": 3 }
+    ],
+    "guideSnap": true,
+    "guideLocked": true
+  },
+  "pages": [
+    {
+      "left": {},
+      "right": {
+        "_alias": "text only path (right) 1",
+        "texts": [
+          {
+            "path": "assets/markdown/test_simple.md"
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "text only a path withy style",
+        "texts": [
+          {
+            "path": "assets/markdown/test_simple.md",
+            "style": "GenRedForMatthijs"
+          }
+        ]
+      },
+      "right": {
+        "_alias": "only height",
+        "texts": [
+          {
+            "path": "assets/markdown/test_simple.md",
+            "width": { "unit": "mm", "value": 100 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "only width",
+        "texts": [
+          {
+            "path": "assets/markdown/test_simple.md",
+            "width": { "unit": "mm", "value": 100 }
+          }
+        ]
+      },
+      "right": {
+        "_alias": "only width/height",
+        "texts": [
+          {
+            "path": "assets/markdown/test_simple.md",
+            "width": { "unit": "mm", "value": 100 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {},
+      "right": {}
+    }
+  ]
+}
