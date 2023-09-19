@@ -27,9 +27,25 @@ class Main {
 		// // use settings
 		// useSettings('scribus_148x148mm.json');
 
-		info('Scribus data');
-		info('-------------------------------------------');
-		info('Total pages: ' + ScData.TOTAL_PAGES, 1);
+		infoGen();
+	}
+
+	function infoGen() {
+		var numberPages = [8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64];
+		var maxValue = 0;
+		var minValue = 0;
+		for (i in 0...numberPages.length) {
+			var _numberPages = numberPages[i];
+			if (_numberPages >= ScData.TOTAL_PAGES) {
+				maxValue = i;
+				minValue = i - 1;
+				if (minValue <= 0)
+					minValue = 0;
+				break;
+			}
+		}
+		info('------------------- Scribus data ------------------------');
+		info('Total pages: ' + ScData.TOTAL_PAGES + ' (${numberPages[minValue]}-${numberPages[maxValue]})', 1);
 		info('Total images: ' + ScData.TOTAL_IMAGES, 1);
 		info('Total text: ' + ScData.TOTAL_TEXT, 1);
 		info('Total errors: ' + ScData.TOTAL_ERRORS, 1);
@@ -37,7 +53,7 @@ class Main {
 			var _errorArray = ScData.errorArray[i];
 			info(' - ' + _errorArray, 2);
 		}
-		info('-------------------------------------------');
+		info('----------------------------------------------------------');
 	}
 
 	function init() {

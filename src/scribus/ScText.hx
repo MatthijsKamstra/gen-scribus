@@ -29,16 +29,18 @@ class ScText {
 		if (!FileSystem.exists(_path)) {
 			ScData.TOTAL_ERRORS++;
 			ScData.errorArray.push('Text file doesnt exist (${_path})');
+			var convert = new ScMarkdownConverter('# File does not exist\n\nCheck path: `${_path}`');
+			// ITEXT = convert.itextArr;
+			ITEXT_STR = convert.out;
 		} else {
 			// file exists
+			// read the file
+			var content = sys.io.File.getContent(_path);
+			// trace(content);
+			var convert = new ScMarkdownConverter(content);
+			// ITEXT = convert.itextArr;
+			ITEXT_STR = convert.out;
 		}
-
-		// read the file
-		var content = sys.io.File.getContent(_path);
-		// trace(content);
-		var convert = new ScMarkdownConverter(content);
-		// ITEXT = convert.itextArr;
-		ITEXT_STR = convert.out;
 
 		// log('page.xpos: ' + page.xpos);
 		// log('page.ypos: ' + page.ypos);
