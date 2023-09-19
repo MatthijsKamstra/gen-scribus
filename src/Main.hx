@@ -33,11 +33,16 @@ class Main {
 		info('Total images: ' + ScData.TOTAL_IMAGES, 1);
 		info('Total text: ' + ScData.TOTAL_TEXT, 1);
 		info('Total errors: ' + ScData.TOTAL_ERRORS, 1);
+		for (i in 0...ScData.errorArray.length) {
+			var _errorArray = ScData.errorArray[i];
+			info(' - ' + _errorArray, 2);
+		}
 		info('-------------------------------------------');
 	}
 
 	function init() {
 		// info('init');
+		ScData.reset();
 
 		Config.ROOT = Sys.getCwd();
 		Folder.ROOT_FOLDER = Sys.getCwd();

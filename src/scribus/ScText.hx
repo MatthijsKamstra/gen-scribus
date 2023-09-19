@@ -28,6 +28,7 @@ class ScText {
 
 		if (!FileSystem.exists(_path)) {
 			ScData.TOTAL_ERRORS++;
+			ScData.errorArray.push('Text file doesnt exist (${_path})');
 		} else {
 			// file exists
 		}

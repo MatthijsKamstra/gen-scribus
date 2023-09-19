@@ -32,6 +32,7 @@ class ScImage {
 
 		if (!FileSystem.exists(this.path)) {
 			ScData.TOTAL_ERRORS++;
+			ScData.errorArray.push('Image file doesnt exist (${this.path})');
 		} else {
 			// file exists
 		}

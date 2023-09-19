@@ -65,8 +65,6 @@ class ScSettings {
 		// // scribus.removeMasterPages();
 		scribus.removePages();
 
-		ScData.TOTAL_PAGES = json.pages.length;
-
 		var pages:Array<AST.Pages> = json.pages;
 		for (i in 0...pages.length) {
 			var _page = pages[i];
@@ -97,6 +95,9 @@ class ScSettings {
 
 	function createPage(scribus:Scribus, pageObj:AST.PageObj) {
 		var page:ScPage = scribus.addPage(pageObj._alias);
+
+		ScData.TOTAL_PAGES++;
+
 		if (pageObj.images != null) {
 			// info('image');
 			for (i in 0...pageObj.images.length) {
