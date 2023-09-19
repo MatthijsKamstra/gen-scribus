@@ -1,6 +1,7 @@
 import const.Config;
 import scribus.Locale;
 import scribus.PageSize;
+import scribus.ScData;
 import scribus.ScPage;
 import scribus.ScSettings;
 import scribus.Scribus;
@@ -25,6 +26,14 @@ class Main {
 
 		// // use settings
 		// useSettings('scribus_148x148mm.json');
+
+		info('Scribus data');
+		info('-------------------------------------------');
+		info('Total pages: ' + ScData.TOTAL_PAGES, 1);
+		info('Total images: ' + ScData.TOTAL_IMAGES, 1);
+		info('Total text: ' + ScData.TOTAL_TEXT, 1);
+		info('Total errors: ' + ScData.TOTAL_ERRORS, 1);
+		info('-------------------------------------------');
 	}
 
 	function init() {

@@ -65,6 +65,8 @@ class ScSettings {
 		// // scribus.removeMasterPages();
 		scribus.removePages();
 
+		ScData.TOTAL_PAGES = json.pages.length;
+
 		var pages:Array<AST.Pages> = json.pages;
 		for (i in 0...pages.length) {
 			var _page = pages[i];
@@ -107,6 +109,8 @@ class ScSettings {
 				// var image = new ScImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + 'assets/png/a4_red.png'));
 				image.settings(_image);
 				scribus.add2document(image.toString());
+
+				ScData.TOTAL_IMAGES++;
 			}
 		}
 		if (pageObj.texts != null) {
@@ -114,6 +118,8 @@ class ScSettings {
 			for (i in 0...pageObj.texts.length) {
 				var _text = pageObj.texts[i];
 				scribus.addText(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _text.path));
+
+				ScData.TOTAL_TEXT++;
 			}
 		}
 	}

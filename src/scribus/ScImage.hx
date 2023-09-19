@@ -1,6 +1,7 @@
 package scribus;
 
 import AST.Image;
+import sys.FileSystem;
 import utils.ID;
 import utils.UUID;
 
@@ -28,6 +29,12 @@ class ScImage {
 	public function new(page:ScPage, path:String) {
 		this.id = page.id;
 		this.path = path;
+
+		if (!FileSystem.exists(this.path)) {
+			ScData.TOTAL_ERRORS++;
+		} else {
+			// file exists
+		}
 
 		this.xpos = page.xpos; // top left corner
 		this.ypos = page.ypos; // top left corner

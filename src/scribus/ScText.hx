@@ -1,7 +1,8 @@
 package scribus;
 
-import utils.UUID;
+import sys.FileSystem;
 import utils.ID;
+import utils.UUID;
 
 class ScText {
 	var id(default, null):Int;
@@ -23,8 +24,16 @@ class ScText {
 		// trace('ScText');
 		this.id = page.id;
 
+		var _path = path.replace('../', '');
+
+		if (!FileSystem.exists(_path)) {
+			ScData.TOTAL_ERRORS++;
+		} else {
+			// file exists
+		}
+
 		// read the file
-		var content = sys.io.File.getContent(path.replace('../', ''));
+		var content = sys.io.File.getContent(_path);
 		// trace(content);
 		var convert = new ScMarkdownConverter(content);
 		// ITEXT = convert.itextArr;
