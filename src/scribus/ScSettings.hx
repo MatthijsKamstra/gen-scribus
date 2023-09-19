@@ -80,7 +80,7 @@ class ScSettings {
 			}
 		}
 
-		var _title = json.document.title.replace(' ', '_');
+		var _title = json.document.title.replace(' ', '_').replace(',', '_').replace('.', '_');
 		var _size = '${json.document.width.value}${json.document.width.unit}x${json.document.height.value}${json.document.height.unit}'.replace(' ', '_');
 		var _fileName = '${_title}__${_size}__${json.document.language}.sla'.toLowerCase();
 
