@@ -120,6 +120,12 @@ class ScSettings {
 				var _text = pageObj.texts[i];
 				scribus.addText(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _text.path));
 
+				if (_text.style != null) {
+					warn('add style: ${_text.style}');
+					scribus.addComment('add custom style to doc');
+					// scribus.addCharacter(_text.style);
+					scribus.addStyle(_text.style);
+				}
 				// // new methode
 				// scribus.addComment('Images added by hand');
 				// var image = new ScText(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _text.path));

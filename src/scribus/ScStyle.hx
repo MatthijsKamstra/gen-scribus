@@ -31,28 +31,4 @@ class ScStyle {
 		FONTFEATURES="-clig"
 		/>\n';
 	}
-
-	public function defaultToString():String {
-		return '<STYLE
-			NAME="Default Paragraph Style"
-			DefaultStyle="1"
-			ALIGN="0"
-			DIRECTION="0"
-			LINESPMode="0"
-			LINESP="15"
-			INDENT="0"
-			RMARGIN="0"
-			FIRST="0"
-			VOR="0"
-			NACH="0"
-			ParagraphEffectOffset="0"
-			DROP="0"
-			DROPLIN="2"
-			Bullet="0"
-			Numeration="0"
-			HyphenConsecutiveLines="2"
-			BCOLOR="None"
-			BSHADE="100"
-			CPARENT="Default Character Style"/>\n';
-	}
 }

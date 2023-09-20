@@ -125,6 +125,11 @@ class Scribus {
 		doc.att.SnapToGuides = '${(bool) ? '1' : '0'}';
 	}
 
+	public function addCharacter(name:String) {
+		var el = new ScStyleChar(name);
+		add2document(el.toString());
+	}
+
 	public function isGuideLocked(bool:Bool) {
 		doc.att.GUIDELOCK = '${(bool) ? '1' : '0'}';
 	}
@@ -251,22 +256,24 @@ class Scribus {
 		return page;
 	}
 
+	// ____________________________________ style ____________________________________
+
+	public function addDefaultStyle(name:String) {
+		var style = new ScStyleDefault(name);
+		add2document(style.toString());
+		return style;
+	}
+
+	public function addStyle(name:String, fontsize:Int = 11) {
+		var style = new ScStyle(name, fontsize);
+		add2document(style.toString());
+		return style;
+	}
+
 	public function defaultFont(name:String, fontsize:Int) {
 		var font = new ScFont(name, fontsize);
 		add2document(font.toString());
 		return font;
-	}
-
-	public function addDefaultStyle(name:String, fontsize:Int) {
-		var style = new ScStyle(name, fontsize).defaultToString();
-		add2document(style.toString());
-		return style;
-	}
-
-	public function addStyle(name:String, fontsize:Int) {
-		var style = new ScStyle(name, fontsize);
-		add2document(style.toString());
-		return style;
 	}
 
 	public function dumpStyle() {
@@ -309,12 +316,11 @@ class Scribus {
 		add2document(dump.toString());
 	}
 
+	// ____________________________________ misc/tools ____________________________________
+
 	public function add2document(str:String) {
 		var root = _xml.firstElement();
 		var document = root.firstElement();
-
-		// log(document);
-
 		document.addChild(Xml.parse(str));
 	}
 
