@@ -1,5 +1,6 @@
 package scribus;
 
+import AST.Texts;
 import sys.FileSystem;
 import utils.ID;
 import utils.UUID;
@@ -7,18 +8,28 @@ import utils.UUID;
 class ScText {
 	var id(default, null):Int;
 
-	@:isVar public var height(get, set):Float;
-	@:isVar public var width(get, set):Float;
 	public var path:String;
+	public var DEFAULT_X = 100.001; // in points
+	public var DEFAULT_Y = 20.001; // in points
 
-	public var xpos = 100.001;
-	public var ypos = 20.001;
-	public var offsetx:Float = 0.0;
-	public var offsety:Float = 0.0;
+	// public var xpos = 100.001;
+	// public var ypos = 20.001;
+	@:isVar public var xpos(get, set):Float; // in points
+	@:isVar public var ypos(get, set):Float; // in points
+	@:isVar public var width(get, set):Float = 100; // in points
+	@:isVar public var height(get, set):Float = 100; // in points
 
 	var ITEXT:Array<String> = [];
 	var ITEXT_STR:String = '';
 	var DEFAULT_STYLE = '<DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>';
+
+	@:isVar public var xposInMM(get, set):Float; // in mm
+	@:isVar public var yposInMM(get, set):Float; // in mm
+	@:isVar public var widthInMM(get, set):Float; // in mm
+	@:isVar public var heightInMM(get, set):Float; // in mm
+
+	public var offsetx:Float = 0.0;
+	public var offsety:Float = 0.0;
 
 	public function new(page:ScPage, path:String) {
 		// trace('ScText');
@@ -52,6 +63,10 @@ class ScText {
 
 		this.xpos = page.xpos;
 		this.ypos = page.ypos;
+	}
+
+	public function settings(text:Texts) {
+		// warn(text);
 	}
 
 	public function toString():String {
@@ -109,6 +124,14 @@ class ScText {
 
 	// ____________________________________ getter/setter ____________________________________
 
+	function get_width():Float {
+		return width;
+	}
+
+	function set_width(value:Float):Float {
+		return width = value;
+	}
+
 	function get_height():Float {
 		return height;
 	}
@@ -117,11 +140,55 @@ class ScText {
 		return height = value;
 	}
 
-	function get_width():Float {
-		return width;
+	function get_xpos():Float {
+		return xpos;
 	}
 
-	function set_width(value:Float):Float {
-		return width = value;
+	function set_xpos(value:Float):Float {
+		return xpos = value;
+	}
+
+	function get_ypos():Float {
+		return ypos;
+	}
+
+	function set_ypos(value:Float):Float {
+		return ypos = value;
+	}
+
+	function set_xposInMM(value:Float):Float {
+		this.xpos = PageSize.MM2POINTS * value;
+		return xposInMM = value;
+	}
+
+	function get_xposInMM():Float {
+		return xposInMM;
+	}
+
+	function set_yposInMM(value:Float):Float {
+		this.ypos = PageSize.MM2POINTS * value;
+		return xposInMM = value;
+	}
+
+	function get_yposInMM():Float {
+		return yposInMM;
+	}
+
+	function set_widthInMM(value:Float):Float {
+		this.width = PageSize.MM2POINTS * value;
+		return widthInMM = value;
+	}
+
+	function get_widthInMM():Float {
+		return widthInMM;
+	}
+
+	function set_heightInMM(value:Float):Float {
+		this.height = PageSize.MM2POINTS * value;
+		return heightInMM = value;
+	}
+
+	function get_heightInMM():Float {
+		return heightInMM;
 	}
 }

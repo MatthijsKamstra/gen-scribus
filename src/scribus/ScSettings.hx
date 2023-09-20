@@ -105,7 +105,7 @@ class ScSettings {
 				// scribus.addImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _image.path));
 
 				// new methode
-				scribus.addComment('Images added by hand');
+				// scribus.addComment('Images added by hand');
 				var image = new ScImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _image.path));
 				// var image = new ScImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + 'assets/png/a4_red.png'));
 				image.settings(_image);
@@ -119,6 +119,13 @@ class ScSettings {
 			for (i in 0...pageObj.texts.length) {
 				var _text = pageObj.texts[i];
 				scribus.addText(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _text.path));
+
+				// // new methode
+				// scribus.addComment('Images added by hand');
+				// var image = new ScText(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _text.path));
+				// // var image = new ScImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + 'assets/png/a4_red.png'));
+				// image.settings(_text);
+				// scribus.add2document(image.toString());
 
 				ScData.TOTAL_TEXT++;
 			}

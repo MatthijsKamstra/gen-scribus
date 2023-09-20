@@ -54,6 +54,21 @@ class Main {
 			info(' - ' + _errorArray, 2);
 		}
 		info('----------------------------------------------------------');
+
+		var md = '# Scribus data\n\n';
+		md += '- Total pages: ' + ScData.TOTAL_PAGES + ' (${numberPages[minValue]}-${numberPages[maxValue]})' + '\n';
+		md += '- Total images: ' + ScData.TOTAL_IMAGES + '\n';
+		md += '- Total text: ' + ScData.TOTAL_TEXT + '\n';
+		md += '- Total errors: ' + ScData.TOTAL_ERRORS + '\n';
+		for (i in 0...ScData.errorArray.length) {
+			var _errorArray = ScData.errorArray[i];
+			md += '\t- ' + _errorArray + '\n';
+		}
+		var arr = Config.PATH.split('/');
+		var fileName = arr[arr.length - 1].replace('.json', '.md');
+		var _p = Path.normalize(Config.ROOT) + '/' + fileName;
+		log(_p);
+		SaveFile.out(_p, md);
 	}
 
 	function init() {

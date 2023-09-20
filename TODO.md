@@ -1,0 +1,49 @@
+# TODO
+
+- [x] create scribus file in any size you want
+- [x] regex door alle PAGEHEIGHT PAGEWIDTH
+- Pages
+  - [x] add pages
+  - [x] xpos ypos page
+- Document
+  - [x] change input to mm
+  - [x] change margins
+  - [x] change the language of the file
+  - [x] horizontal and vertical guides
+  - [x] snapToGuide toggle
+  - [x] generate document based upon json (settings file)
+  - [x] updating title, author, etc
+- [x] create dummy png
+- [x] use UUID in nodes (doesn't work.. is cleaned after save in Scribus)
+- Custom markdown converter
+  - [x] heading
+  - [x] bold
+  - [x] italic
+  - [x] bold italic
+  - [ ] strikethrough
+  - [x] quote / block quote
+  - [x] list
+  - [x] number list
+  - [ ] refactor
+  - [ ] test more
+  - [ ] fix choose enters to hide or not
+- [x] create json (settings file)
+- [x] adding colors (rgb, cmyk)
+- Images
+  - [x] fit image to frame
+  - [x] import images
+  - [x] update images (does Scribus also self)
+  - [x] xpos ypos image
+  - [x] position images via settings json
+  - [ ] use percentage for width and height
+  - [ ] use percentage for x and y
+- Texts
+  - [x] import text
+  - [x] update text (how to find? use UUID, doesn't work)
+  - [x] text input odt
+  - [x] text input markdown
+  - [x] text input html
+  - [ ] position texts via settings json
+  - [ ] custom style
+- [ ] single page, facing page
+- [x] resize image to correct scale (load image, get imagesize, calculate new scale) <- fit image to frame
