@@ -27,22 +27,24 @@
   - [ ] refactor
   - [ ] test more
   - [ ] fix choose enters to hide or not
+  - [ ] remove html escape of (single) quotes
 - [x] create json (settings file)
 - [x] adding colors (rgb, cmyk)
 - Images
   - [x] fit image to frame
   - [x] import images
   - [x] update images (does Scribus also self)
-  - [x] xpos ypos image
+  - [x] xpos/ypos image
   - [x] position images via settings json
   - [ ] use percentage for width and height
   - [ ] use percentage for x and y
 - Texts
   - [x] import text
-  - [x] update text (how to find? use UUID, doesn't work)
+  - [x] ~~update text~~ ( UUID, doesn't work)
   - [x] text input odt
   - [x] text input markdown
   - [x] text input html
+  - [ ] xpos/ypos text
   - [ ] position texts via settings json
   - [ ] custom style
 - [ ] single page, facing page

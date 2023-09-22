@@ -1,4 +1,5 @@
 import const.Config;
+import haxe.Json;
 import scribus.Locale;
 import scribus.PageSize;
 import scribus.ScData;
@@ -9,6 +10,8 @@ import sys.FileSystem;
 import utils.SaveFile;
 
 class Main {
+	var json:AST.HxSettingsObj;
+
 	public function new(?args:Array<String>) {
 		info('Start project: "${Project.NAME}"');
 
@@ -45,6 +48,35 @@ class Main {
 			}
 		}
 		info('------------------- Scribus data ------------------------');
+		info('Document:', 1);
+		info('width: ${json.document.width.value}${json.document.width.unit}', 2);
+		info('height: ${json.document.height.value}${json.document.height.unit}', 2);
+		info('author: ${json.document.author}', 2);
+		info('title: ${json.document.title}', 2);
+		info('description: ${json.document.description}', 2);
+		info('language: ${json.document.language}', 2);
+		info('pageName: ${json.document.pageName}', 2);
+		info('guideSnap: ${json.document.guideSnap}', 2);
+		info('guideLocked: ${json.document.guideLocked}', 2);
+
+		info('Margins:', 1);
+		info('margins-${json.document.margins[0].dir}: ${json.document.margins[0].value}${json.document.margins[0].unit}', 2);
+		info('margins-${json.document.margins[1].dir}: ${json.document.margins[1].value}${json.document.margins[1].unit}', 2);
+		info('margins-${json.document.margins[2].dir}: ${json.document.margins[2].value}${json.document.margins[2].unit}', 2);
+		info('margins-${json.document.margins[3].dir}: ${json.document.margins[3].value}${json.document.margins[3].unit}', 2);
+
+		info('Guides:', 1);
+		info('guides-${json.document.guides[0].dir}: ${json.document.guides[0].value}${json.document.guides[0].unit}', 2);
+		info('guides-${json.document.guides[1].dir}: ${json.document.guides[1].value}${json.document.guides[1].unit}', 2);
+		info('guides-${json.document.guides[2].dir}: ${json.document.guides[2].value}${json.document.guides[2].unit}', 2);
+		info('guides-${json.document.guides[3].dir}: ${json.document.guides[3].value}${json.document.guides[3].unit}', 2);
+
+		info('Bleeds:', 1);
+		info('bleeds-${json.document.bleeds[0].dir}: ${json.document.bleeds[0].value}${json.document.bleeds[0].unit}', 2);
+		info('bleeds-${json.document.bleeds[1].dir}: ${json.document.bleeds[1].value}${json.document.bleeds[1].unit}', 2);
+		info('bleeds-${json.document.bleeds[2].dir}: ${json.document.bleeds[2].value}${json.document.bleeds[2].unit}', 2);
+		info('bleeds-${json.document.bleeds[3].dir}: ${json.document.bleeds[3].value}${json.document.bleeds[3].unit}', 2);
+
 		info('Total pages: ' + ScData.TOTAL_PAGES + ' (${numberPages[minValue]}-${numberPages[maxValue]})', 1);
 		info('Total images: ' + ScData.TOTAL_IMAGES, 1);
 		info('Total text: ' + ScData.TOTAL_TEXT, 1);
@@ -56,6 +88,36 @@ class Main {
 		info('----------------------------------------------------------');
 
 		var md = '# Scribus data\n\n';
+
+		md += '- Document:\n';
+		md += '\t- width: ${json.document.width.value}${json.document.width.unit}\n';
+		md += '\t- height: ${json.document.height.value}${json.document.height.unit}\n';
+		md += '\t- author: ${json.document.author}\n';
+		md += '\t- title: ${json.document.title}\n';
+		md += '\t- description: ${json.document.description}\n';
+		md += '\t- language: ${json.document.language}\n';
+		md += '\t- pageName: ${json.document.pageName}\n';
+		md += '\t- guideSnap: ${json.document.guideSnap}\n';
+		md += '\t- guideLocked: ${json.document.guideLocked}\n';
+
+		md += '- Margins:\n';
+		md += '\t- margins-${json.document.margins[0].dir}: ${json.document.margins[0].value}${json.document.margins[0].unit}\n';
+		md += '\t- margins-${json.document.margins[1].dir}: ${json.document.margins[1].value}${json.document.margins[1].unit}\n';
+		md += '\t- margins-${json.document.margins[2].dir}: ${json.document.margins[2].value}${json.document.margins[2].unit}\n';
+		md += '\t- margins-${json.document.margins[3].dir}: ${json.document.margins[3].value}${json.document.margins[3].unit}\n';
+
+		md += '- Guides:\n';
+		md += '\t- guides-${json.document.guides[0].dir}: ${json.document.guides[0].value}${json.document.guides[0].unit}\n';
+		md += '\t- guides-${json.document.guides[1].dir}: ${json.document.guides[1].value}${json.document.guides[1].unit}\n';
+		md += '\t- guides-${json.document.guides[2].dir}: ${json.document.guides[2].value}${json.document.guides[2].unit}\n';
+		md += '\t- guides-${json.document.guides[3].dir}: ${json.document.guides[3].value}${json.document.guides[3].unit}\n';
+
+		md += '- Bleeds:\n';
+		md += '\t- bleeds-${json.document.bleeds[0].dir}: ${json.document.bleeds[0].value}${json.document.bleeds[0].unit}\n';
+		md += '\t- bleeds-${json.document.bleeds[1].dir}: ${json.document.bleeds[1].value}${json.document.bleeds[1].unit}\n';
+		md += '\t- bleeds-${json.document.bleeds[2].dir}: ${json.document.bleeds[2].value}${json.document.bleeds[2].unit}\n';
+		md += '\t- bleeds-${json.document.bleeds[3].dir}: ${json.document.bleeds[3].value}${json.document.bleeds[3].unit}\n';
+
 		md += '- Total pages: ' + ScData.TOTAL_PAGES + ' (${numberPages[minValue]}-${numberPages[maxValue]})' + '\n';
 		md += '- Total images: ' + ScData.TOTAL_IMAGES + '\n';
 		md += '- Total text: ' + ScData.TOTAL_TEXT + '\n';
@@ -173,6 +235,8 @@ class Main {
 
 		if (Config.PATH != '') {
 			useSettings(Config.PATH);
+			var content = sys.io.File.getContent(Config.PATH);
+			json = Json.parse(content);
 		}
 	}
 
