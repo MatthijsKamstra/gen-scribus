@@ -26,8 +26,8 @@
   - [x] number list
   - [ ] refactor
   - [ ] test more
-  - [ ] fix choose enters to hide or not
-  - [ ] remove html escape of (single) quotes
+  - [x] fix choose enters to hide or not
+  - [x] remove html escape of (single) quotes
 - [x] create json (settings file)
 - [x] adding colors (rgb, cmyk)
 - Images
@@ -44,8 +44,10 @@
   - [x] text input odt
   - [x] text input markdown
   - [x] text input html
-  - [ ] xpos/ypos text
-  - [ ] position texts via settings json
+  - [x] xpos/ypos text
+  - [x] position texts via settings json
+  - [ ] use percentage for width and height
+  - [ ] use percentage for x and y
   - [ ] custom style
 - [ ] single page, facing page
 - [x] resize image to correct scale (load image, get imagesize, calculate new scale) <- fit image to frame

@@ -9,6 +9,7 @@ class StyleName {
 	public static final H6 = 'Heading_6_GenByMck';
 
 	public static final BOLD_ITALIC = 'BoldItalic_GenByMck';
+	public static final ITALIC_BOLD = 'BoldItalic_GenByMck';
 	public static final BOLD = 'Bold_GenByMck';
 	public static final ITALIC = 'Italic_GenByMck';
 

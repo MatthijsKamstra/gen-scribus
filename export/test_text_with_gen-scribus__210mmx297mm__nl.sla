@@ -109,9 +109,9 @@
 		<STYLE ParagraphEffectOffset="2.83464566929134" PARENT="Default Paragraph Style" NumerationOther="1" Numeration="1" NAME="List_Numbered_GenByMck" LINESPMode="1"/>
 
 		<!-- text only path (right) 1 -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c356a898-c1cb-4266-9124-8485a6021a23" Size="a4" PRESET="0" PAGEYPOS="20.001" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="0" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c3694e08-1231-4215-a556-f0623b0cbe7d" Size="a4" PRESET="0" PAGEYPOS="20.001" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="0" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
 		<!-- Text added by hand -->
-<PAGEOBJECT uuid="c356a898-f0ed-4634-9f05-30209d03d855" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="48.3474566929134042" XPOS="723.623047244094892" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="0" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1083607025" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGEOBJECT uuid="c3694e08-8056-41ec-aa37-759c71721dcb" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="48.3474566929134042" XPOS="723.623047244094892" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="0" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="947249529" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -119,25 +119,25 @@
 <ITEXT CPARENT="Bold_GenByMck" CH="(bold) consectetur adipiscing elit"/>
 <ITEXT CH=", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="(italic) nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"/>
-<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint _**(italic bold)occaecat cupidatat non"/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH=" proident, sunt in (bold italic)culpa qui officia"/>
+<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold italic) culpa qui officia"/>
 <ITEXT CH=" deserunt mollit anim id est laborum."/>
 <para PARENT=""/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 2"/>
 <para PARENT="Heading_2_GenByMck"/><ITEXT CH="Lorem "/>
-<ITEXT CPARENT="Bold_GenByMck" CH="ipsum dolor sit"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(bold) ipsum dolor sit"/>
 <ITEXT CH=" amet,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="consectetur "/>
-<ITEXT CPARENT="Italic_GenByMck" CH="adipiscing"/>
+<ITEXT CPARENT="Italic_GenByMck" CH="(italic) adipiscing"/>
 <ITEXT CH=" elit,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="sed do "/>
 <ITEXT CPARENT="Bold_GenByMck" CH="eiusmod"/>
 <ITEXT CH=" tempor "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="incididunt"/>
 <ITEXT CH=" ut labore et "/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH="dolore"/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold-italic) dolore"/>
 <ITEXT CH=" magna _"/>
-<ITEXT CPARENT="Bold_GenByMck" CH="aliqua"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(italic-bold) aliqua"/>
 <ITEXT CH="_."/>
 <para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 3"/>
@@ -145,17 +145,24 @@
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Consectetur adipiscing elit"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Integer molestie lorem at massa"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 1"/>
 <para PARENT=""/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 2"/>
 <para PARENT=""/><ITEXT CH=""/>
+<para PARENT=""/><ITEXT CH="quotes"/>
+<para PARENT="Heading_4_GenByMck"/><ITEXT CH="test &quot;double quotes&quot;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test &#039;single quotes&#039;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test `back tick`"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test “double curly quote”"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test ‘single curly quote’"/>
+<para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/>
             </StoryText>
         </PAGEOBJECT>
 <!-- text only a path withy style -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c356a898-48b2-4cc4-ade8-ceb40606701e" Size="a4" PRESET="0" PAGEYPOS="901.892763779528" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="1" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c3694e08-53d0-4de8-b2bc-610779d30d35" Size="a4" PRESET="0" PAGEYPOS="901.892763779528" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="1" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
 		<!-- Text added by hand -->
-<PAGEOBJECT uuid="c356a898-1c54-4309-8718-a4503d7b4254" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="930.239220472441389" XPOS="128.347456692913397" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="1" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1083607026" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGEOBJECT uuid="c3694e08-e074-485a-88e8-6abdfe91cb52" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="930.239220472441389" XPOS="128.347456692913397" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="1" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="947249530" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -163,25 +170,25 @@
 <ITEXT CPARENT="Bold_GenByMck" CH="(bold) consectetur adipiscing elit"/>
 <ITEXT CH=", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="(italic) nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"/>
-<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint _**(italic bold)occaecat cupidatat non"/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH=" proident, sunt in (bold italic)culpa qui officia"/>
+<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold italic) culpa qui officia"/>
 <ITEXT CH=" deserunt mollit anim id est laborum."/>
 <para PARENT=""/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 2"/>
 <para PARENT="Heading_2_GenByMck"/><ITEXT CH="Lorem "/>
-<ITEXT CPARENT="Bold_GenByMck" CH="ipsum dolor sit"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(bold) ipsum dolor sit"/>
 <ITEXT CH=" amet,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="consectetur "/>
-<ITEXT CPARENT="Italic_GenByMck" CH="adipiscing"/>
+<ITEXT CPARENT="Italic_GenByMck" CH="(italic) adipiscing"/>
 <ITEXT CH=" elit,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="sed do "/>
 <ITEXT CPARENT="Bold_GenByMck" CH="eiusmod"/>
 <ITEXT CH=" tempor "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="incididunt"/>
 <ITEXT CH=" ut labore et "/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH="dolore"/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold-italic) dolore"/>
 <ITEXT CH=" magna _"/>
-<ITEXT CPARENT="Bold_GenByMck" CH="aliqua"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(italic-bold) aliqua"/>
 <ITEXT CH="_."/>
 <para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 3"/>
@@ -189,17 +196,24 @@
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Consectetur adipiscing elit"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Integer molestie lorem at massa"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 1"/>
 <para PARENT=""/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 2"/>
 <para PARENT=""/><ITEXT CH=""/>
+<para PARENT=""/><ITEXT CH="quotes"/>
+<para PARENT="Heading_4_GenByMck"/><ITEXT CH="test &quot;double quotes&quot;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test &#039;single quotes&#039;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test `back tick`"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test “double curly quote”"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test ‘single curly quote’"/>
+<para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/>
             </StoryText>
         </PAGEOBJECT>
 <!-- only width -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c356a898-e1e7-440f-965d-ff2e4f727b4e" Size="a4" PRESET="0" PAGEYPOS="901.892763779528" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="2" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c3694e08-d344-45c1-af13-81db16345765" Size="a4" PRESET="0" PAGEYPOS="901.892763779528" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="2" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
 		<!-- Text added by hand -->
-<PAGEOBJECT uuid="c356a898-9d77-4900-984d-597862a19d28" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="930.239220472441389" XPOS="723.623047244094892" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="2" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1083607027" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGEOBJECT uuid="c3694e08-805c-4b56-a703-f0a199a4fa77" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="930.239220472441389" XPOS="723.623047244094892" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="2" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="947249531" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -207,25 +221,25 @@
 <ITEXT CPARENT="Bold_GenByMck" CH="(bold) consectetur adipiscing elit"/>
 <ITEXT CH=", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="(italic) nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"/>
-<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint _**(italic bold)occaecat cupidatat non"/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH=" proident, sunt in (bold italic)culpa qui officia"/>
+<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold italic) culpa qui officia"/>
 <ITEXT CH=" deserunt mollit anim id est laborum."/>
 <para PARENT=""/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 2"/>
 <para PARENT="Heading_2_GenByMck"/><ITEXT CH="Lorem "/>
-<ITEXT CPARENT="Bold_GenByMck" CH="ipsum dolor sit"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(bold) ipsum dolor sit"/>
 <ITEXT CH=" amet,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="consectetur "/>
-<ITEXT CPARENT="Italic_GenByMck" CH="adipiscing"/>
+<ITEXT CPARENT="Italic_GenByMck" CH="(italic) adipiscing"/>
 <ITEXT CH=" elit,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="sed do "/>
 <ITEXT CPARENT="Bold_GenByMck" CH="eiusmod"/>
 <ITEXT CH=" tempor "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="incididunt"/>
 <ITEXT CH=" ut labore et "/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH="dolore"/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold-italic) dolore"/>
 <ITEXT CH=" magna _"/>
-<ITEXT CPARENT="Bold_GenByMck" CH="aliqua"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(italic-bold) aliqua"/>
 <ITEXT CH="_."/>
 <para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 3"/>
@@ -233,17 +247,24 @@
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Consectetur adipiscing elit"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Integer molestie lorem at massa"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 1"/>
 <para PARENT=""/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 2"/>
 <para PARENT=""/><ITEXT CH=""/>
+<para PARENT=""/><ITEXT CH="quotes"/>
+<para PARENT="Heading_4_GenByMck"/><ITEXT CH="test &quot;double quotes&quot;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test &#039;single quotes&#039;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test `back tick`"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test “double curly quote”"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test ‘single curly quote’"/>
+<para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/>
             </StoryText>
         </PAGEOBJECT>
 <!-- only height -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c356a898-b4d1-4549-b526-a2b7bc938392" Size="a4" PRESET="0" PAGEYPOS="1783.78452755905596" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="3" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c3694e08-f828-45bc-848c-faf22c795242" Size="a4" PRESET="0" PAGEYPOS="1783.78452755905596" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="3" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
 		<!-- Text added by hand -->
-<PAGEOBJECT uuid="c356a898-b211-42ee-ad91-20b62fe71661" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="1812.13098425196927" XPOS="128.347456692913397" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="3" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1083607028" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGEOBJECT uuid="c3694e08-694e-4b68-9ba1-ad2f2ac4a18b" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="1812.13098425196927" XPOS="128.347456692913397" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="3" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="947249532" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -251,25 +272,25 @@
 <ITEXT CPARENT="Bold_GenByMck" CH="(bold) consectetur adipiscing elit"/>
 <ITEXT CH=", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="(italic) nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"/>
-<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint _**(italic bold)occaecat cupidatat non"/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH=" proident, sunt in (bold italic)culpa qui officia"/>
+<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold italic) culpa qui officia"/>
 <ITEXT CH=" deserunt mollit anim id est laborum."/>
 <para PARENT=""/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 2"/>
 <para PARENT="Heading_2_GenByMck"/><ITEXT CH="Lorem "/>
-<ITEXT CPARENT="Bold_GenByMck" CH="ipsum dolor sit"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(bold) ipsum dolor sit"/>
 <ITEXT CH=" amet,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="consectetur "/>
-<ITEXT CPARENT="Italic_GenByMck" CH="adipiscing"/>
+<ITEXT CPARENT="Italic_GenByMck" CH="(italic) adipiscing"/>
 <ITEXT CH=" elit,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="sed do "/>
 <ITEXT CPARENT="Bold_GenByMck" CH="eiusmod"/>
 <ITEXT CH=" tempor "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="incididunt"/>
 <ITEXT CH=" ut labore et "/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH="dolore"/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold-italic) dolore"/>
 <ITEXT CH=" magna _"/>
-<ITEXT CPARENT="Bold_GenByMck" CH="aliqua"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(italic-bold) aliqua"/>
 <ITEXT CH="_."/>
 <para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 3"/>
@@ -277,17 +298,24 @@
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Consectetur adipiscing elit"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Integer molestie lorem at massa"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 1"/>
 <para PARENT=""/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 2"/>
 <para PARENT=""/><ITEXT CH=""/>
+<para PARENT=""/><ITEXT CH="quotes"/>
+<para PARENT="Heading_4_GenByMck"/><ITEXT CH="test &quot;double quotes&quot;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test &#039;single quotes&#039;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test `back tick`"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test “double curly quote”"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test ‘single curly quote’"/>
+<para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/>
             </StoryText>
         </PAGEOBJECT>
 <!-- only width/height -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c356a898-e5c9-4fe3-81b5-525c8cdf5abc" Size="a4" PRESET="0" PAGEYPOS="1783.78452755905596" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="4" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c3694e08-d8f5-4628-8474-d1ca57bb3180" Size="a4" PRESET="0" PAGEYPOS="1783.78452755905596" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="4" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
 		<!-- Text added by hand -->
-<PAGEOBJECT uuid="c356a898-4605-4d14-bdad-fd77fde41a88" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="1812.13098425196927" XPOS="723.623047244094892" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="4" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1083607029" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGEOBJECT uuid="c3694e08-9dd5-4657-8c15-11c05ee8df33" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="1812.13098425196927" XPOS="723.623047244094892" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="4" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="947249533" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -295,25 +323,25 @@
 <ITEXT CPARENT="Bold_GenByMck" CH="(bold) consectetur adipiscing elit"/>
 <ITEXT CH=", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="(italic) nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"/>
-<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint _**(italic bold)occaecat cupidatat non"/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH=" proident, sunt in (bold italic)culpa qui officia"/>
+<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold italic) culpa qui officia"/>
 <ITEXT CH=" deserunt mollit anim id est laborum."/>
 <para PARENT=""/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 2"/>
 <para PARENT="Heading_2_GenByMck"/><ITEXT CH="Lorem "/>
-<ITEXT CPARENT="Bold_GenByMck" CH="ipsum dolor sit"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(bold) ipsum dolor sit"/>
 <ITEXT CH=" amet,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="consectetur "/>
-<ITEXT CPARENT="Italic_GenByMck" CH="adipiscing"/>
+<ITEXT CPARENT="Italic_GenByMck" CH="(italic) adipiscing"/>
 <ITEXT CH=" elit,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="sed do "/>
 <ITEXT CPARENT="Bold_GenByMck" CH="eiusmod"/>
 <ITEXT CH=" tempor "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="incididunt"/>
 <ITEXT CH=" ut labore et "/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH="dolore"/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold-italic) dolore"/>
 <ITEXT CH=" magna _"/>
-<ITEXT CPARENT="Bold_GenByMck" CH="aliqua"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(italic-bold) aliqua"/>
 <ITEXT CH="_."/>
 <para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 3"/>
@@ -321,17 +349,24 @@
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Consectetur adipiscing elit"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Integer molestie lorem at massa"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 1"/>
 <para PARENT=""/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 2"/>
 <para PARENT=""/><ITEXT CH=""/>
+<para PARENT=""/><ITEXT CH="quotes"/>
+<para PARENT="Heading_4_GenByMck"/><ITEXT CH="test &quot;double quotes&quot;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test &#039;single quotes&#039;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test `back tick`"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test “double curly quote”"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test ‘single curly quote’"/>
+<para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/>
             </StoryText>
         </PAGEOBJECT>
 <!-- only width/height/x -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c356a898-952c-4860-b828-20251a7764f5" Size="a4" PRESET="0" PAGEYPOS="2665.67629133858372" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="5" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c3694e08-8e30-46d1-8867-2e3a0706e900" Size="a4" PRESET="0" PAGEYPOS="2665.67629133858372" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="5" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
 		<!-- Text added by hand -->
-<PAGEOBJECT uuid="c356a898-d862-462f-bcdf-3467babc9a29" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="2694.02274803149703" XPOS="383.465566929134" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="5" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1083607030" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGEOBJECT uuid="c3694e08-378c-444f-9311-7f8ba5977896" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="2694.02274803149703" XPOS="383.465566929134" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="5" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="947249534" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -339,25 +374,25 @@
 <ITEXT CPARENT="Bold_GenByMck" CH="(bold) consectetur adipiscing elit"/>
 <ITEXT CH=", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="(italic) nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"/>
-<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint _**(italic bold)occaecat cupidatat non"/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH=" proident, sunt in (bold italic)culpa qui officia"/>
+<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold italic) culpa qui officia"/>
 <ITEXT CH=" deserunt mollit anim id est laborum."/>
 <para PARENT=""/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 2"/>
 <para PARENT="Heading_2_GenByMck"/><ITEXT CH="Lorem "/>
-<ITEXT CPARENT="Bold_GenByMck" CH="ipsum dolor sit"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(bold) ipsum dolor sit"/>
 <ITEXT CH=" amet,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="consectetur "/>
-<ITEXT CPARENT="Italic_GenByMck" CH="adipiscing"/>
+<ITEXT CPARENT="Italic_GenByMck" CH="(italic) adipiscing"/>
 <ITEXT CH=" elit,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="sed do "/>
 <ITEXT CPARENT="Bold_GenByMck" CH="eiusmod"/>
 <ITEXT CH=" tempor "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="incididunt"/>
 <ITEXT CH=" ut labore et "/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH="dolore"/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold-italic) dolore"/>
 <ITEXT CH=" magna _"/>
-<ITEXT CPARENT="Bold_GenByMck" CH="aliqua"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(italic-bold) aliqua"/>
 <ITEXT CH="_."/>
 <para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 3"/>
@@ -365,17 +400,24 @@
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Consectetur adipiscing elit"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Integer molestie lorem at massa"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 1"/>
 <para PARENT=""/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 2"/>
 <para PARENT=""/><ITEXT CH=""/>
+<para PARENT=""/><ITEXT CH="quotes"/>
+<para PARENT="Heading_4_GenByMck"/><ITEXT CH="test &quot;double quotes&quot;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test &#039;single quotes&#039;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test `back tick`"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test “double curly quote”"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test ‘single curly quote’"/>
+<para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/>
             </StoryText>
         </PAGEOBJECT>
 <!-- only width/height/x/y -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c356a898-93ae-40f5-b498-7d9dd877eaed" Size="a4" PRESET="0" PAGEYPOS="2665.67629133858372" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="6" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c3694e08-a21f-42f3-8445-ce26515f70e8" Size="a4" PRESET="0" PAGEYPOS="2665.67629133858372" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="6" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
 		<!-- Text added by hand -->
-<PAGEOBJECT uuid="c356a898-df4a-4429-ae17-b11774222cd1" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="2949.1408582677177" XPOS="978.741157480315564" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="6" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1083607031" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGEOBJECT uuid="c3694e08-572e-444e-a1c2-7b640b0123f9" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="2949.1408582677177" XPOS="978.741157480315564" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="6" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="947249535" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -383,25 +425,25 @@
 <ITEXT CPARENT="Bold_GenByMck" CH="(bold) consectetur adipiscing elit"/>
 <ITEXT CH=", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="(italic) nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"/>
-<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint _**(italic bold)occaecat cupidatat non"/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH=" proident, sunt in (bold italic)culpa qui officia"/>
+<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold italic) culpa qui officia"/>
 <ITEXT CH=" deserunt mollit anim id est laborum."/>
 <para PARENT=""/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 2"/>
 <para PARENT="Heading_2_GenByMck"/><ITEXT CH="Lorem "/>
-<ITEXT CPARENT="Bold_GenByMck" CH="ipsum dolor sit"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(bold) ipsum dolor sit"/>
 <ITEXT CH=" amet,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="consectetur "/>
-<ITEXT CPARENT="Italic_GenByMck" CH="adipiscing"/>
+<ITEXT CPARENT="Italic_GenByMck" CH="(italic) adipiscing"/>
 <ITEXT CH=" elit,"/>
 <para PARENT="List_GenByMck"/><ITEXT CH="sed do "/>
 <ITEXT CPARENT="Bold_GenByMck" CH="eiusmod"/>
 <ITEXT CH=" tempor "/>
 <ITEXT CPARENT="Italic_GenByMck" CH="incididunt"/>
 <ITEXT CH=" ut labore et "/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH="dolore"/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="(bold-italic) dolore"/>
 <ITEXT CH=" magna _"/>
-<ITEXT CPARENT="Bold_GenByMck" CH="aliqua"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="(italic-bold) aliqua"/>
 <ITEXT CH="_."/>
 <para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/><ITEXT CH="Heading 3"/>
@@ -409,10 +451,17 @@
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Consectetur adipiscing elit"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Integer molestie lorem at massa"/>
 <para PARENT="List_Numbered_GenByMck"/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 1"/>
 <para PARENT=""/><ITEXT CH=""/>
-<para PARENT=""/><ITEXT CH="test paragraph"/>
+<para PARENT=""/><ITEXT CH="test paragraph 2"/>
 <para PARENT=""/><ITEXT CH=""/>
+<para PARENT=""/><ITEXT CH="quotes"/>
+<para PARENT="Heading_4_GenByMck"/><ITEXT CH="test &quot;double quotes&quot;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test &#039;single quotes&#039;"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test `back tick`"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test “double curly quote”"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="test ‘single curly quote’"/>
+<para PARENT="List_GenByMck"/><ITEXT CH=""/>
 <para PARENT=""/>
             </StoryText>
         </PAGEOBJECT>

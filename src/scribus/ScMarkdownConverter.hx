@@ -48,8 +48,9 @@ class ScMarkdownConverter {
 			// log(_arr);
 
 			var str = _arr.htmlEscape(true);
-			str = extractDefault(str); // <p>
 			str = extractBoldItalic(str);
+			str = extractItalicBold(str);
+			str = extractDefault(str); // <p>
 			str = extractBold(str);
 			str = extractItalic(str);
 			str = extractBlockquote(str); // <blockquote>
@@ -95,25 +96,30 @@ class ScMarkdownConverter {
 	function extractBoldItalic(str:String):String {
 		// trace('extractBoldItalic ("${str}")');
 		var para = StyleName.BOLD_ITALIC;
-		// content = content.replace('**_')
 		var matches = RegEx.getMatches(RegEx.boldItalicPattern, content);
-		if (matches.length <= 0) {
-			// trace('not bold-italic');
-			matches = RegEx.getMatches(RegEx.italicBoldPattern, content);
-		}
-		// if (matches.length <= 0) {
-		// 	// trace('not italic-bold');
-		// }
 		if (matches.length > 0) {
 			for (i in 0...matches.length) {
 				var match = matches[i];
 				var tt = match;
-				// trace('${i} --------------------');
-				// trace(tt);
-				tt = tt.replace('**', '');
-				// trace(tt);
-				tt = tt.replace('_', '');
-				// trace(tt);
+				tt = tt.replace('**_', '');
+				tt = tt.replace('_**', '');
+				// // tt = tt.replace('_', '');
+				str = str.replace(match, '"/>\n<ITEXT CPARENT="${para}" CH="${tt}"/>\n<ITEXT CH="');
+			}
+		}
+		return str;
+	}
+
+	function extractItalicBold(str:String) {
+		var para = StyleName.ITALIC_BOLD;
+		var matches = RegEx.getMatches(RegEx.italicBoldPattern, content);
+		if (matches.length > 0) {
+			for (i in 0...matches.length) {
+				var match = matches[i];
+				var tt = match;
+				tt = tt.replace('**_', '');
+				tt = tt.replace('_**', '');
+				// // tt = tt.replace('_', '');
 				str = str.replace(match, '"/>\n<ITEXT CPARENT="${para}" CH="${tt}"/>\n<ITEXT CH="');
 			}
 		}
