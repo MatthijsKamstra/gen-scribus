@@ -1,5 +1,30 @@
 # Scribus data
 
+- Document:
+	- width: 148mm
+	- height: 148mm
+	- author: Matthijs Kamstra
+	- title: Snippets of knowledge
+	- description: Snippets of knowledge, verzameling van handige tips/grafieken en samenvattingen
+	- language: nl
+	- pageName: Custom 148mm x 148mm
+	- guideSnap: true
+	- guideLocked: true
+- Margins:
+	- margins-left: 14mm
+	- margins-right: 14mm
+	- margins-top: 14mm
+	- margins-bottom: 14mm
+- Guides:
+	- guides-left: 14mm
+	- guides-right: 14mm
+	- guides-top: 14mm
+	- guides-bottom: 14mm
+- Bleeds:
+	- bleeds-left: 3mm
+	- bleeds-right: 3mm
+	- bleeds-top: 3mm
+	- bleeds-bottom: 3mm
 - Total pages: 60 (56-60)
 - Total images: 33
 - Total text: 31

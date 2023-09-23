@@ -31,9 +31,12 @@ class ScText {
 	public var offsetx:Float = 0.0;
 	public var offsety:Float = 0.0;
 
+	var page:ScPage;
+
 	public function new(page:ScPage, path:String) {
 		// trace('ScText');
 		this.id = page.id;
+		this.page = page;
 
 		var _path = path.replace('../', '');
 
@@ -86,7 +89,7 @@ class ScText {
 				info(xpos);
 				info(xpos + (PageSize.MM2POINTS * text.x.value));
 			}
-			xpos = xpos + (PageSize.MM2POINTS * text.x.value);
+			xpos = xpos + (PageSize.MM2POINTS * text.x.value) - page.marginLeft;
 			// xposInMM = text.x.value;
 			if (Config.IS_DEBUG)
 				log('x: ${text.x.value}${text.x.unit}, ${PageSize.MM2POINTS * text.x.value} points, xpos: ${xpos}', 2);
@@ -94,7 +97,7 @@ class ScText {
 		if (text.y != null && text.y.unit.toLowerCase() == 'mm') {
 			if (Config.IS_DEBUG)
 				log('y: ${text.y.value}${text.y.unit}, ${PageSize.MM2POINTS * text.y.value} points, ypos: ${ypos}', 1);
-			ypos = ypos + (PageSize.MM2POINTS * text.y.value);
+			ypos = ypos + (PageSize.MM2POINTS * text.y.value) - page.marginTop;
 			// yposInMM = text.y.value;
 			if (Config.IS_DEBUG)
 				log('y: ${text.y.value}${text.y.unit}, ${PageSize.MM2POINTS * text.y.value} points, ypos: ${ypos}', 2);
