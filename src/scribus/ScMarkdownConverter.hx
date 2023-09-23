@@ -34,12 +34,16 @@ class ScMarkdownConverter {
 
 			// info('previous line: ' + this.previous);
 
-			if (_arr == '') {
+			// if (_arr == '') {
+			// 	this.previous = EMPTY;
+			// 	continue; // block empty line
+			// }
+			// if (_arr == '' && this.previous == HEADING)
+			// 	continue; // block empty line
+			if (_arr == '' && this.previous == HEADING) {
 				this.previous = EMPTY;
 				continue; // block empty line
 			}
-			// if (_arr == '' && this.previous == HEADING)
-			// 	continue; // block empty line
 
 			// log(_arr);
 
