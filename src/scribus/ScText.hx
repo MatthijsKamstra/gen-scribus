@@ -61,12 +61,56 @@ class ScText {
 		// @example: 	rightpage: left:10, right:50
 		//  			left-page: left:50, right:10
 
-		this.xpos = page.xpos;
-		this.ypos = page.ypos;
+		this.xpos = page.xpos + page.marginLeft;
+		this.ypos = page.ypos + page.marginTop;
+		// this.xposInMM = page.xpos * PageSize.POINTS2MM;
+		// this.yposInMM = page.ypos * PageSize.POINTS2MM;
+
+		this.width = page.width - page.marginLeft - page.marginRight;
+		this.height = page.height - page.marginTop - page.marginBottom;
+		// this.widthInMM = page.width * PageSize.POINTS2MM;
+		// this.heightInMM = page.height * PageSize.POINTS2MM;
+
+		if (Config.IS_DEBUG)
+			info('x: ${this.xpos}, y: ${this.ypos}, w: ${this.width}, h: ${this.height}', 1);
 	}
 
 	public function settings(text:Texts) {
 		// warn(text);
+		if (text.x != null && text.x.unit.toLowerCase() == 'mm') {
+			if (Config.IS_DEBUG) {
+				log('x: ${text.x.value}${text.x.unit}, ${PageSize.MM2POINTS * text.x.value} points, xpos: ${xpos}', 1);
+				info(PageSize.MM2POINTS);
+				info('${text.x.value}');
+				info(PageSize.MM2POINTS * text.x.value);
+				info(xpos);
+				info(xpos + (PageSize.MM2POINTS * text.x.value));
+			}
+			xpos = xpos + (PageSize.MM2POINTS * text.x.value);
+			// xposInMM = text.x.value;
+			if (Config.IS_DEBUG)
+				log('x: ${text.x.value}${text.x.unit}, ${PageSize.MM2POINTS * text.x.value} points, xpos: ${xpos}', 2);
+		}
+		if (text.y != null && text.y.unit.toLowerCase() == 'mm') {
+			if (Config.IS_DEBUG)
+				log('y: ${text.y.value}${text.y.unit}, ${PageSize.MM2POINTS * text.y.value} points, ypos: ${ypos}', 1);
+			ypos = ypos + (PageSize.MM2POINTS * text.y.value);
+			// yposInMM = text.y.value;
+			if (Config.IS_DEBUG)
+				log('y: ${text.y.value}${text.y.unit}, ${PageSize.MM2POINTS * text.y.value} points, ypos: ${ypos}', 2);
+		}
+		if (text.width != null && text.width.unit.toLowerCase() == 'mm') {
+			if (Config.IS_DEBUG)
+				log('w', 1);
+			width = PageSize.MM2POINTS * text.width.value;
+			// widthInMM = text.width.value;
+		}
+		if (text.height != null && text.height.unit.toLowerCase() == 'mm') {
+			if (Config.IS_DEBUG)
+				log('h', 1);
+			height = PageSize.MM2POINTS * text.height.value;
+			// heightInMM = text.height.value;
+		}
 	}
 
 	public function toString():String {

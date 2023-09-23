@@ -109,8 +109,9 @@
 		<STYLE ParagraphEffectOffset="2.83464566929134" PARENT="Default Paragraph Style" NumerationOther="1" Numeration="1" NAME="List_Numbered_GenByMck" LINESPMode="1"/>
 
 		<!-- text only path (right) 1 -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c24e6440-112b-4356-be7d-e02bcd4a0224" Size="a4" PRESET="0" PAGEYPOS="20.001" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="0" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
-		<PAGEOBJECT uuid="c24e6440-4c8b-447e-9e7d-4d2b94e524d1" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="48.3474566929134042" XPOS="723.623047244094892" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="0" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1210168762" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c255a3b8-337c-48c0-adbf-a30a50c0cd9c" Size="a4" PRESET="0" PAGEYPOS="20.001" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="0" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+		<!-- Text added by hand -->
+<PAGEOBJECT uuid="c255a3b8-5285-43cf-9b81-4ebac1ac8464" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="48.3474566929134042" XPOS="723.623047244094892" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="0" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="729638322" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -145,49 +146,9 @@
             </StoryText>
         </PAGEOBJECT>
 <!-- text only a path withy style -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c24e6440-16d1-451d-8b67-e0e42f313d36" Size="a4" PRESET="0" PAGEYPOS="901.892763779528" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="1" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
-		<PAGEOBJECT uuid="c24e6440-523e-43a7-b7d7-7c7aa8527f0a" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="930.239220472441389" XPOS="128.347456692913397" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="1" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1210168763" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
-            <StoryText>
-                <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
-				<ITEXT CH="Heading 1"/>
-<para PARENT="Heading_1_GenByMck"/><ITEXT CH="Lorem ipsum dolor sit amet, "/>
-<ITEXT CPARENT="Bold_GenByMck" CH="consectetur adipiscing elit"/>
-<ITEXT CH=", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "/>
-<ITEXT CPARENT="Italic_GenByMck" CH="nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"/>
-<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint _"/>
-<ITEXT CPARENT="Bold_GenByMck" CH="occaecat cupidatat non"/>
-<ITEXT CH="_ proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
-<para PARENT=""/><ITEXT CH="Heading 2"/>
-<para PARENT="Heading_2_GenByMck"/><ITEXT CH="Lorem "/>
-<ITEXT CPARENT="Bold_GenByMck" CH="ipsum dolor sit"/>
-<ITEXT CH=" amet,"/>
-<para PARENT="List_GenByMck"/><ITEXT CH="consectetur "/>
-<ITEXT CPARENT="Italic_GenByMck" CH="adipiscing"/>
-<ITEXT CH=" elit,"/>
-<para PARENT="List_GenByMck"/><ITEXT CH="sed do "/>
-<ITEXT CPARENT="Bold_GenByMck" CH="eiusmod"/>
-<ITEXT CH=" tempor "/>
-<ITEXT CPARENT="Italic_GenByMck" CH="incididunt"/>
-<ITEXT CH=" ut labore et "/>
-<ITEXT CPARENT="BoldItalic_GenByMck" CH="dolore"/>
-<ITEXT CH=" magna _"/>
-<ITEXT CPARENT="Bold_GenByMck" CH="aliqua"/>
-<ITEXT CH="_."/>
-<para PARENT="List_GenByMck"/><ITEXT CH="Heading 3"/>
-<para PARENT="Heading_3_GenByMck"/><ITEXT CH="Lorem ipsum dolor sit amet"/>
-<para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Consectetur adipiscing elit"/>
-<para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Integer molestie lorem at massa"/>
-<para PARENT="List_Numbered_GenByMck"/>
-            </StoryText>
-        </PAGEOBJECT>
-<!-- add custom style to doc -->
-<CHARSTYLE FONT="" CPARENT="Default Paragraph Style" CNAME="GenRedForMatthijs New Character Style"/>
-<STYLE NAME="GenRedForMatthijs New Paragraph Style" LANGUAGE="nl"/>
-<STYLE PARENT="GenRedForMatthijs New Paragraph Style" NAME="GenRedForMatthijs"/>
-<!-- end style -->
-<!-- only height -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c24e6440-7c22-44fc-8cdd-c187ffcc5d56" Size="a4" PRESET="0" PAGEYPOS="901.892763779528" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="2" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
-		<PAGEOBJECT uuid="c24e6440-482d-4e90-b62c-20a909b4005c" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="930.239220472441389" XPOS="723.623047244094892" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="2" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1210168764" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c255a3b8-007f-48fc-9144-a3ed5f873bb3" Size="a4" PRESET="0" PAGEYPOS="901.892763779528" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="1" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+		<!-- Text added by hand -->
+<PAGEOBJECT uuid="c255a3b8-a6c0-4a0c-8ca9-3fe6e621df60" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="930.239220472441389" XPOS="128.347456692913397" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="1" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="729638323" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -222,8 +183,46 @@
             </StoryText>
         </PAGEOBJECT>
 <!-- only width -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c24e6440-7ab2-4647-8fa7-7840241c5d5d" Size="a4" PRESET="0" PAGEYPOS="1783.78452755905596" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="3" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
-		<PAGEOBJECT uuid="c24e6440-af69-4ea1-ab71-ebf0bcad5219" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="1812.13098425196927" XPOS="128.347456692913397" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="3" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1210168765" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c255a3b8-6513-41d2-8d62-adf4c7ae6875" Size="a4" PRESET="0" PAGEYPOS="901.892763779528" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="2" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+		<!-- Text added by hand -->
+<PAGEOBJECT uuid="c255a3b8-48aa-4e3e-b97c-46ce18a1d52d" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="930.239220472441389" XPOS="723.623047244094892" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="2" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="729638324" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+            <StoryText>
+                <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
+				<ITEXT CH="Heading 1"/>
+<para PARENT="Heading_1_GenByMck"/><ITEXT CH="Lorem ipsum dolor sit amet, "/>
+<ITEXT CPARENT="Bold_GenByMck" CH="consectetur adipiscing elit"/>
+<ITEXT CH=", sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis "/>
+<ITEXT CPARENT="Italic_GenByMck" CH="nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"/>
+<ITEXT CH=" consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint _"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="occaecat cupidatat non"/>
+<ITEXT CH="_ proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+<para PARENT=""/><ITEXT CH="Heading 2"/>
+<para PARENT="Heading_2_GenByMck"/><ITEXT CH="Lorem "/>
+<ITEXT CPARENT="Bold_GenByMck" CH="ipsum dolor sit"/>
+<ITEXT CH=" amet,"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="consectetur "/>
+<ITEXT CPARENT="Italic_GenByMck" CH="adipiscing"/>
+<ITEXT CH=" elit,"/>
+<para PARENT="List_GenByMck"/><ITEXT CH="sed do "/>
+<ITEXT CPARENT="Bold_GenByMck" CH="eiusmod"/>
+<ITEXT CH=" tempor "/>
+<ITEXT CPARENT="Italic_GenByMck" CH="incididunt"/>
+<ITEXT CH=" ut labore et "/>
+<ITEXT CPARENT="BoldItalic_GenByMck" CH="dolore"/>
+<ITEXT CH=" magna _"/>
+<ITEXT CPARENT="Bold_GenByMck" CH="aliqua"/>
+<ITEXT CH="_."/>
+<para PARENT="List_GenByMck"/><ITEXT CH="Heading 3"/>
+<para PARENT="Heading_3_GenByMck"/><ITEXT CH="Lorem ipsum dolor sit amet"/>
+<para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Consectetur adipiscing elit"/>
+<para PARENT="List_Numbered_GenByMck"/><ITEXT CH="Integer molestie lorem at massa"/>
+<para PARENT="List_Numbered_GenByMck"/>
+            </StoryText>
+        </PAGEOBJECT>
+<!-- only height -->
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c255a3b8-113c-437c-8217-c3d9e7c9a12b" Size="a4" PRESET="0" PAGEYPOS="1783.78452755905596" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="3" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+		<!-- Text added by hand -->
+<PAGEOBJECT uuid="c255a3b8-2a11-4351-b9bd-c70c3cdcc4f5" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="1812.13098425196927" XPOS="128.347456692913397" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="3" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="729638325" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -258,8 +257,9 @@
             </StoryText>
         </PAGEOBJECT>
 <!-- only width/height -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c24e6440-78de-4752-8e01-ec11a99e90e9" Size="a4" PRESET="0" PAGEYPOS="1783.78452755905596" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="4" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
-		<PAGEOBJECT uuid="c24e6440-83ba-4f65-8b23-c059f384a364" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="1812.13098425196927" XPOS="723.623047244094892" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="4" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1210168766" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c255a3b8-e6d4-47b2-b0b6-04fac09b3015" Size="a4" PRESET="0" PAGEYPOS="1783.78452755905596" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="4" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+		<!-- Text added by hand -->
+<PAGEOBJECT uuid="c255a3b8-8973-4990-8b00-780a775af6cd" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="1812.13098425196927" XPOS="723.623047244094892" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="4" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="729638326" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -294,8 +294,9 @@
             </StoryText>
         </PAGEOBJECT>
 <!-- only width/height/x -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c24e6440-eb95-43aa-b5df-3986009a871a" Size="a4" PRESET="0" PAGEYPOS="2665.67629133858372" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="5" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
-		<PAGEOBJECT uuid="c24e6440-d471-42c4-a9df-c49aba779c87" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="2694.02274803149703" XPOS="128.347456692913397" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="5" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1210168767" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c255a3b8-9965-4175-8584-ef97afb711f0" Size="a4" PRESET="0" PAGEYPOS="2665.67629133858372" PAGEXPOS="100.001" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="5" NAM="" MNAM="Normal Left" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+		<!-- Text added by hand -->
+<PAGEOBJECT uuid="c255a3b8-1e0c-46a7-b5a9-8b6076a621dd" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="2694.02274803149703" XPOS="411.812023622047434" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="5" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="729638327" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>
@@ -330,8 +331,9 @@
             </StoryText>
         </PAGEOBJECT>
 <!-- only width/height/x/y -->
-<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c24e6440-cf90-4047-82fb-0098a8979c49" Size="a4" PRESET="0" PAGEYPOS="2665.67629133858372" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="6" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
-		<PAGEOBJECT uuid="c24e6440-d790-4202-a8d9-524b30918e3d" textPathType="0" textPathFlipped="0" path="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L538.582677165354653 0 L538.582677165354653 785.196850393701197 L0 785.196850393701197 L0 0 Z" YPOS="2694.02274803149703" XPOS="723.623047244094892" WIDTH="538.582677165354653" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="6" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="1210168768" HEIGHT="785.196850393701197" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
+<PAGE pageViewDuration="1" pageEffectDuration="1" effectType="0" VerticalGuides="" UUID="c255a3b8-728e-4940-94e4-a93d3aaa66a2" Size="a4" PRESET="0" PAGEYPOS="2665.67629133858372" PAGEXPOS="695.276590551181471" PAGEWIDTH="595.275590551181494" PAGEHEIGHT="841.889763779528" Orientation="0" NUM="6" NAM="" MNAM="Normal Right" M="0" LEFT="0" HorizontalGuides="" Dm="0" Di="0" BORDERTOP="28.346456692913403" BORDERRIGHT="28.346456692913403" BORDERLEFT="28.346456692913403" BORDERBOTTOM="28.346456692913403" AGverticalAutoRefer="0" AGverticalAutoGap="0" AGverticalAutoCount="0" AGhorizontalAutoRefer="0" AGhorizontalAutoGap="0" AGhorizontalAutoCount="0" AGSelection="0 0 0 0"/>
+		<!-- Text added by hand -->
+<PAGEOBJECT uuid="c255a3b8-0768-415a-813c-8d07a9f169be" textPathType="0" textPathFlipped="0" path="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" gYpos="" gXpos="" gWidth="0" gHeight="0" copath="M0 0 L283.464566929134037 0 L283.464566929134037 283.464566929134037 L0 283.464566929134037 L0 0 Z" YPOS="2977.48731496063101" XPOS="1007.08761417322899" WIDTH="283.464566929134037" VAlign="0" TEXTRA="0" SCALETYPE="1" REXTRA="0" RATIO="1" PWIDTH="1" PTYPE="4" PLTSHOW="0" PLINEART="1" PICART="1" OwnPage="6" NEXTITEM="-1" LOCALY="0" LOCALX="0" LOCALSCY="1" LOCALSCX="1" LOCALROT="0" LAYER="0" ItemID="729638328" HEIGHT="283.464566929134037" FRTYPE="0" FLOP="1" EXTRA="0" COLUMNS="1" COLGAP="0" CLIPEDIT="0" BEXTRA="0" BASEOF="0" BACKITEM="-1" AUTOTEXT="0">
             <StoryText>
                 <DefaultStyle PARENT="Default Paragraph Style" LINESPMode="1" CPARENT="Default Character Style"/>
 				<ITEXT CH="Heading 1"/>

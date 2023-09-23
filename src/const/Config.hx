@@ -10,7 +10,7 @@ class Config {
 
 	public static var ROOT:String;
 
-	public static var IS_DEBUG:Bool = false;
+	public static var IS_DEBUG:Bool = true;
 
 	public static var OPEN_FILE:Bool = false;
 }

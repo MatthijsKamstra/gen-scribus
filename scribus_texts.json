@@ -51,7 +51,7 @@
         ]
       },
       "right": {
-        "_alias": "only height",
+        "_alias": "only width",
         "texts": [
           {
             "path": "assets/markdown/test_simple.md",
@@ -62,11 +62,11 @@
     },
     {
       "left": {
-        "_alias": "only width",
+        "_alias": "only height",
         "texts": [
           {
             "path": "assets/markdown/test_simple.md",
-            "width": { "unit": "mm", "value": 100 }
+            "height": { "unit": "mm", "value": 100 }
           }
         ]
       },
@@ -87,7 +87,9 @@
         "texts": [
           {
             "path": "assets/markdown/test_simple.md",
-            "width": { "unit": "mm", "value": 100 }
+            "width": { "unit": "mm", "value": 100 },
+            "height": { "unit": "mm", "value": 100 },
+            "x": { "unit": "mm", "value": 100 }
           }
         ]
       },
@@ -97,7 +99,9 @@
           {
             "path": "assets/markdown/test_simple.md",
             "width": { "unit": "mm", "value": 100 },
-            "height": { "unit": "mm", "value": 100 }
+            "height": { "unit": "mm", "value": 100 },
+            "x": { "unit": "mm", "value": 100 },
+            "y": { "unit": "mm", "value": 100 }
           }
         ]
       }
