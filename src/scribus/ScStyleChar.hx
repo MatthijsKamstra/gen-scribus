@@ -24,6 +24,6 @@ class ScStyleChar {
 		CNAME="${name}"
 		CPARENT="${parent}"
 		FONT="${font}"
-		/>';
+		/>\n';
 	}
 }

@@ -1,0 +1,49 @@
+{
+  "document": {
+    "author": "Matthijs Kamstra",
+    "title": "test style with gen-scribus",
+    "description": "blah blah, Haxe Scribus Gen doc",
+    "language": "nl",
+    "pageName": "a4",
+    "width": { "unit": "mm", "value": 210 },
+    "height": { "unit": "mm", "value": 297 },
+    "margins": [
+      { "dir": "left", "unit": "mm", "value": 10 },
+      { "dir": "right", "unit": "mm", "value": 10 },
+      { "dir": "top", "unit": "mm", "value": 10 },
+      { "dir": "bottom", "unit": "mm", "value": 10 }
+    ],
+    "guides": [
+      { "dir": "left", "unit": "mm", "value": 10 },
+      { "dir": "right", "unit": "mm", "value": 10 },
+      { "dir": "top", "unit": "mm", "value": 10 },
+      { "dir": "bottom", "unit": "mm", "value": 10 }
+    ],
+    "bleeds": [
+      { "dir": "left", "unit": "mm", "value": 3 },
+      { "dir": "right", "unit": "mm", "value": 3 },
+      { "dir": "top", "unit": "mm", "value": 3 },
+      { "dir": "bottom", "unit": "mm", "value": 3 }
+    ],
+    "guideSnap": true,
+    "guideLocked": true
+  },
+  "pages": [
+    {
+      "left": {},
+      "right": {
+        "_alias": "text only path (right) 1",
+        "texts": [
+          {
+            "path": "assets/markdown/test_simple.md",
+            "style": "foo"
+          }
+        ]
+      }
+    },
+    {
+      "left": {},
+      "right": {}
+    }
+  ]
+}

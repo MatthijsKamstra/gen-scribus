@@ -75,7 +75,29 @@
         "texts": [
           {
             "path": "assets/markdown/test_simple.md",
+            "width": { "unit": "mm", "value": 100 },
+            "height": { "unit": "mm", "value": 100 }
+          }
+        ]
+      }
+    },
+    {
+      "left": {
+        "_alias": "only width/height/x",
+        "texts": [
+          {
+            "path": "assets/markdown/test_simple.md",
             "width": { "unit": "mm", "value": 100 }
+          }
+        ]
+      },
+      "right": {
+        "_alias": "only width/height/x/y",
+        "texts": [
+          {
+            "path": "assets/markdown/test_simple.md",
+            "width": { "unit": "mm", "value": 100 },
+            "height": { "unit": "mm", "value": 100 }
           }
         ]
       }

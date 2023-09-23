@@ -63,6 +63,8 @@ class Scribus {
 		addComment('[mck] start generation document');
 	}
 
+	// ____________________________________ document ____________________________________
+
 	public function setDocumentAuthor(arg:Null<String>) {
 		doc.att.AUTHOR = arg;
 	}
@@ -75,9 +77,17 @@ class Scribus {
 		doc.att.COMMENTS = arg;
 	}
 
+	public function setLanguage(s:String) {
+		doc.att.LANGUAGE = s;
+	}
+
+	// ____________________________________ comment ____________________________________
+
 	public function addComment(comment:String) {
 		add2document('<!-- ${comment} -->\n');
 	}
+
+	// ____________________________________ color ____________________________________
 
 	public function addColorRGB(name:String, r:Int, g:Int, b:Int) {
 		add2document('<COLOR SPACE="RGB" NAME="${name}"R="${r}" G="${g}" B="${b}"/>\n');
@@ -87,9 +97,7 @@ class Scribus {
 		add2document('<COLOR SPACE="CMYK" NAME="${name}" C="${c}" M="${m}" Y="${y}" K="${k}"/>\n');
 	}
 
-	public function setLanguage(s:String) {
-		doc.att.LANGUAGE = s;
-	}
+	// ____________________________________ page size ____________________________________
 
 	public function setPageName(pagesize:String) {
 		pageSizeName = pagesize;
@@ -121,18 +129,17 @@ class Scribus {
 		// this.pageHeightMM = PageSize.MM2POINTS * height;
 	}
 
+	// ____________________________________ booleans ____________________________________
+
 	public function isSnapToGuides(bool:Bool) {
 		doc.att.SnapToGuides = '${(bool) ? '1' : '0'}';
-	}
-
-	public function addCharacter(name:String) {
-		var el = new ScStyleChar(name);
-		add2document(el.toString());
 	}
 
 	public function isGuideLocked(bool:Bool) {
 		doc.att.GUIDELOCK = '${(bool) ? '1' : '0'}';
 	}
+
+	// ____________________________________ add image/text ____________________________________
 
 	public function addImage(page:ScPage, path:String) {
 		var el = new ScImage(page, path);
@@ -158,6 +165,7 @@ class Scribus {
 	// function setPageWidth(pagesize:String) {
 	// 	doc.att.PAGEWIDTH = PageSize.setValueInPoints(pagesize).width;
 	// }
+	// ____________________________________ guides ____________________________________
 
 	public function setVerticalGuidesInMM(arr:Array<Float>) {
 		var _guides = '';
@@ -205,6 +213,8 @@ class Scribus {
 		}
 	}
 
+	// ____________________________________ bleeds ____________________________________
+
 	public function setBleedInMM(left:Float = 0, right:Float = 0, top:Float = 0, bottom:Float = 0) {
 		var _left:Float = left * PageSize.MM2POINTS;
 		var _right:Float = right * PageSize.MM2POINTS;
@@ -217,6 +227,8 @@ class Scribus {
 		doc.att.BleedBottom = '$_bottom';
 		doc.att.showBleed = '1';
 	}
+
+	// ____________________________________ margins ____________________________________
 
 	public function setMarginInMM(left:Float = 14.111, right:Float = 14.111, top:Float = 14.111, bottom:Float = 14.111) {
 		// log('$left, $right, $top, $bottom');
@@ -257,6 +269,16 @@ class Scribus {
 	}
 
 	// ____________________________________ style ____________________________________
+
+	public function addStyleToParent(parent:String, name:String) {
+		var el = new ScStyleToParent(parent, name);
+		add2document(el.toString());
+	}
+
+	public function addCharacter(name:String) {
+		var el = new ScStyleChar(name);
+		add2document(el.toString());
+	}
 
 	public function addDefaultStyle(name:String) {
 		var style = new ScStyleDefault(name);
