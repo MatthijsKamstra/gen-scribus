@@ -128,8 +128,13 @@ class Main {
 		}
 		var arr = Config.PATH.split('/');
 		var fileName = arr[arr.length - 1].replace('.json', '.md');
-		var _p = Path.normalize(Config.ROOT) + '/' + fileName;
-		log(_p);
+		var _p = Path.normalize(Config.PATH).replace('.json', '.md');
+
+		// warn('Config.PATH: ' + Config.PATH);
+		// warn('Config.ROOT: ' + Config.ROOT);
+		// warn('filename: ' + fileName);
+		// warn('path: ' + _p);
+
 		SaveFile.out(_p, md);
 	}
 
