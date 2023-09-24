@@ -1,5 +1,26 @@
 # TODO
 
+### Inkscape
+
+- [ ] create inkscape file in any size you want
+- [ ] use settings
+- Pages
+  - [ ] add pages
+  - [ ] xpos ypos page
+- Document
+  - [ ] change input to mm
+  - [ ] change margins
+  - [ ] change the language of the file
+  - [ ] horizontal and vertical guides
+  - [ ] snapToGuide toggle
+  - [ ] generate document based upon json (settings file)
+  - [ ] updating title, author, etc
+- Artboards
+  - [ ] generate artboards
+  - [ ] create bleed, bg, margin layer
+
+### Scribus
+
 - [x] create scribus file in any size you want
 - [x] regex door alle PAGEHEIGHT PAGEWIDTH
 - Pages
