@@ -1,11 +1,9 @@
-package scribus;
+package inkscape;
 
-import const.Config;
-import const.StyleName;
 import haxe.xml.Access;
 import utils.Counter;
 
-class Scribus {
+class Inkscape {
 	private var _xml:Xml;
 
 	var doc:Access;
@@ -20,11 +18,11 @@ class Scribus {
 	@:isVar public var marginBottom(get, set):Float;
 
 	public function new() {
-		info('Scribus');
+		info('Inkscape');
 
 		Counter.reset(); // start all new Scribus document from zero
 
-		var path = Config.ROOT + '/assets/scribus/template_scribus_a4.sla';
+		var path = Config.ROOT + '/assets/inkscape/template_inkscape_a4.sla';
 		if (sys.FileSystem.exists(path)) {
 			var str:String = sys.io.File.getContent(path);
 			_xml = Xml.parse(str);
@@ -35,30 +33,32 @@ class Scribus {
 	}
 
 	function init() {
-		// _xml = Xml.createElement('SCRIBUSUTF8NEW')
+		trace('init');
 
-		// wrap the Xml for Access
-		var access = new haxe.xml.Access(_xml.firstElement());
+		// // _xml = Xml.createElement('SCRIBUSUTF8NEW')
 
-		// log(access);
-		// log(access.node.DOCUMENT);
+		// // wrap the Xml for Access
+		// var access = new haxe.xml.Access(_xml.firstElement());
 
-		// // // access the "phone" child, which is wrapped with haxe.xml.Access too
-		doc = access.node.DOCUMENT;
-		// // iterate over numbers
-		// for (c in doc.nodes.COLOR) {
-		// 	trace(c.att.SPACE);
-		// }
-		// // iterate over numbers
-		// for (c in doc.nodes.PAGE) {
-		// 	trace(c.att.Size);
-		// }
+		// // log(access);
+		// // log(access.node.DOCUMENT);
 
-		// log(doc.nodes.PAGE[0]);
+		// // // // access the "phone" child, which is wrapped with haxe.xml.Access too
+		// doc = access.node.DOCUMENT;
+		// // // iterate over numbers
+		// // for (c in doc.nodes.COLOR) {
+		// // 	trace(c.att.SPACE);
+		// // }
+		// // // iterate over numbers
+		// // for (c in doc.nodes.PAGE) {
+		// // 	trace(c.att.Size);
+		// // }
 
-		// // log(doc);
-		// log(doc.att.PAGESIZE);
-		// log(doc.att.LANGUAGE);
+		// // log(doc.nodes.PAGE[0]);
+
+		// // // log(doc);
+		// // log(doc.att.PAGESIZE);
+		// // log(doc.att.LANGUAGE);
 
 		addComment('[mck] start generation document');
 	}
