@@ -13,6 +13,7 @@ class ScStyleDefault {
 		return '<STYLE
 		NAME="${this.name}"
 		LANGUAGE="nl"
+		BCOLOR="Red"
 		/>\n';
 	}
 }

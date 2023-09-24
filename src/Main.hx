@@ -18,124 +18,7 @@ class Main {
 		init();
 		initArgs(args);
 		setup();
-
-		// create Scibus document, with adjustments
-		// createScribus();
-		// createScribusA4NL();
-		// createScribusA5EN();
-
-		// // snippets of knownledge
-		// createScribusCustomNL();
-
-		// // use settings
-		// useSettings('scribus_148x148mm.json');
-
 		infoGen();
-	}
-
-	function infoGen() {
-		var numberPages = [8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64];
-		var maxValue = 0;
-		var minValue = 0;
-		for (i in 0...numberPages.length) {
-			var _numberPages = numberPages[i];
-			if (_numberPages >= ScData.TOTAL_PAGES) {
-				maxValue = i;
-				minValue = i - 1;
-				if (minValue <= 0)
-					minValue = 0;
-				break;
-			}
-		}
-		info('------------------- Scribus data ------------------------');
-		info('Document:', 1);
-		info('width: ${json.document.width.value}${json.document.width.unit}', 2);
-		info('height: ${json.document.height.value}${json.document.height.unit}', 2);
-		info('author: ${json.document.author}', 2);
-		info('title: ${json.document.title}', 2);
-		info('description: ${json.document.description}', 2);
-		info('language: ${json.document.language}', 2);
-		info('pageName: ${json.document.pageName}', 2);
-		info('guideSnap: ${json.document.guideSnap}', 2);
-		info('guideLocked: ${json.document.guideLocked}', 2);
-
-		info('Margins:', 1);
-		info('margins-${json.document.margins[0].dir}: ${json.document.margins[0].value}${json.document.margins[0].unit}', 2);
-		info('margins-${json.document.margins[1].dir}: ${json.document.margins[1].value}${json.document.margins[1].unit}', 2);
-		info('margins-${json.document.margins[2].dir}: ${json.document.margins[2].value}${json.document.margins[2].unit}', 2);
-		info('margins-${json.document.margins[3].dir}: ${json.document.margins[3].value}${json.document.margins[3].unit}', 2);
-
-		info('Guides:', 1);
-		info('guides-${json.document.guides[0].dir}: ${json.document.guides[0].value}${json.document.guides[0].unit}', 2);
-		info('guides-${json.document.guides[1].dir}: ${json.document.guides[1].value}${json.document.guides[1].unit}', 2);
-		info('guides-${json.document.guides[2].dir}: ${json.document.guides[2].value}${json.document.guides[2].unit}', 2);
-		info('guides-${json.document.guides[3].dir}: ${json.document.guides[3].value}${json.document.guides[3].unit}', 2);
-
-		info('Bleeds:', 1);
-		info('bleeds-${json.document.bleeds[0].dir}: ${json.document.bleeds[0].value}${json.document.bleeds[0].unit}', 2);
-		info('bleeds-${json.document.bleeds[1].dir}: ${json.document.bleeds[1].value}${json.document.bleeds[1].unit}', 2);
-		info('bleeds-${json.document.bleeds[2].dir}: ${json.document.bleeds[2].value}${json.document.bleeds[2].unit}', 2);
-		info('bleeds-${json.document.bleeds[3].dir}: ${json.document.bleeds[3].value}${json.document.bleeds[3].unit}', 2);
-
-		info('Total pages: ' + ScData.TOTAL_PAGES + ' (${numberPages[minValue]}-${numberPages[maxValue]})', 1);
-		info('Total images: ' + ScData.TOTAL_IMAGES, 1);
-		info('Total text: ' + ScData.TOTAL_TEXT, 1);
-		info('Total errors: ' + ScData.TOTAL_ERRORS, 1);
-		for (i in 0...ScData.errorArray.length) {
-			var _errorArray = ScData.errorArray[i];
-			info(' - ' + _errorArray, 2);
-		}
-		info('----------------------------------------------------------');
-
-		var md = '# Scribus data\n\n';
-
-		md += '- Document:\n';
-		md += '\t- width: ${json.document.width.value}${json.document.width.unit}\n';
-		md += '\t- height: ${json.document.height.value}${json.document.height.unit}\n';
-		md += '\t- author: ${json.document.author}\n';
-		md += '\t- title: ${json.document.title}\n';
-		md += '\t- description: ${json.document.description}\n';
-		md += '\t- language: ${json.document.language}\n';
-		md += '\t- pageName: ${json.document.pageName}\n';
-		md += '\t- guideSnap: ${json.document.guideSnap}\n';
-		md += '\t- guideLocked: ${json.document.guideLocked}\n';
-
-		md += '- Margins:\n';
-		md += '\t- margins-${json.document.margins[0].dir}: ${json.document.margins[0].value}${json.document.margins[0].unit}\n';
-		md += '\t- margins-${json.document.margins[1].dir}: ${json.document.margins[1].value}${json.document.margins[1].unit}\n';
-		md += '\t- margins-${json.document.margins[2].dir}: ${json.document.margins[2].value}${json.document.margins[2].unit}\n';
-		md += '\t- margins-${json.document.margins[3].dir}: ${json.document.margins[3].value}${json.document.margins[3].unit}\n';
-
-		md += '- Guides:\n';
-		md += '\t- guides-${json.document.guides[0].dir}: ${json.document.guides[0].value}${json.document.guides[0].unit}\n';
-		md += '\t- guides-${json.document.guides[1].dir}: ${json.document.guides[1].value}${json.document.guides[1].unit}\n';
-		md += '\t- guides-${json.document.guides[2].dir}: ${json.document.guides[2].value}${json.document.guides[2].unit}\n';
-		md += '\t- guides-${json.document.guides[3].dir}: ${json.document.guides[3].value}${json.document.guides[3].unit}\n';
-
-		md += '- Bleeds:\n';
-		md += '\t- bleeds-${json.document.bleeds[0].dir}: ${json.document.bleeds[0].value}${json.document.bleeds[0].unit}\n';
-		md += '\t- bleeds-${json.document.bleeds[1].dir}: ${json.document.bleeds[1].value}${json.document.bleeds[1].unit}\n';
-		md += '\t- bleeds-${json.document.bleeds[2].dir}: ${json.document.bleeds[2].value}${json.document.bleeds[2].unit}\n';
-		md += '\t- bleeds-${json.document.bleeds[3].dir}: ${json.document.bleeds[3].value}${json.document.bleeds[3].unit}\n';
-
-		md += '- Total pages: ' + ScData.TOTAL_PAGES + ' (${numberPages[minValue]}-${numberPages[maxValue]})' + '\n';
-		md += '- Total images: ' + ScData.TOTAL_IMAGES + '\n';
-		md += '- Total text: ' + ScData.TOTAL_TEXT + '\n';
-		md += '- Total errors: ' + ScData.TOTAL_ERRORS + '\n';
-		for (i in 0...ScData.errorArray.length) {
-			var _errorArray = ScData.errorArray[i];
-			md += '\t- ' + _errorArray + '\n';
-		}
-		var arr = Config.PATH.split('/');
-		var fileName = arr[arr.length - 1].replace('.json', '.md');
-		var _p = Path.normalize(Config.PATH).replace('.json', '.md');
-
-		// warn('Config.PATH: ' + Config.PATH);
-		// warn('Config.ROOT: ' + Config.ROOT);
-		// warn('filename: ' + fileName);
-		// warn('path: ' + _p);
-
-		SaveFile.out(_p, md);
 	}
 
 	function init() {
@@ -220,7 +103,6 @@ class Main {
 	}
 
 	function setup() {
-		//
 		info('SETUP');
 		mute(Folder.EXPORT, 1);
 
@@ -249,111 +131,111 @@ class Main {
 		var settings = new ScSettings(path);
 	}
 
-	function createScribus() {
-		var pagesize = PageSize.A3;
-		var language = Locale.EN_US;
+	function infoGen() {
+		var numberPages = [8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64];
+		var maxValue = 0;
+		var minValue = 0;
+		for (i in 0...numberPages.length) {
+			var _numberPages = numberPages[i];
+			if (_numberPages >= ScData.TOTAL_PAGES) {
+				maxValue = i;
+				minValue = i - 1;
+				if (minValue <= 0)
+					minValue = 0;
+				break;
+			}
+		}
+		if (Config.IS_DEBUG) {
+			info('------------------- Scribus data ------------------------');
+			info('Document:', 1);
+			info('width: ${json.document.width.value}${json.document.width.unit}', 2);
+			info('height: ${json.document.height.value}${json.document.height.unit}', 2);
+			info('author: ${json.document.author}', 2);
+			info('title: ${json.document.title}', 2);
+			info('description: ${json.document.description}', 2);
+			info('language: ${json.document.language}', 2);
+			info('pageName: ${json.document.pageName}', 2);
+			info('guideSnap: ${json.document.guideSnap}', 2);
+			info('guideLocked: ${json.document.guideLocked}', 2);
 
-		var scribus = new Scribus();
+			info('Margins:', 1);
+			info('margins-${json.document.margins[0].dir}: ${json.document.margins[0].value}${json.document.margins[0].unit}', 2);
+			info('margins-${json.document.margins[1].dir}: ${json.document.margins[1].value}${json.document.margins[1].unit}', 2);
+			info('margins-${json.document.margins[2].dir}: ${json.document.margins[2].value}${json.document.margins[2].unit}', 2);
+			info('margins-${json.document.margins[3].dir}: ${json.document.margins[3].value}${json.document.margins[3].unit}', 2);
 
-		scribus.setPageName(pagesize);
-		scribus.setLanguage(language);
+			info('Guides:', 1);
+			info('guides-${json.document.guides[0].dir}: ${json.document.guides[0].value}${json.document.guides[0].unit}', 2);
+			info('guides-${json.document.guides[1].dir}: ${json.document.guides[1].value}${json.document.guides[1].unit}', 2);
+			info('guides-${json.document.guides[2].dir}: ${json.document.guides[2].value}${json.document.guides[2].unit}', 2);
+			info('guides-${json.document.guides[3].dir}: ${json.document.guides[3].value}${json.document.guides[3].unit}', 2);
 
-		scribus.addColorRGB('test_mck_rgb', 0, 10, 20);
-		scribus.addColorCMYK('test_mck_cmyk', 0, 10, 20, 30);
+			info('Bleeds:', 1);
+			info('bleeds-${json.document.bleeds[0].dir}: ${json.document.bleeds[0].value}${json.document.bleeds[0].unit}', 2);
+			info('bleeds-${json.document.bleeds[1].dir}: ${json.document.bleeds[1].value}${json.document.bleeds[1].unit}', 2);
+			info('bleeds-${json.document.bleeds[2].dir}: ${json.document.bleeds[2].value}${json.document.bleeds[2].unit}', 2);
+			info('bleeds-${json.document.bleeds[3].dir}: ${json.document.bleeds[3].value}${json.document.bleeds[3].unit}', 2);
 
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}_combo.sla', scribus.toString());
-	}
+			info('Total pages: ' + ScData.TOTAL_PAGES + ' (${numberPages[minValue]}-${numberPages[maxValue]})', 1);
+			info('Total images: ' + ScData.TOTAL_IMAGES, 1);
+			info('Total text: ' + ScData.TOTAL_TEXT, 1);
+			info('Total errors: ' + ScData.TOTAL_ERRORS, 1);
+			for (i in 0...ScData.errorArray.length) {
+				var _errorArray = ScData.errorArray[i];
+				info(' - ' + _errorArray, 2);
+			}
+			info('----------------------------------------------------------');
+		}
 
-	function createScribusA4NL() {
-		var pagesize = PageSize.A4;
-		var language = Locale.NL;
-		var scribus = new Scribus();
+		var md = '# Scribus data\n\n';
 
-		scribus.setPageName(pagesize);
-		scribus.setLanguage(language);
+		md += '- Document:\n';
+		md += '\t- width: ${json.document.width.value}${json.document.width.unit}\n';
+		md += '\t- height: ${json.document.height.value}${json.document.height.unit}\n';
+		md += '\t- author: ${json.document.author}\n';
+		md += '\t- title: ${json.document.title}\n';
+		md += '\t- description: ${json.document.description}\n';
+		md += '\t- language: ${json.document.language}\n';
+		md += '\t- pageName: ${json.document.pageName}\n';
+		md += '\t- guideSnap: ${json.document.guideSnap}\n';
+		md += '\t- guideLocked: ${json.document.guideLocked}\n';
 
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}.sla', scribus.toString());
-	}
+		md += '- Margins:\n';
+		md += '\t- margins-${json.document.margins[0].dir}: ${json.document.margins[0].value}${json.document.margins[0].unit}\n';
+		md += '\t- margins-${json.document.margins[1].dir}: ${json.document.margins[1].value}${json.document.margins[1].unit}\n';
+		md += '\t- margins-${json.document.margins[2].dir}: ${json.document.margins[2].value}${json.document.margins[2].unit}\n';
+		md += '\t- margins-${json.document.margins[3].dir}: ${json.document.margins[3].value}${json.document.margins[3].unit}\n';
 
-	function createScribusA5EN() {
-		var pagesize = PageSize.A5;
-		var language = Locale.EN_GB;
-		var scribus = new Scribus();
+		md += '- Guides:\n';
+		md += '\t- guides-${json.document.guides[0].dir}: ${json.document.guides[0].value}${json.document.guides[0].unit}\n';
+		md += '\t- guides-${json.document.guides[1].dir}: ${json.document.guides[1].value}${json.document.guides[1].unit}\n';
+		md += '\t- guides-${json.document.guides[2].dir}: ${json.document.guides[2].value}${json.document.guides[2].unit}\n';
+		md += '\t- guides-${json.document.guides[3].dir}: ${json.document.guides[3].value}${json.document.guides[3].unit}\n';
 
-		scribus.setPageName(pagesize);
-		scribus.setLanguage(language);
+		md += '- Bleeds:\n';
+		md += '\t- bleeds-${json.document.bleeds[0].dir}: ${json.document.bleeds[0].value}${json.document.bleeds[0].unit}\n';
+		md += '\t- bleeds-${json.document.bleeds[1].dir}: ${json.document.bleeds[1].value}${json.document.bleeds[1].unit}\n';
+		md += '\t- bleeds-${json.document.bleeds[2].dir}: ${json.document.bleeds[2].value}${json.document.bleeds[2].unit}\n';
+		md += '\t- bleeds-${json.document.bleeds[3].dir}: ${json.document.bleeds[3].value}${json.document.bleeds[3].unit}\n';
 
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${pagesize}_${language}.sla', scribus.toString());
-	}
+		md += '- Total pages: ' + ScData.TOTAL_PAGES + ' (${numberPages[minValue]}-${numberPages[maxValue]})' + '\n';
+		md += '- Total images: ' + ScData.TOTAL_IMAGES + '\n';
+		md += '- Total text: ' + ScData.TOTAL_TEXT + '\n';
+		md += '- Total errors: ' + ScData.TOTAL_ERRORS + '\n';
+		for (i in 0...ScData.errorArray.length) {
+			var _errorArray = ScData.errorArray[i];
+			md += '\t- ' + _errorArray + '\n';
+		}
+		var arr = Config.PATH.split('/');
+		var fileName = arr[arr.length - 1].replace('.json', '.md');
+		var _p = Path.normalize(Config.PATH).replace('.json', '.md');
 
-	function createScribusCustomNL() {
-		var _pageSize = 'Custom 148x148mm';
-		var _pageWidth = PageSize.MM2POINTS * 148;
-		var _pageHeight = PageSize.MM2POINTS * 148;
+		// warn('Config.PATH: ' + Config.PATH);
+		// warn('Config.ROOT: ' + Config.ROOT);
+		// warn('filename: ' + fileName);
+		// warn('path: ' + _p);
 
-		var _language = Locale.NL;
-
-		var scribus = new Scribus();
-		scribus.setLanguage(_language);
-		scribus.setPageName(_pageSize);
-		scribus.setMarginInMM(14, 14, 14, 14);
-		scribus.setBleedInMM(3, 3, 3, 3);
-		scribus.setHorizontalGuidesInMM([14, 148 - 14]);
-		scribus.setVerticalGuidesInMM([14, 148 - 14]);
-		scribus.isSnapToGuides(true);
-		scribus.isGuideLocked(true);
-
-		scribus.pageWidth = _pageWidth;
-		scribus.pageHeight = _pageHeight;
-
-		scribus.removeStyle();
-
-		// scribus.defaultFont('Titillium Web Regular', 11);
-		// scribus.addDefaultStyle('Titillium Web Regular', 11);
-		// scribus.addStyle('Text3_Heading 1', 24);
-		// scribus.addStyle('Text3_Heading 2', 20);
-		// scribus.addStyle('Text3_Heading 3', 18);
-		// scribus.addStyle('Text3_Heading 4', 16);
-		// scribus.addStyle('Text3_Heading 5', 14);
-		// scribus.addStyle('Text3_Heading 6', 12);
-
-		scribus.dumpStyle();
-
-		// scribus.removeMasterPages();
-		scribus.removePages();
-
-		var page:ScPage = scribus.addPage('cover (right)');
-		scribus.addImage(page, '../assets/svg/snippets_piramide van Lencioni.png');
-		// scribus.addText(page, '../assets/markdown/simple.md');
-
-		page = scribus.addPage('inner side cover (left)');
-		// scribus.addImage(page, '../assets/png/a4_colors_Layer 1_copy_5.png');
-		// scribus.addText(page, '../assets/markdown/simple.md');
-
-		page = scribus.addPage('inhoud (right)');
-		scribus.addImage(page, '../assets/png/a4_gray.png');
-
-		page = scribus.addPage('text (left)');
-		scribus.addText(page, '../assets/markdown/test_heading.md');
-		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_green.png');
-
-		page = scribus.addPage('text (left)');
-		scribus.addText(page, '../assets/markdown/maslow.md');
-		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_pink.png');
-
-		page = scribus.addPage('text (left)');
-		scribus.addText(page, '../assets/markdown/test_simple.md');
-		page = scribus.addPage('image (right)');
-		scribus.addImage(page, '../assets/png/a4_red.png');
-
-		page = scribus.addPage();
-		scribus.addImage(page, '../assets/svg/snippets_piramide van Lencioni.svg');
-
-		SaveFile.out(Folder.BIN + '/_gen_scribus_${_pageSize.replace(' ', '_')}_${_language}.sla', scribus.toString());
-
-		// Sys.command('open ./bin/_gen_scribus_Custom_148x148mm_nl.sla');
+		SaveFile.out(_p, md);
 	}
 
 	/**

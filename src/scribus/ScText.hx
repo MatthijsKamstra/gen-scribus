@@ -169,6 +169,12 @@ class ScText {
         </PAGEOBJECT>\n';
 	}
 
+	// ____________________________________ use style ____________________________________
+
+	public function useStyle(name:String) {
+		this.DEFAULT_STYLE = new ScStyleDefaultReal(name).toString();
+	}
+
 	// ____________________________________ getter/setter ____________________________________
 
 	function get_width():Float {

@@ -107,7 +107,6 @@ class ScSettings {
 				// new methode
 				// scribus.addComment('Images added by hand');
 				var image = new ScImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _image.path));
-				// var image = new ScImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + 'assets/png/a4_red.png'));
 				image.settings(_image);
 				scribus.add2document(image.toString());
 
@@ -120,21 +119,24 @@ class ScSettings {
 				var _text = pageObj.texts[i];
 				// scribus.addText(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _text.path));
 
-				// if (_text.style != null) {
-				// 	warn('add style: ${_text.style}');
-				// 	scribus.addComment('add custom style to doc');
-				// 	scribus.addCharacter(_text.style + " New Character Style");
-				// 	scribus.addDefaultStyle(_text.style + " New Paragraph Style");
-				// 	scribus.addStyleToParent(_text.style + " New Paragraph Style", _text.style);
-				// 	// scribus.addStyle("STYLE_" + _text.style);
-				// 	scribus.addComment('end style');
-				// }
-				// // new methode
+				if (_text.style != null) {
+					warn('add style: ${_text.style}');
+					scribus.addComment('add custom style to doc');
+					scribus.addCharacter(_text.style + " New Character Style");
+					scribus.addDefaultStyle(_text.style + " New Paragraph Style");
+					scribus.addStyleToParent(_text.style + " New Paragraph Style", _text.style);
+					// scribus.addStyle("STYLE_" + _text.style);
+					scribus.addComment('end style');
+				}
+
+				// new methode
 				scribus.addComment('Text added by hand');
-				var image = new ScText(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _text.path));
-				// var image = new ScImage(page, Path.normalize(Folder.ROOT_FOLDER + '/' + 'assets/png/a4_red.png'));
-				image.settings(_text);
-				scribus.add2document(image.toString());
+				var text = new ScText(page, Path.normalize(Folder.ROOT_FOLDER + '/' + _text.path));
+				text.settings(_text);
+				if (_text.style != null) {
+					text.useStyle(_text.style + " New Paragraph Style");
+				}
+				scribus.add2document(text.toString());
 
 				ScData.TOTAL_TEXT++;
 			}
