@@ -1,11 +1,9 @@
+package;
+
 import const.Config;
 import haxe.Json;
-import scribus.Locale;
-import scribus.PageSize;
+import inkscape.InkscapeSettings;
 import scribus.ScData;
-import scribus.ScPage;
-import scribus.ScSettings;
-import scribus.Scribus;
 import sys.FileSystem;
 import utils.SaveFile;
 
@@ -128,7 +126,8 @@ class Main {
 	}
 
 	function useSettings(path:String) {
-		var settings = new ScSettings(path);
+		// var scribusSettings = new ScSettings(path);
+		var inkscapeSettings = new InkscapeSettings(path);
 	}
 
 	function infoGen() {

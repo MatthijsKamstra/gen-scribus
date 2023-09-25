@@ -1,21 +1,20 @@
-package scribus;
+package inkscape;
 
+import scribus.PageSize;
 import suite.Default;
 import utils.Counter;
 import utils.UUID;
 
-class ScPage {
-	final DEFAULT_XPOS = 100.001;
-	final DEFAULT_YPOS = 20.001;
-
-	private static var XPOS:Float = 100.001;
-	private static var YPOS:Float = 20.001;
+class InkscapePage {
+	private static var XPOS:Float = Default.XPOS_ZERO;
+	private static var YPOS:Float = Default.YPOS_ZERO;
+	private static var XOFFSET:Float = Default.XOFFSET_IN_POINTS;
+	private static var YOFFSET:Float = Default.YOFFSET_IN_POINTS;
 
 	@:isVar public var id(default, null):Int = -1;
 
-	@:isVar public var size(get, set):String = Default.PAGESIZE; // in points
-	@:isVar public var xpos(get, set):Float = 100.001; // in points
-	@:isVar public var ypos(get, set):Float = 20.001; // in points
+	@:isVar public var xpos(get, set):Float = 0; // in points
+	@:isVar public var ypos(get, set):Float = 0; // in points
 	@:isVar public var width(get, set):Float = Default.PAGEWIDTH_IN_POINTS; // in points
 	@:isVar public var height(get, set):Float = Default.PAGEHEIGHT_IN_POINTS; // in points
 
@@ -30,87 +29,39 @@ class ScPage {
 	public var marginBottom:Float;
 
 	public function new() {
-		// trace('ScribusPage');
+		// info('InkscapePage');
 	}
 
 	function reset() {
-		XPOS = DEFAULT_XPOS;
-		YPOS = DEFAULT_YPOS;
+		XPOS = Default.XPOS_ZERO;
+		YPOS = Default.YPOS_ZERO;
 	}
 
-	public function toString():String {
+	public function toString() {
 		if (Counter.ID <= -1) {
 			reset();
 		}
 		Counter.ID++;
 		this.id = Counter.ID;
 
-		var _MNAM = 'Normal Right';
-		// 'Normal Left'
-		// 'Normal Right'
-		if (Counter.ID % 2 == 0) {
-			// row = "-even";
-			_MNAM = 'Normal Right';
-			XPOS = DEFAULT_XPOS + width;
-		} else {
-			// row = "--odd";
-			_MNAM = 'Normal Left';
-			XPOS = DEFAULT_XPOS;
-			YPOS += height + (2 * DEFAULT_YPOS);
-		}
+		XPOS = Counter.ID * (this.width + XOFFSET);
+		// YPOS = Counter.ID * (this.height + YOFFSET);
 
 		this.xpos = XPOS;
 		this.ypos = YPOS;
 
-		// log('ScPage | ${Counter.ID} | XPOS: ' + XPOS);
-		// log('ScPage | ${Counter.ID} | YPOS: ' + YPOS);
-		// log('ScPage | ${Counter.ID} | this.xpos: ' + this.xpos);
-		// log('ScPage | ${Counter.ID} | this.ypos: ' + this.ypos);
-
-		return '<PAGE
-			UUID="${UUID.uuid()}"
-			PAGEXPOS="${XPOS}"
-			PAGEYPOS="${YPOS}"
-			PAGEWIDTH="${width}"
-			PAGEHEIGHT="${height}"
-			BORDERLEFT="${marginLeft}"
-			BORDERRIGHT="${marginRight}"
-			BORDERTOP="${marginTop}"
-			BORDERBOTTOM="${marginBottom}"
-			NUM="${Counter.ID}"
-			NAM=""
-			MNAM="${_MNAM}"
-			Size="${size}"
-			Orientation="0"
-			LEFT="0"
-			PRESET="0"
-			VerticalGuides=""
-			HorizontalGuides=""
-			AGhorizontalAutoGap="0"
-			AGverticalAutoGap="0"
-			AGhorizontalAutoCount="0"
-			AGverticalAutoCount="0"
-			AGhorizontalAutoRefer="0"
-			AGverticalAutoRefer="0"
-			AGSelection="0 0 0 0"
-			pageEffectDuration="1"
-			pageViewDuration="1"
-			effectType="0"
-			Dm="0"
-			M="0"
-			Di="0"/>
-		';
+		return '<inkscape:page
+			x="${XPOS}"
+			y="${YPOS}"
+			width="${this.width}"
+			height="${this.height}"
+			id="page${this.id + 1}"
+			margin="0"
+       		bleed="0"
+			/>\n';
 	}
 
 	// ____________________________________ getter/setter ____________________________________
-
-	function get_size():String {
-		return size;
-	}
-
-	function set_size(value:String):String {
-		return size = value;
-	}
 
 	function set_xpos(value:Float):Float {
 		return xpos = value;

@@ -1,6 +1,6 @@
-package scribus;
+package inkscape;
 
-class ScData {
+class InkscapeData {
 	public static var TOTAL_PAGES:Int = 0;
 	public static var TOTAL_IMAGES:Int = 0;
 	public static var TOTAL_TEXT:Int = 0;
@@ -8,7 +8,7 @@ class ScData {
 	public static var errorArray:Array<String> = [];
 
 	public function new() {
-		trace('ScData');
+		// info('InkscapeData');
 	}
 
 	public static function reset() {

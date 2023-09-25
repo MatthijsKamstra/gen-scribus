@@ -1,24 +1,24 @@
 # Scribus data
 
 - Document:
-	- width: 200mm
-	- height: 150mm
+	- width: 210mm
+	- height: 210mm
 	- author: Matthijs Kamstra
-	- title: Haxe Scribus Gen doc
+	- title: test images with gen-scribus
 	- description: blah blah, Haxe Scribus Gen doc
 	- language: nl
-	- pageName: Custom Size
+	- pageName: a4
 	- guideSnap: true
 	- guideLocked: true
 - Margins:
-	- margins-left: 70mm
-	- margins-right: 0mm
-	- margins-top: 30mm
+	- margins-left: 10mm
+	- margins-right: 10mm
+	- margins-top: 10mm
 	- margins-bottom: 10mm
 - Guides:
-	- guides-left: 70mm
-	- guides-right: 0mm
-	- guides-top: 30mm
+	- guides-left: 10mm
+	- guides-right: 10mm
+	- guides-top: 10mm
 	- guides-bottom: 10mm
 - Bleeds:
 	- bleeds-left: 3mm

@@ -25,7 +25,7 @@
 	- bleeds-right: 3mm
 	- bleeds-top: 3mm
 	- bleeds-bottom: 3mm
-- Total pages: 1 (8-8)
+- Total pages: 0 (8-8)
 - Total images: 0
-- Total text: 1
+- Total text: 0
 - Total errors: 0

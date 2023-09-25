@@ -6,7 +6,7 @@
     "language": "nl",
     "pageName": "a4",
     "width": { "unit": "mm", "value": 210 },
-    "height": { "unit": "mm", "value": 297 },
+    "height": { "unit": "mm", "value": 210 },
     "margins": [
       { "dir": "left", "unit": "mm", "value": 10 },
       { "dir": "right", "unit": "mm", "value": 10 },

@@ -20,7 +20,7 @@ class Scribus {
 	@:isVar public var marginBottom(get, set):Float;
 
 	public function new() {
-		info('Scribus');
+		info('Scribus Generator');
 
 		Counter.reset(); // start all new Scribus document from zero
 

@@ -5,8 +5,8 @@
     "description": "blah blah, Haxe Scribus Gen doc",
     "language": "nl",
     "pageName": "Custom Size",
-    "width": { "unit": "mm", "value": 200 },
-    "height": { "unit": "mm", "value": 150 },
+    "width": { "unit": "mm", "value": 148 },
+    "height": { "unit": "mm", "value": 148 },
     "margins": [
       { "dir": "left", "unit": "mm", "value": 70 },
       { "dir": "right", "unit": "mm", "value": 0 },
