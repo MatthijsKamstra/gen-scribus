@@ -27,6 +27,10 @@ class InkscapeSettings {
 		inkscape.setMarginInMM(marginMap.get('left'), marginMap.get('right'), marginMap.get('top'), marginMap.get('bottom'));
 		inkscape.setBleedInMM(bleedMap.get('left'), bleedMap.get('right'), bleedMap.get('top'), bleedMap.get('bottom'));
 
+		if (json.document.title != null) {
+			// inkscape.setDocumentTitle(json.document.title);
+		}
+
 		var pages:Array<AST.Pages> = json.pages;
 		for (i in 0...pages.length) {
 			var _page = pages[i];
@@ -57,6 +61,7 @@ class InkscapeSettings {
 
 	function createPage(inkscape:Inkscape, pageObj:AST.PageObj) {
 		var page:InkscapePage = inkscape.addPage(pageObj._alias);
+		inkscape.addLayer(pageObj._alias);
 
 		InkscapeData.TOTAL_PAGES++;
 

@@ -8,6 +8,6 @@ class Default {
 	public static final PAGEHEIGHT_IN_MM:Float = 297;
 	public static final XPOS_ZERO:Float = 0;
 	public static final YPOS_ZERO:Float = 0;
-	public static final YOFFSET_IN_POINTS:Float = 10;
-	public static final XOFFSET_IN_POINTS:Float = 10;
+	public static final YOFFSET_IN_POINTS:Float = 100;
+	public static final XOFFSET_IN_POINTS:Float = 100;
 }

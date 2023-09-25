@@ -73,10 +73,10 @@ typedef PageObj = {
 
 typedef Image = {
 	var path:String;
-	var x:X;
-	var y:Y;
-	var width:ValueObj;
-	var height:ValueObj;
+	@:optional var x:X;
+	@:optional var y:Y;
+	@:optional var width:ValueObj;
+	@:optional var height:ValueObj;
 };
 
 typedef Texts = {

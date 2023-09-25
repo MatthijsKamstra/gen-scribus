@@ -28,6 +28,10 @@ class InkscapePage {
 	public var marginTop:Float;
 	public var marginBottom:Float;
 
+	public var margin:String = '14mm';
+	public var bleed:String = '3mm';
+	public var title:String = '';
+
 	public function new() {
 		// info('InkscapePage');
 	}
@@ -50,14 +54,19 @@ class InkscapePage {
 		this.xpos = XPOS;
 		this.ypos = YPOS;
 
+		if (marginLeft != null) {
+			this.margin = '${marginLeft}mm ${marginTop}mm ${marginRight}mm ${marginBottom}mm';
+		}
+
 		return '<inkscape:page
 			x="${XPOS}"
 			y="${YPOS}"
 			width="${this.width}"
 			height="${this.height}"
 			id="page${this.id + 1}"
-			margin="0"
-       		bleed="0"
+			margin="${this.margin}"
+       		bleed="${this.bleed}"
+			${(this.title != '') ? 'inkscape:label="${this.title}"' : ''}
 			/>\n';
 	}
 

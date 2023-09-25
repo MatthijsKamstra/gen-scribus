@@ -9,7 +9,7 @@ class Inkscape {
 	var _svg:Xml;
 	var _namedView:Xml;
 
-	var doc:Access;
+	var _access:Access;
 
 	@:isVar public var pageHeight(get, set):Float; // cm / mm
 	@:isVar public var pageWidth(get, set):Float; // cm / mm
@@ -19,7 +19,7 @@ class Inkscape {
 	@:isVar public var marginTop(get, set):Float;
 	@:isVar public var marginBottom(get, set):Float;
 
-
+	@:isVar public var bleed(get, set):Float;
 
 	public function new() {
 		info('Inkscape Generator');
@@ -32,7 +32,7 @@ class Inkscape {
 			_xml = Xml.parse(str);
 			_svg = _xml.firstElement();
 			_namedView = _xml.firstElement().firstElement();
-			doc = new haxe.xml.Access(_xml.firstElement());
+			_access = new haxe.xml.Access(_xml.firstElement());
 		} else {
 			trace('ERROR: there is not file: $path');
 		}
@@ -54,6 +54,10 @@ class Inkscape {
 		this.pageHeight = PageSize.MM2POINTS * height;
 		// this.pageWidthMM = PageSize.MM2POINTS * width;
 		// this.pageHeightMM = PageSize.MM2POINTS * height;
+
+		_svg.set('width', '${width}mm');
+		_svg.set('height', '${height}mm');
+		_svg.set('viewBox', '0 0 ${this.pageWidth} ${this.pageHeight}');
 	}
 
 	// ____________________________________ guides ____________________________________
@@ -148,19 +152,34 @@ class Inkscape {
 	// ____________________________________ page ____________________________________
 
 	public function addPage(alias:String = ''):InkscapePage {
-		if (alias != '')
-			addComment(alias);
+		// if (alias != '')
+		// 	addComment(alias);
 
 		var page = new InkscapePage();
+		page.title = alias;
 		page.width = pageWidth;
 		page.height = pageHeight;
 
-		// page.marginLeft = marginLeft;
-		// page.marginRight = marginRight;
-		// page.marginTop = marginTop;
-		// page.marginBottom = marginBottom;
+		page.marginLeft = marginLeft;
+		page.marginRight = marginRight;
+		page.marginTop = marginTop;
+		page.marginBottom = marginBottom;
+
+		// page.bleed = '${bleed}mm';
 
 		add2NamedView(page.toString());
+
+		return page;
+	}
+
+	public function addLayer(alias:String = '') {
+		// if (alias != '')
+		// 	addComment(alias);
+
+		var page = new InkscapeLayer();
+		page.title = alias;
+
+		add2document(page.toString());
 
 		return page;
 	}
@@ -233,5 +252,13 @@ class Inkscape {
 
 	function set_marginLeft(value:Float):Float {
 		return marginLeft = value;
+	}
+
+	function get_bleed():Float {
+		return bleed;
+	}
+
+	function set_bleed(value:Float):Float {
+		return bleed = value;
 	}
 }
