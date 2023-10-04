@@ -4,6 +4,7 @@ import const.Config;
 import haxe.Json;
 import inkscape.InkscapeSettings;
 import scribus.ScData;
+import scribus.ScSettings;
 import sys.FileSystem;
 import utils.SaveFile;
 
@@ -126,7 +127,7 @@ class Main {
 	}
 
 	function useSettings(path:String) {
-		// var scribusSettings = new ScSettings(path);
+		var scribusSettings = new ScSettings(path);
 		var inkscapeSettings = new InkscapeSettings(path);
 	}
 
