@@ -1,7 +1,7 @@
 package tests;
 
-import scribus.ScMarkdownConverter;
 import buddy.BuddySuite;
+import scribus.ScMarkdownConverter;
 
 using buddy.Should;
 
@@ -32,6 +32,36 @@ class TestScMarkdownConverter extends BuddySuite {
 				var md = 'hallo, ik ben **bold** en niet jij';
 				var str = new ScMarkdownConverter(md).out;
 				str.should.be('<ITEXT CH="hallo, ik ben "/>\n<ITEXT CPARENT="Bold_GenByMck" CH="bold"/>\n<ITEXT CH=" en niet jij"/>\n<para PARENT=""/>');
+			});
+		});
+
+		// first bold
+		describe("Extract bold from markdown file", {
+			it("should convert to xml with bold styling", {
+				var md = '**hallo**, blah blah';
+				var str = new ScMarkdownConverter(md).out;
+				str.should.be('<ITEXT CH=""/>\n<ITEXT CPARENT="Bold_GenByMck" CH="hallo"/>\n<ITEXT CH=", blah blah"/>\n<para PARENT=""/>');
+			});
+		});
+
+		// heading with first bold
+		describe("Extract heading and then the first char is bold from markdown file", {
+			it("should convert to xml with bold styling", {
+				var md = '# Wet van Parkinson
+
+**Parkinson\'s Law** is een observatie';
+
+				var str = new ScMarkdownConverter(md).out;
+				str.should.be('<ITEXT CH="Wet van Parkinson"/>\n<para PARENT="Heading_1_GenByMck"/><ITEXT CH="Parkinson&#039;s Law is een observatie"/>\n<para PARENT=""/>');
+			});
+		});
+
+		// heading first bold
+		describe("Extract bold from markdown file", {
+			it("should convert to xml with bold styling", {
+				var md = '# heading\n\n**hallo**, blah blah';
+				var str = new ScMarkdownConverter(md).out;
+				str.should.be('<ITEXT CH="heading"/>\n<para PARENT="Heading_1_GenByMck"/><ITEXT CH=""/>\n<ITEXT CPARENT="Bold_GenByMck" CH="hallo"/>\n<ITEXT CH=", blah blah"/>\n<para PARENT=""/>');
 			});
 		});
 
