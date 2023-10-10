@@ -1,4 +1,4 @@
 # Inhoud
 
-- only a path + (1)
-- only width + (2)
+- only a path + (3)
+- only width + (4)

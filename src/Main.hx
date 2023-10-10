@@ -240,7 +240,7 @@ class Main {
 		var md = '# Inhoud\n\n';
 		for (i in 0...json.pages.length) {
 			var _pages = json.pages[i];
-			trace(_pages);
+			// trace(_pages);
 			if (_pages.left._alias != null) {
 				md += '- ${_pages.left._alias} + (${i + 2})\n';
 			}
