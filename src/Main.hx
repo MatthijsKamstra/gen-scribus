@@ -236,6 +236,24 @@ class Main {
 		// warn('path: ' + _p);
 
 		SaveFile.out(_p, md);
+
+		var md = '# Inhoud\n\n';
+		for (i in 0...json.pages.length) {
+			var _pages = json.pages[i];
+			trace(_pages);
+			if (_pages.left._alias != null) {
+				md += '- ${_pages.left._alias} + (${i + 2})\n';
+			}
+		}
+
+		var _p = Path.normalize(Config.PATH).replace('.json', '-inhoud.md');
+
+		// warn('Config.PATH: ' + Config.PATH);
+		// warn('Config.ROOT: ' + Config.ROOT);
+		// warn('filename: ' + fileName);
+		// warn('path: ' + _p);
+
+		SaveFile.out(_p, md);
 	}
 
 	/**
