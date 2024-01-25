@@ -1,31 +1,18 @@
 # TODO
 
-### Inkscape
-
-- [ ] create inkscape file in any size you want
-- [ ] use settings
-- Pages
-  - [ ] add pages
-  - [ ] xpos ypos page
-- Document
-  - [ ] change input to mm
-  - [ ] change margins
-  - [ ] change the language of the file
-  - [ ] horizontal and vertical guides
-  - [ ] snapToGuide toggle
-  - [ ] generate document based upon json (settings file)
-  - [ ] updating title, author, etc
-- Artboards
-  - [ ] generate artboards
-  - [ ] create bleed, bg, margin layer
-
 ### Scribus
 
 - [x] create scribus file in any size you want
 - [x] regex door alle PAGEHEIGHT PAGEWIDTH
+- [ ] single page, facing page
+- Single page
+  - [ ] master called normal
+  - [ ] all page x same
+  - [ ] all page MNAM =normal
 - Pages
   - [x] add pages
   - [x] xpos ypos page
+  - [ ] left, right, middle page
 - Document
   - [x] change input to mm
   - [x] change margins
@@ -60,6 +47,7 @@
   - [ ] use percentage for width and height
   - [ ] use percentage for x and y
 - Texts
+
   - [x] import text
   - [x] ~~update text~~ ( UUID, doesn't work)
   - [x] text input odt
@@ -70,5 +58,26 @@
   - [ ] use percentage for width and height
   - [ ] use percentage for x and y
   - [ ] custom style
-- [ ] single page, facing page
+
 - [x] resize image to correct scale (load image, get imagesize, calculate new scale) <- fit image to frame
+
+### Inkscape
+
+When I generate a document, I add an Inkscape svg with the same padding/bleed/size
+
+- [ ] create inkscape file in any size you want
+- [ ] use settings
+- Pages
+  - [ ] add pages
+  - [ ] xpos ypos page
+- Document
+  - [ ] change input to mm
+  - [ ] change margins
+  - [ ] change the language of the file
+  - [ ] horizontal and vertical guides
+  - [ ] snapToGuide toggle
+  - [ ] generate document based upon json (settings file)
+  - [ ] updating title, author, etc
+- Artboards
+  - [ ] generate artboards
+  - [ ] create bleed, bg, margin layer
