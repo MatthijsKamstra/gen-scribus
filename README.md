@@ -2,6 +2,8 @@
 
 POC: generating a [Scribus](https://www.scribus.net/) file via [Haxe](https://haxe.org/)
 
+![](haxe_scribus.jpeg)
+
 ## Reason
 
 - Not possible to link (and update) to external text file (markdown)
