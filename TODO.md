@@ -4,6 +4,8 @@
 
 - [x] create scribus file in any size you want
 - [x] regex door alle PAGEHEIGHT PAGEWIDTH
+- [ ] regex door alle MARGIN
+- [ ] regex door alle PADDING
 - [ ] single page, facing page
 - Single page
   - [ ] master called normal
@@ -23,6 +25,7 @@
   - [x] updating title, author, etc
 - [x] create dummy png
 - [x] use UUID in nodes (doesn't work.. is cleaned after save in Scribus)
+- [ ] use UUID in nodes (try to use data.xxx ??? )
 - Custom markdown converter
   - [x] heading
   - [x] bold
@@ -47,7 +50,6 @@
   - [ ] use percentage for width and height
   - [ ] use percentage for x and y
 - Texts
-
   - [x] import text
   - [x] ~~update text~~ ( UUID, doesn't work)
   - [x] text input odt
@@ -58,7 +60,6 @@
   - [ ] use percentage for width and height
   - [ ] use percentage for x and y
   - [ ] custom style
-
 - [x] resize image to correct scale (load image, get imagesize, calculate new scale) <- fit image to frame
 
 ### Inkscape
